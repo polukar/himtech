@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Главная</title>
+    <title>История заказов</title>
     <!--
     link(rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png")
@@ -385,10 +385,15 @@
         </div>
       </div>
       <div class="content content--user">
-        <section class="section-grey">
+        <section>
               <div class="content__header">
                 <div class="title"> 
-                  <h1>Добрый день, Максим</h1>
+                  <div class="content-header-ico"> 
+                        <svg class="svgsprite _header-history">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#header-history"></use>
+                        </svg>
+                  </div>
+                  <h1>История заказов</h1>
                 </div>
                 <div class="header__nav"><a class="button-catalog" href="arrange.html"> 
                             <svg class="svgsprite _catalog-btn">
@@ -400,271 +405,348 @@
                         <div class="button-basket__summ">0</div></a>
                 </div>
               </div>
-          <div class="main__description">
-            <p class="text-regular-big">Это ваш личный кабинет. Посмотрите как пользоваться</p><a class="play-link" href="#">
-                  <svg class="svgsprite _subtract">
-                    <use xlink:href="assets/img/sprites/svgsprites.svg#subtract"></use>
-                  </svg>Инструкция </a>
-          </div>
-          <div class="main__panels"><a class="main__panel" href="#"> 
-              <div class="main__panel-ico">
-                    <svg class="svgsprite _main-panels-ico_1">
-                      <use xlink:href="assets/img/sprites/svgsprites.svg#main-panels-ico_1"></use>
-                    </svg>
+              <div class="search"> 
+                <input class="search__input" type="text" placeholder="Введите ИНН или название организации...">
+                <div class="search__ico"> 
+                      <svg class="svgsprite _search">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#search"></use>
+                      </svg>
+                </div>
               </div>
-              <div class="text-medium-big">Быстрый заказ</div></a><a class="main__panel" href="#"> 
-              <div class="main__panel-ico">
-                    <svg class="svgsprite _main-panels-ico_2">
-                      <use xlink:href="assets/img/sprites/svgsprites.svg#main-panels-ico_2"></use>
-                    </svg>
-              </div>
-              <div class="text-medium-big">Финансы</div></a><a class="main__panel" href="#"> 
-              <div class="main__panel-ico">
-                    <svg class="svgsprite _main-panels-ico_3">
-                      <use xlink:href="assets/img/sprites/svgsprites.svg#main-panels-ico_3"></use>
-                    </svg>
-              </div>
-              <div class="text-medium-big">Заказы</div></a><a class="main__panel" href="#"> 
-              <div class="main__panel-ico">
-                    <svg class="svgsprite _main-panels-ico_4">
-                      <use xlink:href="assets/img/sprites/svgsprites.svg#main-panels-ico_4"></use>
-                    </svg>
-              </div>
-              <div class="text-medium-big">Реквизиты</div></a></div>
-        </section>
-        <section class="main__tables">
-          <div class="main__history">
-            <div class="page__title"> 
-              <h2>Мои заказы</h2><a class="link" href="history.html">История заказов</a>
+          <div class="head-select">
+            <div class="head-select__item">
+              <p class="text-medium-small">Дата заказа</p>
+                  <div class="select"> 
+                    <div class="select__main">
+                      <input id="calendar" type="text" placeholder="Выбрать">
+                    </div>
+                  </div>
             </div>
-            <div class="table-scroll">
-              <table class="table table-user" style="min-width: 474px">
-                <thead>
-                  <tr>
-                    <td>Заказ</td>
-                    <td>Статус</td>
-                    <td>Сумма</td>
-                  </tr>
-                </thead>
-                <tbody> 
-                  <tr>
-                    <td>
-                      <div class="ico-text">
-                        <div class="blue-ico">
-                              <svg class="svgsprite _order">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
-                              </svg>
-                        </div>
-                        <div class="ico-text__info">
-                          <p class="text-medium-small">d2234-VV0</p>
-                          <p class="text-medium-small --grey-1">02.02.2021, 12:32</p>
+            <div class="head-select__item">
+              <p class="text-medium-small">Статус заказа</p>
+                  <div class="select"> 
+                    <div class="select__main">
+                      <input type="text" disabled placeholder="Выбрать">
+                    </div>
+                    <div class="select__drop"> 
+                      <div class="select__item"> 
+                        <div class="select__check"> 
+                              <svg class="svgsprite _select-check">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                              </svg><span>Химические средства</span>
                         </div>
                       </div>
-                    </td>
-                    <td> 
-                          <div class="status">
-                                <svg class="svgsprite _progress">
-                                  <use xlink:href="assets/img/sprites/svgsprites.svg#progress"></use>
-                                </svg><span class="text-regular-big">Ожидает оплаты</span>
-                          </div>
-                    </td>
-                    <td> 
-                      <div class="price">9 200 ₽</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="ico-text">
-                        <div class="blue-ico">
-                              <svg class="svgsprite _order">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
-                              </svg>
-                        </div>
-                        <div class="ico-text__info">
-                          <p class="text-medium-small">d2234-VV0</p>
-                          <p class="text-medium-small --grey-1">02.02.2021, 12:32</p>
+                      <div class="select__item"> 
+                        <div class="select__check"> 
+                              <svg class="svgsprite _select-check">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                              </svg><span>Перчатки</span>
                         </div>
                       </div>
-                    </td>
-                    <td> 
-                          <div class="status">
-                                <svg class="svgsprite _done">
-                                  <use xlink:href="assets/img/sprites/svgsprites.svg#done"></use>
-                                </svg><span class="text-regular-big">Оплачено</span>
-                          </div>
-                    </td>
-                    <td> 
-                      <div class="price">9 200 ₽</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="ico-text">
-                        <div class="blue-ico">
-                              <svg class="svgsprite _order">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
-                              </svg>
-                        </div>
-                        <div class="ico-text__info">
-                          <p class="text-medium-small">d2234-VV0</p>
-                          <p class="text-medium-small --grey-1">02.02.2021, 12:32</p>
+                      <div class="select__item"> 
+                        <div class="select__check"> 
+                              <svg class="svgsprite _select-check">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                              </svg><span>Средства обработки</span>
                         </div>
                       </div>
-                    </td>
-                    <td> 
-                          <div class="status">
-                                <svg class="svgsprite _error">
-                                  <use xlink:href="assets/img/sprites/svgsprites.svg#error"></use>
-                                </svg><span class="text-regular-big">Отказ</span>
-                          </div>
-                    </td>
-                    <td> 
-                      <div class="price">9 200 ₽</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="ico-text">
-                        <div class="blue-ico">
-                              <svg class="svgsprite _order">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
-                              </svg>
-                        </div>
-                        <div class="ico-text__info">
-                          <p class="text-medium-small">d2234-VV0</p>
-                          <p class="text-medium-small --grey-1">02.02.2021, 12:32</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="head-select__item">
+              <p class="text-medium-small">Договор</p>
+                  <div class="select"> 
+                    <div class="select__main">
+                      <input type="text" disabled placeholder="Выбрать">
+                    </div>
+                    <div class="select__drop"> 
+                      <div class="select__item"> 
+                        <div class="select__check"> 
+                              <svg class="svgsprite _select-check">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                              </svg><span>1</span>
                         </div>
                       </div>
-                    </td>
-                    <td> 
-                          <div class="status">
-                                <svg class="svgsprite _progress">
-                                  <use xlink:href="assets/img/sprites/svgsprites.svg#progress"></use>
-                                </svg><span class="text-regular-big">Ожидает оплаты</span>
-                          </div>
-                    </td>
-                    <td> 
-                      <div class="price">9 200 ₽</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="ico-text">
-                        <div class="blue-ico">
-                              <svg class="svgsprite _order">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
-                              </svg>
-                        </div>
-                        <div class="ico-text__info">
-                          <p class="text-medium-small">d2234-VV0</p>
-                          <p class="text-medium-small --grey-1">02.02.2021, 12:32</p>
+                      <div class="select__item"> 
+                        <div class="select__check"> 
+                              <svg class="svgsprite _select-check">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                              </svg><span>2</span>
                         </div>
                       </div>
-                    </td>
-                    <td> 
-                          <div class="status">
-                                <svg class="svgsprite _progress">
-                                  <use xlink:href="assets/img/sprites/svgsprites.svg#progress"></use>
-                                </svg><span class="text-regular-big">Ожидает оплаты</span>
-                          </div>
-                    </td>
-                    <td> 
-                      <div class="price">9 200 ₽</div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="ico-text">
-                        <div class="blue-ico">
-                              <svg class="svgsprite _order">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
-                              </svg>
-                        </div>
-                        <div class="ico-text__info">
-                          <p class="text-medium-small">d2234-VV0</p>
-                          <p class="text-medium-small --grey-1">02.02.2021, 12:32</p>
+                      <div class="select__item"> 
+                        <div class="select__check"> 
+                              <svg class="svgsprite _select-check">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                              </svg><span>3</span>
                         </div>
                       </div>
-                    </td>
-                    <td> 
-                          <div class="status">
-                                <svg class="svgsprite _progress">
-                                  <use xlink:href="assets/img/sprites/svgsprites.svg#progress"></use>
-                                </svg><span class="text-regular-big">Ожидает оплаты</span>
-                          </div>
-                    </td>
-                    <td> 
-                      <div class="price">9 200 ₽</div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                    </div>
+                  </div>
+            </div>
+            <div class="head-select__item">
+              <p class="text-medium-small">Статус оплаты</p>
+                  <div class="select"> 
+                    <div class="select__main">
+                      <input type="text" disabled placeholder="Выбрать">
+                    </div>
+                    <div class="select__drop"> 
+                      <div class="select__item"> 
+                        <div class="select__check"> 
+                              <svg class="svgsprite _select-check">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                              </svg><span>1</span>
+                        </div>
+                      </div>
+                      <div class="select__item"> 
+                        <div class="select__check"> 
+                              <svg class="svgsprite _select-check">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                              </svg><span>2</span>
+                        </div>
+                      </div>
+                      <div class="select__item"> 
+                        <div class="select__check"> 
+                              <svg class="svgsprite _select-check">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                              </svg><span>3</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
           </div>
-          <div class="main__docs">
-            <div class="page__title"> 
-              <h2>Мои документы</h2><a class="link" href="docs.html">Смотреть все</a>
-            </div>
-            <div class="main__doc">
-              <div class="main__doc-left"> 
-                <div class="ico-text">
-                  <div class="blue-ico">
-                        <svg class="svgsprite _document">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#document"></use>
-                        </svg>
-                  </div>
-                  <div class="ico-text__info">
-                    <p class="text-medium-small">№ kV232-XX1</p><a class="link --ellipsis" href="#">Акт выполненных работ Акт выполненных работ</a>
-                  </div>
-                </div>
-              </div>
-              <div class="main__doc-right"> <a class="btn --medium">Подтвердить</a></div>
-            </div>
-            <div class="main__doc">
-              <div class="main__doc-left"> 
-                <div class="ico-text">
-                  <div class="blue-ico">
-                        <svg class="svgsprite _document">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#document"></use>
-                        </svg>
-                  </div>
-                  <div class="ico-text__info">
-                    <p class="text-medium-small">№ kV232-XX1</p><a class="link --ellipsis" href="#">Акт выполненных работ Акт выполненных работ</a>
-                  </div>
-                </div>
-              </div>
-              <div class="main__doc-right"> <a class="btn --medium">Подтвердить</a></div>
-            </div>
-            <div class="main__doc">
-              <div class="main__doc-left"> 
-                <div class="ico-text">
-                  <div class="blue-ico">
-                        <svg class="svgsprite _document">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#document"></use>
-                        </svg>
-                  </div>
-                  <div class="ico-text__info">
-                    <p class="text-medium-small">№ kV232-XX1</p><a class="link --ellipsis" href="#">Акт выполненных работ Акт выполненных работ</a>
-                  </div>
-                </div>
-              </div>
-              <div class="main__doc-right"> <a class="btn --medium">Подтвердить</a></div>
-            </div>
-            <div class="main__doc">
-              <div class="main__doc-left"> 
-                <div class="ico-text">
-                  <div class="blue-ico">
-                        <svg class="svgsprite _document">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#document"></use>
-                        </svg>
-                  </div>
-                  <div class="ico-text__info">
-                    <p class="text-medium-small">№ kV232-XX1</p><a class="link --ellipsis" href="#">Акт выполненных работ Акт выполненных работ</a>
-                  </div>
-                </div>
-              </div>
-              <div class="main__doc-right"> <a class="btn --medium">Подтвердить</a></div>
-            </div>
+          <button class="claer__filter">Сбросить фильтры
+                <svg class="svgsprite _clear-filter">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#clear-filter"></use>
+                </svg>
+          </button>
+          <div class="table-scroll">
+            <table class="table table-history" style="min-width: 795px">
+              <thead>
+                <tr>
+                  <td>Заказ</td>
+                  <td>Договор</td>
+                  <td>Документ</td>
+                  <td>Дата заказа</td>
+                  <td>Дата отгрузки</td>
+                  <td>Статус</td>
+                  <td>Сумма</td>
+                </tr>
+              </thead>
+              <tbody> 
+                <tr>
+                  <td>
+                    <div class="ico-text">
+                      <div class="blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div><a class="link">INV - 1001</a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">kV232-XX1</div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span>PDF</span></a>
+                  </td>
+                  <td>
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                        <div class="status">
+                              <svg class="svgsprite _progress">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#progress"></use>
+                              </svg><span class="text-regular-big">Ожидает оплаты</span>
+                        </div>
+                  </td>
+                  <td> 
+                    <div class="price">9 200 ₽</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="ico-text">
+                      <div class="blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div><a class="link">INV - 1001</a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">kV232-XX1</div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span>PDF</span></a>
+                  </td>
+                  <td>
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                        <div class="status">
+                              <svg class="svgsprite _progress">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#progress"></use>
+                              </svg><span class="text-regular-big">Ожидает оплаты</span>
+                        </div>
+                  </td>
+                  <td> 
+                    <div class="price">9 200 ₽</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="ico-text">
+                      <div class="blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div><a class="link">INV - 1001</a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">kV232-XX1</div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span>PDF</span></a>
+                  </td>
+                  <td>
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                        <div class="status">
+                              <svg class="svgsprite _progress">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#progress"></use>
+                              </svg><span class="text-regular-big">Ожидает оплаты</span>
+                        </div>
+                  </td>
+                  <td> 
+                    <div class="price">9 200 ₽</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="ico-text">
+                      <div class="blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div><a class="link">INV - 1001</a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">kV232-XX1</div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span>PDF</span></a>
+                  </td>
+                  <td>
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                        <div class="status">
+                              <svg class="svgsprite _progress">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#progress"></use>
+                              </svg><span class="text-regular-big">Ожидает оплаты</span>
+                        </div>
+                  </td>
+                  <td> 
+                    <div class="price">9 200 ₽</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="ico-text">
+                      <div class="blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div><a class="link">INV - 1001</a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">kV232-XX1</div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span>PDF</span></a>
+                  </td>
+                  <td>
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                        <div class="status">
+                              <svg class="svgsprite _progress">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#progress"></use>
+                              </svg><span class="text-regular-big">Ожидает оплаты</span>
+                        </div>
+                  </td>
+                  <td> 
+                    <div class="price">9 200 ₽</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="ico-text">
+                      <div class="blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div><a class="link">INV - 1001</a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">kV232-XX1</div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span>PDF</span></a>
+                  </td>
+                  <td>
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big --grey-1">05.05.2021</div>
+                  </td>
+                  <td> 
+                        <div class="status">
+                              <svg class="svgsprite _progress">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#progress"></use>
+                              </svg><span class="text-regular-big">Ожидает оплаты</span>
+                        </div>
+                  </td>
+                  <td> 
+                    <div class="price">9 200 ₽</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
       </div>
