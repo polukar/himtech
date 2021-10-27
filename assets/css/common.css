@@ -2247,6 +2247,22 @@ section {
   margin-bottom: 24px;
 }
 
+.content__header.--ico .title {
+  display: flex;
+  align-items: center;
+}
+
+.content-header-ico {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  background-color: #141923;
+}
+
 .header__nav {
   display: flex;
   justify-content: flex-end;
@@ -2456,7 +2472,7 @@ section {
   margin-bottom: 8px;
 }
 
-.claer__filter {
+.clear__filter {
   display: inline-flex;
   align-items: center;
   font-size: 14px;
@@ -2464,7 +2480,7 @@ section {
   margin-bottom: 24px;
 }
 
-.claer__filter svg {
+.clear__filter svg {
   margin-left: 8px;
 }
 
