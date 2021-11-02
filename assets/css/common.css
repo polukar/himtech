@@ -2793,6 +2793,12 @@ section {
   }
 }
 
+@media (max-width: 1450px) {
+  .profile__status {
+    margin-left: 15px;
+  }
+}
+
 @media (max-width: 1400px) {
   .content--user {
     width: calc(100% - 58px);
