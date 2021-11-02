@@ -2758,7 +2758,6 @@ section {
 
 .profile__address {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .profile__status {
@@ -3148,6 +3147,7 @@ section {
 
   .profile__address {
     width: 100%;
+    flex-wrap: wrap;
   }
 
   .profile-menu {
