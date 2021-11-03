@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Главная</title>
+    <!--
+    link(rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png")
+    link(rel="manifest" href="assets/site.webmanifest")
+    link(rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#ffffff")
+    link(rel="shortcut icon" href="assets/favicon.ico")
+    meta(name="msapplication-TileColor" content="#ffffff")
+    meta(name="msapplication-config" content="assets/browserconfig.xml")
+    meta(name="theme-color" content="#ffffff")
+    
+    -->
+    <meta name="description" content="Description">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="twitter:title" content="title">
+    <meta property="og:description" content="description">
+    <meta property="twitter:description" content="description">
+    <meta property="og:image" content="assets/share.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  </head>
+  <body class="body admin">
+    <div class="mobile-popup --messages">
+      <div class="mobile-popup__panel">
+        <div class="mobile-popup__close -js-close-mobilepopup">
+              <svg class="svgsprite _mobile-popup-close">
+                <use xlink:href="assets/img/sprites/svgsprites.svg#mobile-popup-close"></use>
+              </svg>
+        </div>
+        <div class="tooltip__head"> 
+          <p class="text-medium-small">Уведомления</p>
+        </div>
+            <div class="message">
+              <div class="message__ico blue-ico">
+                    <svg class="svgsprite _order">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                    </svg>
+              </div>
+              <div class="message__info">
+                <div class="message__name">
+                  <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                  <p class="text-regular-big">на подтверждение</p>
+                </div>
+                <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+              </div>
+            </div>
+            <div class="message">
+              <div class="message__ico blue-ico">
+                    <svg class="svgsprite _order">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                    </svg>
+              </div>
+              <div class="message__info">
+                <div class="message__name">
+                  <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                  <p class="text-regular-big">на подтверждение</p>
+                </div>
+                <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+              </div>
+            </div>
+            <div class="message">
+              <div class="message__ico blue-ico">
+                    <svg class="svgsprite _order">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                    </svg>
+              </div>
+              <div class="message__info">
+                <div class="message__name">
+                  <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                  <p class="text-regular-big">на подтверждение</p>
+                </div>
+                <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+              </div>
+            </div>
+            <div class="message">
+              <div class="message__ico blue-ico">
+                    <svg class="svgsprite _order">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                    </svg>
+              </div>
+              <div class="message__info">
+                <div class="message__name">
+                  <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                  <p class="text-regular-big">на подтверждение</p>
+                </div>
+                <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+              </div>
+            </div>
+      </div>
+    </div>
+    <div class="mobile-popup --history">
+      <div class="mobile-popup__panel">
+        <div class="mobile-popup__close -js-close-mobilepopup">
+              <svg class="svgsprite _mobile-popup-close">
+                <use xlink:href="assets/img/sprites/svgsprites.svg#mobile-popup-close"></use>
+              </svg>
+        </div>
+        <h2>Фильтры</h2>
+        <div class="head-select__item">
+          <p class="text-medium-small">Дата заказа</p>
+              <div class="select"> 
+                <div class="select__main">
+                  <input id="calendar-mobile" type="text" placeholder="Выбрать">
+                </div>
+              </div>
+        </div>
+        <div class="head-select__item">
+          <p class="text-medium-small">Статус заказа</p>
+              <div class="select"> 
+                <div class="select__main">
+                  <input type="text" disabled placeholder="Выбрать">
+                </div>
+                <div class="select__drop"> 
+                  <div class="select__item"> 
+                    <div class="select__check"> 
+                          <svg class="svgsprite _select-check">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                          </svg><span>Химические средства</span>
+                    </div>
+                  </div>
+                  <div class="select__item"> 
+                    <div class="select__check"> 
+                          <svg class="svgsprite _select-check">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                          </svg><span>Перчатки</span>
+                    </div>
+                  </div>
+                  <div class="select__item"> 
+                    <div class="select__check"> 
+                          <svg class="svgsprite _select-check">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                          </svg><span>Средства обработки</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="head-select__item">
+          <p class="text-medium-small">Договор</p>
+              <div class="select"> 
+                <div class="select__main">
+                  <input type="text" disabled placeholder="Выбрать">
+                </div>
+                <div class="select__drop"> 
+                  <div class="select__item"> 
+                    <div class="select__check"> 
+                          <svg class="svgsprite _select-check">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                          </svg><span>1</span>
+                    </div>
+                  </div>
+                  <div class="select__item"> 
+                    <div class="select__check"> 
+                          <svg class="svgsprite _select-check">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                          </svg><span>2</span>
+                    </div>
+                  </div>
+                  <div class="select__item"> 
+                    <div class="select__check"> 
+                          <svg class="svgsprite _select-check">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                          </svg><span>3</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="head-select__item">
+          <p class="text-medium-small">Статус оплаты</p>
+              <div class="select"> 
+                <div class="select__main">
+                  <input type="text" disabled placeholder="Выбрать">
+                </div>
+                <div class="select__drop"> 
+                  <div class="select__item"> 
+                    <div class="select__check"> 
+                          <svg class="svgsprite _select-check">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                          </svg><span>1</span>
+                    </div>
+                  </div>
+                  <div class="select__item"> 
+                    <div class="select__check"> 
+                          <svg class="svgsprite _select-check">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                          </svg><span>2</span>
+                    </div>
+                  </div>
+                  <div class="select__item"> 
+                    <div class="select__check"> 
+                          <svg class="svgsprite _select-check">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                          </svg><span>3</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+            <button class="btn --large">Применить</button>
+        <button class="clear__filter">Сбросить фильтры
+              <svg class="svgsprite _clear-filter">
+                <use xlink:href="assets/img/sprites/svgsprites.svg#clear-filter"></use>
+              </svg>
+        </button>
+      </div>
+    </div>
+    <div class="popup --adduser"> 
+      <div class="popup__bg"></div>
+      <div class="popup__close -js-close-popup">
+            <svg class="svgsprite _mobile-popup-close">
+              <use xlink:href="assets/img/sprites/svgsprites.svg#mobile-popup-close"></use>
+            </svg>
+      </div>
+      <div class="popup__right-panel">
+        <div class="popup__head"> 
+          <h1>Добавить пользователя</h1>
+        </div>
+        <form class="popup__body"> 
+          <label class="add-avatar">
+            <input type="file">
+            <div class="add-avatar__pic"></div>
+            <div class="link">+ Загрузить фото</div>
+          </label>
+          <div class="popup__item">
+            <div class="profile__name text-regular-big">Имя</div>
+            <div class="profile__input input">
+              <input type="text" placeholder="Введите имя">
+            </div>
+          </div>
+          <div class="popup__item">
+            <div class="profile__name text-regular-big">Фамилия</div>
+            <div class="profile__input input">
+              <input type="text" placeholder="Введите фамилию">
+            </div>
+          </div>
+          <div class="popup__item">
+            <div class="profile__name text-regular-big">Отчество</div>
+            <div class="profile__input input">
+              <input type="text" placeholder="Введите отчество">
+            </div>
+          </div>
+          <div class="popup__50"> 
+            <div class="popup__item">
+              <div class="profile__name text-regular-big">телефон</div>
+              <div class="profile__input input">
+                <input type="text" placeholder="Телефон">
+              </div>
+            </div>
+            <div class="popup__item">
+              <div class="profile__name text-regular-big">Email</div>
+              <div class="profile__input input">
+                <input type="text" placeholder="example@mail.com">
+              </div>
+            </div>
+          </div>
+          <div class="popup__btns --flex --jcfe --aicn">
+            <button class="popup__cancel">Отменить</button>
+            <div class="popup__save">
+                  <button class="btn --medium">Сохранить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="content__wrap">
+      <header class="header">
+        <div class="header__left">
+          <div class="header__burger -js-menu">
+                <svg class="svgsprite _catalog-btn">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#catalog-btn"></use>
+                </svg>
+          </div>
+          <div class="header__logo"><img src="./assets/img/menu/logo.png" alt=""></div>
+        </div>
+        <div class="header__right">
+          <div class="header__catalog">Каталог</div><a class="header__basket" href="basket.html"> 
+                <svg class="svgsprite _basket-mobile">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#basket-mobile"></use>
+                </svg></a>
+          <div class="header__notification notification active -js-open-messages">
+                <svg class="svgsprite _notifications">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#notifications"></use>
+                </svg>
+          </div>
+        </div>
+      </header>
+      <div class="menu menu--admin --desktop"> 
+        <div class="menu__content">
+          <div class="menu__top"> 
+            <div class="admin__logo"> <img src="./assets/img/admin/logo.png" alt=""></div>
+            <div class="menu__message tooltip tooltip--message --left notification active">
+              <div class="tooltip__panel">
+                <div class="tooltip__head"> 
+                  <p class="text-medium-small">Уведомления</p>
+                </div>
+                    <div class="message">
+                      <div class="message__ico blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div>
+                      <div class="message__info">
+                        <div class="message__name">
+                          <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                          <p class="text-regular-big">на подтверждение</p>
+                        </div>
+                        <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+                      </div>
+                    </div>
+                    <div class="message">
+                      <div class="message__ico blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div>
+                      <div class="message__info">
+                        <div class="message__name">
+                          <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                          <p class="text-regular-big">на подтверждение</p>
+                        </div>
+                        <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+                      </div>
+                    </div>
+                    <div class="message">
+                      <div class="message__ico blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div>
+                      <div class="message__info">
+                        <div class="message__name">
+                          <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                          <p class="text-regular-big">на подтверждение</p>
+                        </div>
+                        <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+                      </div>
+                    </div>
+                    <div class="message">
+                      <div class="message__ico blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div>
+                      <div class="message__info">
+                        <div class="message__name">
+                          <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                          <p class="text-regular-big">на подтверждение</p>
+                        </div>
+                        <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+                      </div>
+                    </div>
+              </div>
+                  <svg class="svgsprite _notifications">
+                    <use xlink:href="assets/img/sprites/svgsprites.svg#notifications"></use>
+                  </svg>
+            </div>
+            <nav class="nav"><a class="nav__link" href="index.html"> 
+                    <svg class="svgsprite _header-manager-1">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-1"></use>
+                    </svg>Клин-тест</a><a class="nav__link" href="history.html"> 
+                    <svg class="svgsprite _header-manager-2">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-2"></use>
+                    </svg>Контрагенты</a><a class="nav__link" href="index.html"> 
+                    <svg class="svgsprite _header-manager-3">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-3"></use>
+                    </svg>Документы</a><a class="nav__link" href="history.html"> 
+                    <svg class="svgsprite _header-manager-4">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-4"></use>
+                    </svg>Сотрудники</a></nav>
+          </div>
+          <div class="menu__admin-user">
+            <div class="manager__avatar tooltip manager__tooltip">
+              <div class="manager__arrow"> <img src="./assets/img/admin/manager-arrow.svg" alt=""></div><img src="./assets/img/menu/manager.png" alt="">
+              <div class="tooltip__panel"><a class="admin-profile" href="#"> 
+                      <svg class="svgsprite _admin-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#admin-user"></use>
+                      </svg>Мой профиль</a>
+                <button class="admin-exit"> 
+                      <svg class="svgsprite _admin-exit">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#admin-exit"></use>
+                      </svg>Выйти
+                </button>
+              </div>
+            </div>
+            <p class="text-medium-small maneger__title">Максим Николаев</p>
+            <div class="--grey-1 text-regular-big" href="mailto:v.petrova@ximtek.ru">Логист</div>
+          </div>
+        </div>
+      </div>
+      <div class="menu --tablet">
+        <div class="menu__top"><a class="menu__logo" href="index.html"> <img src="./assets/img/menu/logo.png" alt=""></a>
+          <div class="user">
+            <div class="user__avatar"><img src="./assets/img/menu/user.png" alt=""></div>
+          </div>
+          <div class="menu__message tooltip tooltip--message --left notification active">
+            <div class="tooltip__panel">
+              <div class="tooltip__head"> 
+                <p class="text-medium-small">Уведомления</p>
+              </div>
+                  <div class="message">
+                    <div class="message__ico blue-ico">
+                          <svg class="svgsprite _order">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                          </svg>
+                    </div>
+                    <div class="message__info">
+                      <div class="message__name">
+                        <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                        <p class="text-regular-big">на подтверждение</p>
+                      </div>
+                      <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+                    </div>
+                  </div>
+                  <div class="message">
+                    <div class="message__ico blue-ico">
+                          <svg class="svgsprite _order">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                          </svg>
+                    </div>
+                    <div class="message__info">
+                      <div class="message__name">
+                        <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                        <p class="text-regular-big">на подтверждение</p>
+                      </div>
+                      <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+                    </div>
+                  </div>
+                  <div class="message">
+                    <div class="message__ico blue-ico">
+                          <svg class="svgsprite _order">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                          </svg>
+                    </div>
+                    <div class="message__info">
+                      <div class="message__name">
+                        <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                        <p class="text-regular-big">на подтверждение</p>
+                      </div>
+                      <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+                    </div>
+                  </div>
+                  <div class="message">
+                    <div class="message__ico blue-ico">
+                          <svg class="svgsprite _order">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                          </svg>
+                    </div>
+                    <div class="message__info">
+                      <div class="message__name">
+                        <p class="text-regular-big --ellipsis">Новый документ<a href="#">Акт заполненный.pdf 1234131231121412414</a></p>
+                        <p class="text-regular-big">на подтверждение</p>
+                      </div>
+                      <p class="text-regular-small --grey-3">14.05.21  02:27</p>
+                    </div>
+                  </div>
+            </div>
+                <svg class="svgsprite _notifications">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#notifications"></use>
+                </svg>
+          </div>
+              <button class="btn --add">
+                    <svg class="svgsprite _add">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#add"></use>
+                    </svg><span>Быстрый заказ</span>
+              </button>
+              <nav class="nav"><a class="nav__link" href="index.html"> 
+                      <svg class="svgsprite _home">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#home"></use>
+                      </svg>Главная</a><a class="nav__link" href="history.html"> 
+                      <svg class="svgsprite _clock">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#clock"></use>
+                      </svg>История заказов</a><a class="nav__link" href="finance.html"> 
+                      <svg class="svgsprite _dollar">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#dollar"></use>
+                      </svg>Финансы</a><a class="nav__link" href="docs.html"> 
+                      <svg class="svgsprite _documents">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#documents"></use>
+                      </svg>Документы</a><a class="nav__link" href="profile.html"> 
+                      <svg class="svgsprite _user-1">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#user-1"></use>
+                      </svg>Профиль</a></nav><a class="nav__link nav__link-exit" href="#"> 
+                <svg class="svgsprite _tablet-exit">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#tablet-exit"></use>
+                </svg></a>
+        </div>
+        <div class="menu__bottom">
+          <div class="menu__maneger tooltip tooltip--manager --left-bottom"> 
+            <div class="menu__maneger__btn">
+                  <svg class="svgsprite _meneger-info">
+                    <use xlink:href="assets/img/sprites/svgsprites.svg#meneger-info"></use>
+                  </svg>
+            </div>
+            <div class="tooltip__panel">
+              <p class="text-medium-small maneger__title">Ваш менеджер</p>
+              <div class="manager__avatar"><img src="./assets/img/menu/manager.png" alt=""></div>
+              <p class="manager__name text-medium-small">Петрова Василиса</p><a class="manager__email --grey-1 text-regular-big" href="mailto:v.petrova@ximtek.ru">v.petrova@ximtek.ru</a><a class="manager__phone --grey-1 text-regular-big" href="tel:88003333211">8 800 333-32-11</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu --mobile">
+        <div class="menu__bg -js-menu-close"></div>
+        <div class="menu__content">
+          <div class="menu__top"> 
+            <div class="user">
+              <div class="user__avatar"><img src="./assets/img/menu/user.png" alt=""></div>
+              <div class="user__text">
+                <p class="user__name text-medium-small">Максим Николаев</p>
+                <p class="user__company text-medium-small --grey-1">Quadralab</p>
+              </div>
+            </div>
+                <button class="btn --add">
+                      <svg class="svgsprite _add">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#add"></use>
+                      </svg><span>Быстрый заказ</span>
+                </button>
+                <nav class="nav"><a class="nav__link" href="index.html"> 
+                        <svg class="svgsprite _home">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#home"></use>
+                        </svg>Главная</a><a class="nav__link" href="history.html"> 
+                        <svg class="svgsprite _clock">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#clock"></use>
+                        </svg>История заказов</a><a class="nav__link" href="finance.html"> 
+                        <svg class="svgsprite _dollar">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#dollar"></use>
+                        </svg>Финансы</a><a class="nav__link" href="docs.html"> 
+                        <svg class="svgsprite _documents">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#documents"></use>
+                        </svg>Документы</a><a class="nav__link" href="profile.html"> 
+                        <svg class="svgsprite _user-1">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#user-1"></use>
+                        </svg>Профиль</a></nav><a class="nav__link nav__link-exit" href="#"> 
+                  <svg class="svgsprite _exit">
+                    <use xlink:href="assets/img/sprites/svgsprites.svg#exit"></use>
+                  </svg>Выйти</a>
+          </div>
+          <div class="menu__maneger">
+            <p class="text-medium-small maneger__title">Ваш менеджер</p>
+            <div class="menu__group">
+              <div class="manager__avatar"><img src="./assets/img/menu/manager.png" alt=""></div>
+              <div class="manager__info">
+                <p class="manager__name text-medium-small">Петрова Василиса</p><a class="manager__email --grey-1 text-regular-big" href="mailto:v.petrova@ximtek.ru">v.petrova@ximtek.ru</a><a class="manager__phone --grey-1 text-regular-big" href="tel:88003333211">8 800 333-32-11  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content content--admin">
+        <section class="section-grey">
+              <div class="content__header --back"><a class="back" href="#"> 
+                      <svg class="svgsprite _back">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#back"></use>
+                      </svg></a>
+                <h1>ООО “РосКосмос”</h1>
+              </div>
+          <div class="test"> 
+            <div class="test__nav"><a class="test__nav-link active" href="#">
+                <div class="test__nav-number">1 </div>Реквизиты компании </a><a class="test__nav-link" href="#"> 
+                <div class="test__nav-number">2</div>Основной документ </a><a class="test__nav-link" href="#"> 
+                <div class="test__nav-number">3</div>Заключение </a></div>
+            <form class="test__content">
+              <h2>Реквизиты</h2>
+              <div class="main__description">
+                <p class="text-regular-big">Заполните и проверьте реквизиты организации. Это важно для следующего этапа</p>
+              </div>
+              <div class="test__form">
+                    <div class="select"> 
+                      <div class="select__main">
+                        <input type="text" disabled placeholder="Выберите из существующих компаний">
+                      </div>
+                      <div class="select__drop"> 
+                        <div class="select__item"> 
+                          <div class="select__check"> 
+                                <svg class="svgsprite _select-check">
+                                  <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                                </svg><span>1</span>
+                          </div>
+                        </div>
+                        <div class="select__item"> 
+                          <div class="select__check"> 
+                                <svg class="svgsprite _select-check">
+                                  <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                                </svg><span>2</span>
+                          </div>
+                        </div>
+                        <div class="select__item"> 
+                          <div class="select__check"> 
+                                <svg class="svgsprite _select-check">
+                                  <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                                </svg><span>3</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                <h3>Данные</h3>
+                <div class="test__input">
+                  <div class="input__name">Название компании</div>
+                  <div class="input"> 
+                    <input type="text" value="ООО “Куадралаб”">
+                  </div>
+                </div>
+                <div class="test__input">
+                  <div class="input__name">ИНН</div>
+                  <div class="input"> 
+                    <input type="text" value="289900211100">
+                  </div>
+                </div>
+                <div class="test__input">
+                  <div class="input__name">КПП</div>
+                  <div class="input"> 
+                    <input type="text" value="8833-33220001">
+                  </div>
+                </div>
+                <div class="test__input">
+                  <div class="input__name">Банк</div>
+                  <div class="input"> 
+                    <input type="text" value="ООО “Тинькофф банк”">
+                  </div>
+                </div>
+                <div class="test__input">
+                  <div class="input__name">БИК</div>
+                  <div class="input"> 
+                    <input type="text" value="2223100">
+                  </div>
+                </div>
+                <div class="test__input">
+                  <div class="input__name">Р/С</div>
+                  <div class="input"> 
+                    <input type="text" value="828283900021">
+                  </div>
+                </div>
+                <div class="test__input">
+                  <div class="input__name">К/С</div>
+                  <div class="input"> 
+                    <input type="text" value="9332000113321">
+                  </div>
+                </div>
+                <div class="test__input">
+                  <div class="input__name">Факт. адрес</div>
+                  <div class="input"> 
+                    <input type="text" value="Москва. Красносельская ул. 23/1">
+                  </div>
+                </div>
+                <div class="test__input">
+                  <div class="input__name">Юр. адрес</div>
+                  <div class="input"> 
+                    <input type="text" value="Москва. Красносельская ул. 23/1">
+                  </div>
+                </div>
+                <div class="test__input">
+                  <div class="input__name">Адрес доставки</div>
+                  <div class="input"> 
+                    <input type="text" value="Москва. Красносельская ул. 23/1">
+                  </div>
+                </div>
+                <div class="test__input"></div>
+              </div>
+              <div class="test__btns"> 
+                    <button class="btn --large">Сохранить и далее</button>
+                <button class="cancel">Отменить</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="assets/js/vendors~main.bundle.js"></script>
+    <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+  </body>
+</html>
