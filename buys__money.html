@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Оформить заказ</title>
+    <title>Документы</title>
     <!--
     link(rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png")
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./assets/css/common.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   </head>
-  <body class="body">
+  <body class="body admin">
     <div class="mobile-popup --messages">
       <div class="mobile-popup__panel">
         <div class="mobile-popup__close -js-close-mobilepopup">
@@ -347,9 +347,10 @@
           </div>
         </div>
       </header>
-      <div class="menu --desktop"> <a class="menu__logo" href="index.html"> <img src="./assets/img/menu/logo.png" alt=""></a>
+      <div class="menu menu--admin --desktop"> 
         <div class="menu__content">
           <div class="menu__top"> 
+            <div class="admin__logo"> <img src="./assets/img/admin/logo.png" alt=""></div>
             <div class="menu__message tooltip tooltip--message --left notification active">
               <div class="tooltip__panel">
                 <div class="tooltip__head"> 
@@ -416,40 +417,36 @@
                     <use xlink:href="assets/img/sprites/svgsprites.svg#notifications"></use>
                   </svg>
             </div>
-            <div class="user">
-              <div class="user__avatar"><img src="./assets/img/menu/user.png" alt=""></div>
-              <p class="user__name text-medium-small">Максим Николаев</p>
-              <p class="user__company text-medium-small --grey-1">Quadralab</p>
-            </div>
-                <button class="btn --add">
-                      <svg class="svgsprite _add">
-                        <use xlink:href="assets/img/sprites/svgsprites.svg#add"></use>
-                      </svg><span>Быстрый заказ</span>
-                </button>
-                <nav class="nav"><a class="nav__link" href="index.html"> 
-                        <svg class="svgsprite _home">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#home"></use>
-                        </svg>Главная</a><a class="nav__link" href="history.html"> 
-                        <svg class="svgsprite _clock">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#clock"></use>
-                        </svg>История заказов</a><a class="nav__link" href="finance.html"> 
-                        <svg class="svgsprite _dollar">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#dollar"></use>
-                        </svg>Финансы</a><a class="nav__link" href="docs.html"> 
-                        <svg class="svgsprite _documents">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#documents"></use>
-                        </svg>Документы</a><a class="nav__link" href="profile.html"> 
-                        <svg class="svgsprite _user-1">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#user-1"></use>
-                        </svg>Профиль</a></nav><a class="nav__link nav__link-exit" href="#"> 
-                  <svg class="svgsprite _exit">
-                    <use xlink:href="assets/img/sprites/svgsprites.svg#exit"></use>
-                  </svg>Выйти</a>
+            <nav class="nav"><a class="nav__link" href="index.html"> 
+                    <svg class="svgsprite _header-manager-1">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-1"></use>
+                    </svg>Клин-тест</a><a class="nav__link" href="history.html"> 
+                    <svg class="svgsprite _header-manager-2">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-2"></use>
+                    </svg>Контрагенты</a><a class="nav__link" href="index.html"> 
+                    <svg class="svgsprite _header-manager-3">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-3"></use>
+                    </svg>Документы</a><a class="nav__link" href="history.html"> 
+                    <svg class="svgsprite _header-manager-4">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-4"></use>
+                    </svg>Сотрудники</a></nav>
           </div>
-          <div class="menu__maneger">
-            <p class="text-medium-small maneger__title">Ваш менеджер</p>
-            <div class="manager__avatar"><img src="./assets/img/menu/manager.png" alt=""></div>
-            <p class="manager__name text-medium-small">Петрова Василиса</p><a class="manager__email --grey-1 text-regular-big" href="mailto:v.petrova@ximtek.ru">v.petrova@ximtek.ru</a><a class="manager__phone --grey-1 text-regular-big" href="tel:88003333211">8 800 333-32-11</a>
+          <div class="menu__admin-user">
+            <div class="manager__avatar tooltip manager__tooltip">
+              <div class="manager__arrow"> <img src="./assets/img/admin/manager-arrow.svg" alt=""></div><img src="./assets/img/menu/manager.png" alt="">
+              <div class="tooltip__panel"><a class="admin-profile" href="#"> 
+                      <svg class="svgsprite _admin-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#admin-user"></use>
+                      </svg>Мой профиль</a>
+                <button class="admin-exit"> 
+                      <svg class="svgsprite _admin-exit">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#admin-exit"></use>
+                      </svg>Выйти
+                </button>
+              </div>
+            </div>
+            <p class="text-medium-small maneger__title">Максим Николаев</p>
+            <div class="--grey-1 text-regular-big" href="mailto:v.petrova@ximtek.ru">Логист</div>
           </div>
         </div>
       </div>
@@ -611,511 +608,174 @@
           </div>
         </div>
       </div>
-      <div class="content content--user">
+      <div class="content content--admin">
         <section>
-              <div class="content__header">
+              <div class="content__header --ico">
                 <div class="title"> 
-                  <h1>Оформить заказ</h1>
-                </div>
-                <div class="header__nav"><a class="button-catalog" href="arrange.html"> 
-                            <svg class="svgsprite _catalog-btn">
-                              <use xlink:href="assets/img/sprites/svgsprites.svg#catalog-btn"></use>
-                            </svg>Каталог</a><a class="button-basket" href="arrange.html"> 
-                            <svg class="svgsprite _basket">
-                              <use xlink:href="assets/img/sprites/svgsprites.svg#basket"></use>
-                            </svg>Корзина
-                        <div class="button-basket__summ">0</div></a>
+                  <div class="content-header-ico"> 
+                        <svg class="svgsprite _header-finance">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#header-finance"></use>
+                        </svg>
+                  </div>
+                  <h1>Поступление по счетам</h1>
                 </div>
               </div>
               <div class="search"> 
-                <input class="search__input" type="text" placeholder="Поиск по артиклу, наименованию">
+                <input class="search__input" type="text" placeholder="Поиск по договору">
                 <div class="search__ico"> 
                       <svg class="svgsprite _search">
                         <use xlink:href="assets/img/sprites/svgsprites.svg#search"></use>
                       </svg>
                 </div>
               </div>
-          <div class="head-select">
-            <div class="head-select__item">
-              <p class="text-medium-small">Сфера применения</p>
-                  <div class="select"> 
-                    <div class="select__main">
-                      <input id="calendar" type="text" placeholder="Выбрать">
-                    </div>
-                  </div>
-            </div>
-            <div class="head-select__item">
-              <p class="text-medium-small">Раздел каталога</p>
-                  <div class="select"> 
-                    <div class="select__main">
-                      <input type="text" disabled placeholder="Выбрать">
-                    </div>
-                    <div class="select__drop"> 
-                      <div class="select__item"> 
-                        <div class="select__check"> 
-                              <svg class="svgsprite _select-check">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                              </svg><span>Химические средства</span>
-                        </div>
-                      </div>
-                      <div class="select__item"> 
-                        <div class="select__check"> 
-                              <svg class="svgsprite _select-check">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                              </svg><span>Перчатки</span>
-                        </div>
-                      </div>
-                      <div class="select__item"> 
-                        <div class="select__check"> 
-                              <svg class="svgsprite _select-check">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                              </svg><span>Средства обработки</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          </div>
-          <div class="filter-mobile -js-open-history">
-                <svg class="svgsprite _filter">
-                  <use xlink:href="assets/img/sprites/svgsprites.svg#filter"></use>
-                </svg>Фильтры
-          </div>
-          <div class="table-scroll">
-            <table class="table table-place" style="min-width: 1050px">
+          <div class="table-scroll table-scroll-admin">
+            <table class="table table-buy-money table-admin table-ico">
               <thead>
                 <tr>
-                  <td>Товар</td>
-                  <td>Док.</td>
-                  <td>Ед изм.</td>
-                  <td>Кратн.</td>
-                  <td>На складе</td>
-                  <td>Характеристики</td>
-                  <td>Кол-во</td>
+                  <td>Счет</td>
+                  <td>Информация</td>
+                  <td>Организация</td>
+                  <td>ИНН</td>
+                  <td>Дата создания</td>
+                  <td>Сумма счета</td>
+                  <td>Пополнение</td>
+                  <td>Статус оплаты</td>
                 </tr>
               </thead>
               <tbody> 
-                <tr> 
+                <tr>
                   <td>
-                    <div class="--flex --aicn">
-                      <div class="order__pic"> <img src="./assets/img/orders/1.jpg" alt=""></div>
-                      <div class="table__info">
-                        <div class="text-regular-big">Антибактериальные коврики</div>
-                        <div class="text-regular-big --grey-1">330100</div>
-                      </div>
+                    <div class="ico-text">
+                      <div class="blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div><a class="link">INV - 1001</a>
                     </div>
                   </td>
-                  <td><a class="btn-download" href="#" download> 
-                              <svg class="svgsprite _download">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
-                              </svg><span></span></a>
+                  <td> 
+                        <button class="btn --gray">Подробнее</button>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">ООО “РосКосмос”</div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big --grey-1">31032035698</div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">05.05.2021</div>
                   </td>
                   <td> 
-                    <div class="text-regular-big">500 шт</div>
+                    <div class="text-regular-big">23 990 ₽</div>
                   </td>
                   <td> 
-                    <div class="text-regular-big">100</div>
+                    <div class="text-regular-big --green">+ 12 320 ₽</div>
                   </td>
-                  <td>
-                        <div class="tag --green">Много</div>
-                  </td>
-                  <td>
-                    <div class="--flex">
-                          <div class="select"> 
-                            <div class="select__main">
-                              <input type="text" disabled placeholder="Цвет">
-                            </div>
-                            <div class="select__drop"> 
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>1</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>2</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>3</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="select"> 
-                            <div class="select__main">
-                              <input type="text" disabled placeholder="Размер">
-                            </div>
-                            <div class="select__drop"> 
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>1</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>2</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>3</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="--flex --jcsb">
-                          <div class="count"> 
-                            <div class="count__minus count__btn">
-                                  <svg class="svgsprite _minus">
-                                    <use xlink:href="assets/img/sprites/svgsprites.svg#minus"></use>
-                                  </svg>
-                            </div>
-                            <div class="count__input">
-                              <div class="count__description"></div>
-                              <input type="text" value="1">
-                            </div>
-                            <div class="count__plus count__btn">
-                                  <svg class="svgsprite _plus">
-                                    <use xlink:href="assets/img/sprites/svgsprites.svg#plus"></use>
-                                  </svg>
-                            </div>
-                          </div>
-                          <button class="btn --medium">В корзину</button>
+                  <td> 
+                    <div class="-js-open-addbuy">
+                          <button class="btn --medium">Внести оплату</button>
                     </div>
                   </td>
                 </tr>
-                <tr> 
+                <tr>
                   <td>
-                    <div class="--flex --aicn">
-                      <div class="order__pic"> <img src="./assets/img/orders/1.jpg" alt=""></div>
-                      <div class="table__info">
-                        <div class="text-regular-big">Антибактериальные коврики</div>
-                        <div class="text-regular-big --grey-1">330100</div>
-                      </div>
+                    <div class="ico-text">
+                      <div class="blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div><a class="link">INV - 1001</a>
                     </div>
                   </td>
-                  <td><a class="btn-download" href="#" download> 
-                              <svg class="svgsprite _download">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
-                              </svg><span></span></a>
+                  <td> 
+                        <button class="btn --gray">Подробнее</button>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">ООО “РосКосмос”</div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big --grey-1">31032035698</div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">05.05.2021</div>
                   </td>
                   <td> 
-                    <div class="text-regular-big">500 шт</div>
+                    <div class="text-regular-big">23 990 ₽</div>
                   </td>
                   <td> 
-                    <div class="text-regular-big">100</div>
+                    <div class="text-regular-big --green">+ 12 320 ₽</div>
                   </td>
-                  <td>
-                        <div class="tag --green">Много</div>
-                  </td>
-                  <td>
-                    <div class="--flex">
-                          <div class="select"> 
-                            <div class="select__main">
-                              <input type="text" disabled placeholder="Цвет">
-                            </div>
-                            <div class="select__drop"> 
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>1</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>2</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>3</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="select"> 
-                            <div class="select__main">
-                              <input type="text" disabled placeholder="Размер">
-                            </div>
-                            <div class="select__drop"> 
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>1</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>2</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>3</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="--flex --jcsb">
-                          <div class="count"> 
-                            <div class="count__minus count__btn">
-                                  <svg class="svgsprite _minus">
-                                    <use xlink:href="assets/img/sprites/svgsprites.svg#minus"></use>
-                                  </svg>
-                            </div>
-                            <div class="count__input">
-                              <div class="count__description"></div>
-                              <input type="text" value="1">
-                            </div>
-                            <div class="count__plus count__btn">
-                                  <svg class="svgsprite _plus">
-                                    <use xlink:href="assets/img/sprites/svgsprites.svg#plus"></use>
-                                  </svg>
-                            </div>
-                          </div>
-                          <button class="btn --medium">В корзину</button>
+                  <td> 
+                    <div class="-js-open-addbuy">
+                          <button class="btn --medium">Внести оплату</button>
                     </div>
                   </td>
                 </tr>
-                <tr> 
+                <tr>
                   <td>
-                    <div class="--flex --aicn">
-                      <div class="order__pic"> <img src="./assets/img/orders/1.jpg" alt=""></div>
-                      <div class="table__info">
-                        <div class="text-regular-big">Антибактериальные коврики</div>
-                        <div class="text-regular-big --grey-1">330100</div>
-                      </div>
+                    <div class="ico-text">
+                      <div class="blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div><a class="link">INV - 1001</a>
                     </div>
                   </td>
-                  <td><a class="btn-download" href="#" download> 
-                              <svg class="svgsprite _download">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
-                              </svg><span></span></a>
+                  <td> 
+                        <button class="btn --gray">Подробнее</button>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">ООО “РосКосмос”</div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big --grey-1">31032035698</div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">05.05.2021</div>
                   </td>
                   <td> 
-                    <div class="text-regular-big">500 шт</div>
+                    <div class="text-regular-big">23 990 ₽</div>
                   </td>
                   <td> 
-                    <div class="text-regular-big">100</div>
+                    <div class="text-regular-big --green">+ 12 320 ₽</div>
                   </td>
-                  <td>
-                        <div class="tag --green">Много</div>
-                  </td>
-                  <td>
-                    <div class="--flex">
-                          <div class="select"> 
-                            <div class="select__main">
-                              <input type="text" disabled placeholder="Цвет">
-                            </div>
-                            <div class="select__drop"> 
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>1</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>2</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>3</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="select"> 
-                            <div class="select__main">
-                              <input type="text" disabled placeholder="Размер">
-                            </div>
-                            <div class="select__drop"> 
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>1</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>2</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>3</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="--flex --jcsb">
-                          <div class="count"> 
-                            <div class="count__minus count__btn">
-                                  <svg class="svgsprite _minus">
-                                    <use xlink:href="assets/img/sprites/svgsprites.svg#minus"></use>
-                                  </svg>
-                            </div>
-                            <div class="count__input">
-                              <div class="count__description"></div>
-                              <input type="text" value="1">
-                            </div>
-                            <div class="count__plus count__btn">
-                                  <svg class="svgsprite _plus">
-                                    <use xlink:href="assets/img/sprites/svgsprites.svg#plus"></use>
-                                  </svg>
-                            </div>
-                          </div>
-                          <button class="btn --medium">В корзину</button>
+                  <td> 
+                    <div class="-js-open-addbuy">
+                          <button class="btn --medium">Внести оплату</button>
                     </div>
                   </td>
                 </tr>
-                <tr> 
+                <tr>
                   <td>
-                    <div class="--flex --aicn">
-                      <div class="order__pic"> <img src="./assets/img/orders/1.jpg" alt=""></div>
-                      <div class="table__info">
-                        <div class="text-regular-big">Антибактериальные коврики</div>
-                        <div class="text-regular-big --grey-1">330100</div>
-                      </div>
+                    <div class="ico-text">
+                      <div class="blue-ico">
+                            <svg class="svgsprite _order">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                            </svg>
+                      </div><a class="link">INV - 1001</a>
                     </div>
                   </td>
-                  <td><a class="btn-download" href="#" download> 
-                              <svg class="svgsprite _download">
-                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
-                              </svg><span></span></a>
+                  <td> 
+                        <button class="btn --gray">Подробнее</button>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">ООО “РосКосмос”</div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big --grey-1">31032035698</div>
+                  </td>
+                  <td>
+                    <div class="text-regular-big">05.05.2021</div>
                   </td>
                   <td> 
-                    <div class="text-regular-big">500 шт</div>
+                    <div class="text-regular-big">23 990 ₽</div>
                   </td>
                   <td> 
-                    <div class="text-regular-big">100</div>
+                    <div class="text-regular-big --green">+ 12 320 ₽</div>
                   </td>
-                  <td>
-                        <div class="tag --green">Много</div>
-                  </td>
-                  <td>
-                    <div class="--flex">
-                          <div class="select"> 
-                            <div class="select__main">
-                              <input type="text" disabled placeholder="Цвет">
-                            </div>
-                            <div class="select__drop"> 
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>1</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>2</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>3</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="select"> 
-                            <div class="select__main">
-                              <input type="text" disabled placeholder="Размер">
-                            </div>
-                            <div class="select__drop"> 
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>1</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>2</span>
-                                </div>
-                              </div>
-                              <div class="select__item"> 
-                                <div class="select__check"> 
-                                      <svg class="svgsprite _select-check">
-                                        <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
-                                      </svg><span>3</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="--flex --jcsb">
-                          <div class="count"> 
-                            <div class="count__minus count__btn">
-                                  <svg class="svgsprite _minus">
-                                    <use xlink:href="assets/img/sprites/svgsprites.svg#minus"></use>
-                                  </svg>
-                            </div>
-                            <div class="count__input">
-                              <div class="count__description"></div>
-                              <input type="text" value="1">
-                            </div>
-                            <div class="count__plus count__btn">
-                                  <svg class="svgsprite _plus">
-                                    <use xlink:href="assets/img/sprites/svgsprites.svg#plus"></use>
-                                  </svg>
-                            </div>
-                          </div>
-                          <button class="btn --medium">В корзину</button>
+                  <td> 
+                    <div class="-js-open-addbuy">
+                          <button class="btn --medium">Внести оплату</button>
                     </div>
                   </td>
                 </tr>
