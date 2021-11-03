@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Настройки аккаунта</title>
+    <title>Главная</title>
     <!--
     link(rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png")
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./assets/css/common.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   </head>
-  <body class="body">
+  <body class="body admin">
     <div class="mobile-popup --messages">
       <div class="mobile-popup__panel">
         <div class="mobile-popup__close -js-close-mobilepopup">
@@ -215,6 +215,64 @@
         </button>
       </div>
     </div>
+    <div class="popup --adduser"> 
+      <div class="popup__bg"></div>
+      <div class="popup__close -js-close-popup">
+            <svg class="svgsprite _mobile-popup-close">
+              <use xlink:href="assets/img/sprites/svgsprites.svg#mobile-popup-close"></use>
+            </svg>
+      </div>
+      <div class="popup__right-panel">
+        <div class="popup__head"> 
+          <h1>Добавить пользователя</h1>
+        </div>
+        <form class="popup__body"> 
+          <label class="add-avatar">
+            <input type="file">
+            <div class="add-avatar__pic"></div>
+            <div class="link">+ Загрузить фото</div>
+          </label>
+          <div class="popup__item">
+            <div class="profile__name text-regular-big">Имя</div>
+            <div class="profile__input input">
+              <input type="text" placeholder="Введите имя">
+            </div>
+          </div>
+          <div class="popup__item">
+            <div class="profile__name text-regular-big">Фамилия</div>
+            <div class="profile__input input">
+              <input type="text" placeholder="Введите фамилию">
+            </div>
+          </div>
+          <div class="popup__item">
+            <div class="profile__name text-regular-big">Отчество</div>
+            <div class="profile__input input">
+              <input type="text" placeholder="Введите отчество">
+            </div>
+          </div>
+          <div class="popup__50"> 
+            <div class="popup__item">
+              <div class="profile__name text-regular-big">телефон</div>
+              <div class="profile__input input">
+                <input type="text" placeholder="Телефон">
+              </div>
+            </div>
+            <div class="popup__item">
+              <div class="profile__name text-regular-big">Email</div>
+              <div class="profile__input input">
+                <input type="text" placeholder="example@mail.com">
+              </div>
+            </div>
+          </div>
+          <div class="popup__btns --flex --jcfe --aicn">
+            <button class="popup__cancel">Отменить</button>
+            <div class="popup__save">
+                  <button class="btn --medium">Сохранить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="content__wrap">
       <header class="header">
         <div class="header__left">
@@ -237,9 +295,10 @@
           </div>
         </div>
       </header>
-      <div class="menu --desktop"> <a class="menu__logo" href="index.html"> <img src="./assets/img/menu/logo.png" alt=""></a>
+      <div class="menu menu--admin --desktop"> 
         <div class="menu__content">
           <div class="menu__top"> 
+            <div class="admin__logo"> <img src="./assets/img/admin/logo.png" alt=""></div>
             <div class="menu__message tooltip tooltip--message --left notification active">
               <div class="tooltip__panel">
                 <div class="tooltip__head"> 
@@ -306,40 +365,30 @@
                     <use xlink:href="assets/img/sprites/svgsprites.svg#notifications"></use>
                   </svg>
             </div>
-            <div class="user">
-              <div class="user__avatar"><img src="./assets/img/menu/user.png" alt=""></div>
-              <p class="user__name text-medium-small">Максим Николаев</p>
-              <p class="user__company text-medium-small --grey-1">Quadralab</p>
-            </div>
-                <button class="btn --add">
-                      <svg class="svgsprite _add">
-                        <use xlink:href="assets/img/sprites/svgsprites.svg#add"></use>
-                      </svg><span>Быстрый заказ</span>
-                </button>
-                <nav class="nav"><a class="nav__link" href="index.html"> 
-                        <svg class="svgsprite _home">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#home"></use>
-                        </svg>Главная</a><a class="nav__link" href="history.html"> 
-                        <svg class="svgsprite _clock">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#clock"></use>
-                        </svg>История заказов</a><a class="nav__link" href="finance.html"> 
-                        <svg class="svgsprite _dollar">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#dollar"></use>
-                        </svg>Финансы</a><a class="nav__link" href="docs.html"> 
-                        <svg class="svgsprite _documents">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#documents"></use>
-                        </svg>Документы</a><a class="nav__link" href="profile.html"> 
-                        <svg class="svgsprite _user-1">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#user-1"></use>
-                        </svg>Профиль</a></nav><a class="nav__link nav__link-exit" href="#"> 
-                  <svg class="svgsprite _exit">
-                    <use xlink:href="assets/img/sprites/svgsprites.svg#exit"></use>
-                  </svg>Выйти</a>
+            <nav class="nav"><a class="nav__link" href="index.html"> 
+                    <svg class="svgsprite _logist-menu-1">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#logist-menu-1"></use>
+                    </svg>Адреса</a><a class="nav__link" href="history.html"> 
+                    <svg class="svgsprite _logist-menu-2">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#logist-menu-2"></use>
+                    </svg>Регионы доставки</a></nav>
           </div>
-          <div class="menu__maneger">
-            <p class="text-medium-small maneger__title">Ваш менеджер</p>
-            <div class="manager__avatar"><img src="./assets/img/menu/manager.png" alt=""></div>
-            <p class="manager__name text-medium-small">Петрова Василиса</p><a class="manager__email --grey-1 text-regular-big" href="mailto:v.petrova@ximtek.ru">v.petrova@ximtek.ru</a><a class="manager__phone --grey-1 text-regular-big" href="tel:88003333211">8 800 333-32-11</a>
+          <div class="menu__admin-user">
+            <div class="manager__avatar tooltip manager__tooltip">
+              <div class="manager__arrow"> <img src="./assets/img/admin/manager-arrow.svg" alt=""></div><img src="./assets/img/menu/manager.png" alt="">
+              <div class="tooltip__panel"><a class="admin-profile" href="#"> 
+                      <svg class="svgsprite _admin-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#admin-user"></use>
+                      </svg>Мой профиль</a>
+                <button class="admin-exit"> 
+                      <svg class="svgsprite _admin-exit">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#admin-exit"></use>
+                      </svg>Выйти
+                </button>
+              </div>
+            </div>
+            <p class="text-medium-small maneger__title">Максим Николаев</p>
+            <div class="--grey-1 text-regular-big" href="mailto:v.petrova@ximtek.ru">Логист</div>
           </div>
         </div>
       </div>
@@ -501,93 +550,96 @@
           </div>
         </div>
       </div>
-      <div class="content content--user">
+      <div class="content content--admin">
         <section>
               <div class="content__header --ico">
                 <div class="title"> 
                   <div class="content-header-ico"> 
-                        <svg class="svgsprite _header-user">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#header-user"></use>
+                        <svg class="svgsprite _header-flag">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#header-flag"></use>
                         </svg>
                   </div>
-                  <h1>Настройки аккаунта</h1>
-                </div>
-                <div class="header__nav"><a class="button-catalog" href="arrange.html"> 
-                            <svg class="svgsprite _catalog-btn">
-                              <use xlink:href="assets/img/sprites/svgsprites.svg#catalog-btn"></use>
-                            </svg>Каталог</a><a class="button-basket" href="arrange.html"> 
-                            <svg class="svgsprite _basket">
-                              <use xlink:href="assets/img/sprites/svgsprites.svg#basket"></use>
-                            </svg>Корзина
-                        <div class="button-basket__summ">0</div></a>
+                  <h1>Управление регионами доставки</h1>
                 </div>
               </div>
-          <div class="profile">
-                <div class="profile-menu"><a class="profile-menu__link active" href="profile.html">Профиль</a><a class="profile-menu__link" href="details.html">Реквизиты компании</a><a class="profile-menu__link" href="staff.html">Сотрудники</a></div>
-            <div class="profile__right">
-              <h2 class="profile__title">Профиль</h2>
-              <form class="profile__form">
-                <div class="profile__block"> 
-                  <div class="profile__form-left">
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Имя</div>
-                      <div class="profile__input input">
-                        <input type="text" value="Максим">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Фамилия</div>
-                      <div class="profile__input input">
-                        <input type="text" value="Николаем">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Телефон</div>
-                      <div class="profile__input input">
-                        <input type="text" value="+7 (903) 223-21-34">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Название компании</div>
-                      <div class="profile__input input">
-                        <input type="text" value="Quadralab">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Должность</div>
-                      <div class="profile__input input">
-                        <input type="text" value="Руководитель закупок">
-                      </div>
-                    </div>
-                    <div class="profile__btn"> 
-                          <button class="btn --medium">Сохранить изменения</button>
+          <div class="main__description">
+            <p class="text-regular-big">Это ваш личный кабинет. Посмотрите как пользоваться</p>
+          </div>
+          <h2 class="h2-admin">Области</h2>
+          <div class="region"> 
+            <div class="region__left">
+                  <div class="search"> 
+                    <input class="search__input" type="text" placeholder="Введите название">
+                    <div class="search__ico"> 
+                          <svg class="svgsprite _search">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#search"></use>
+                          </svg>
                     </div>
                   </div>
-                  <label class="add-avatar">
-                    <input type="file">
-                    <div class="add-avatar__pic"></div>
-                    <div class="link">+ Загрузить фото</div>
-                  </label>
+                  <button class="btn --medium">+ Добавить область</button>
+              <div class="profile-menu"><a class="profile-menu__link active" href="#">Белгородская область</a><a class="profile-menu__link" href="#">Воронежская область</a><a class="profile-menu__link" href="#">Курская область</a><a class="profile-menu__link" href="#">Дмитриевская область</a></div>
+            </div>
+            <div class="region__right">
+              <div class="region__item"> 
+                <div class="back back-region"> 
+                      <svg class="svgsprite _back">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#back"></use>
+                      </svg>
                 </div>
-                <div class="profile__block"> 
-                  <div class="profile__form-left">
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Email</div>
-                      <div class="profile__input input">
-                        <input type="text" disabled value="m.nikolaev@quadralab.ru">
-                      </div>
-                    </div>
-                  </div><a class="profile__link link" href="#"> Изменить email</a>
+                <div class="region__head">
+                  <h3>Белгородская область</h3>
+                      <button class="btn --medium">+ Добавить район</button>
                 </div>
-                <div class="profile__block"> 
-                  <div class="profile__form-left">
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Пароль</div>
-                      <div class="profile__text text-regular-big --grey-1">Измените свой текущий пароль</div>
-                    </div>
-                  </div><a class="profile__link link" href="#"> Изменить пароль</a>
+              </div>
+              <div class="region__item"> 
+                <div class="region__name text-regular-big">Дмитриевский район</div>
+                <div class="region__status"> 
+                      <div class="switch noactive"></div>
+                  <div class="switch__text">Доставка не осуществляется</div>
                 </div>
-              </form>
+              </div>
+              <div class="region__item"> 
+                <div class="region__name text-regular-big">Белоговский район</div>
+                <div class="region__status"> 
+                      <div class="switch active"></div>
+                  <div class="switch__text">Доставка осуществляется</div>
+                </div>
+              </div>
+              <div class="region__item"> 
+                <div class="region__name text-regular-big">Дмитриевский район</div>
+                <div class="region__status"> 
+                      <div class="switch noactive"></div>
+                  <div class="switch__text">Доставка не осуществляется</div>
+                </div>
+              </div>
+              <div class="region__item"> 
+                <div class="region__name text-regular-big">Белоговский район</div>
+                <div class="region__status"> 
+                      <div class="switch active"></div>
+                  <div class="switch__text">Доставка осуществляется</div>
+                </div>
+              </div>
+              <div class="region__item"> 
+                <div class="region__name text-regular-big">Дмитриевский район</div>
+                <div class="region__status"> 
+                      <div class="switch noactive"></div>
+                  <div class="switch__text">Доставка не осуществляется</div>
+                </div>
+              </div>
+              <div class="region__item"> 
+                <div class="region__name text-regular-big">Белоговский район</div>
+                <div class="region__status"> 
+                      <div class="switch active"></div>
+                  <div class="switch__text">Доставка осуществляется</div>
+                </div>
+              </div>
+              <div class="region__item"> 
+                <div class="region__name text-regular-big">Дмитриевский район</div>
+                <div class="region__status"> 
+                      <div class="switch noactive"></div>
+                  <div class="switch__text">Доставка не осуществляется</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

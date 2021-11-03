@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <title>Реквизиты компании</title>
+    <title>Корзина</title>
     <!--
     link(rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png")
@@ -213,6 +213,64 @@
                 <use xlink:href="assets/img/sprites/svgsprites.svg#clear-filter"></use>
               </svg>
         </button>
+      </div>
+    </div>
+    <div class="popup --adduser"> 
+      <div class="popup__bg"></div>
+      <div class="popup__close -js-close-popup">
+            <svg class="svgsprite _mobile-popup-close">
+              <use xlink:href="assets/img/sprites/svgsprites.svg#mobile-popup-close"></use>
+            </svg>
+      </div>
+      <div class="popup__right-panel">
+        <div class="popup__head"> 
+          <h1>Добавить пользователя</h1>
+        </div>
+        <form class="popup__body"> 
+          <label class="add-avatar">
+            <input type="file">
+            <div class="add-avatar__pic"></div>
+            <div class="link">+ Загрузить фото</div>
+          </label>
+          <div class="popup__item">
+            <div class="profile__name text-regular-big">Имя</div>
+            <div class="profile__input input">
+              <input type="text" placeholder="Введите имя">
+            </div>
+          </div>
+          <div class="popup__item">
+            <div class="profile__name text-regular-big">Фамилия</div>
+            <div class="profile__input input">
+              <input type="text" placeholder="Введите фамилию">
+            </div>
+          </div>
+          <div class="popup__item">
+            <div class="profile__name text-regular-big">Отчество</div>
+            <div class="profile__input input">
+              <input type="text" placeholder="Введите отчество">
+            </div>
+          </div>
+          <div class="popup__50"> 
+            <div class="popup__item">
+              <div class="profile__name text-regular-big">телефон</div>
+              <div class="profile__input input">
+                <input type="text" placeholder="Телефон">
+              </div>
+            </div>
+            <div class="popup__item">
+              <div class="profile__name text-regular-big">Email</div>
+              <div class="profile__input input">
+                <input type="text" placeholder="example@mail.com">
+              </div>
+            </div>
+          </div>
+          <div class="popup__btns --flex --jcfe --aicn">
+            <button class="popup__cancel">Отменить</button>
+            <div class="popup__save">
+                  <button class="btn --medium">Сохранить</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
     <div class="content__wrap">
@@ -503,14 +561,9 @@
       </div>
       <div class="content content--user">
         <section>
-              <div class="content__header --ico">
+              <div class="content__header">
                 <div class="title"> 
-                  <div class="content-header-ico"> 
-                        <svg class="svgsprite _header-user">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#header-user"></use>
-                        </svg>
-                  </div>
-                  <h1>Настройки аккаунта</h1>
+                  <h1>Корзина</h1>
                 </div>
                 <div class="header__nav"><a class="button-catalog" href="arrange.html"> 
                             <svg class="svgsprite _catalog-btn">
@@ -522,90 +575,412 @@
                         <div class="button-basket__summ">0</div></a>
                 </div>
               </div>
-          <div class="profile details">
-                <div class="profile-menu"><a class="profile-menu__link active" href="profile.html">Профиль</a><a class="profile-menu__link" href="details.html">Реквизиты компании</a><a class="profile-menu__link" href="staff.html">Сотрудники</a></div>
-            <div class="profile__right">
-              <h2 class="profile__title">Реквизиты компании</h2>
-              <form class="profile__form">
-                <div class="profile__block"> 
-                  <div class="profile__form-left">
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Название компании</div>
-                      <div class="profile__input input">
-                        <input type="text" value="ООО “Куадралаб”">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">ИНН</div>
-                      <div class="profile__input input">
-                        <input type="text" value="289900211100">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">КПП</div>
-                      <div class="profile__input input">
-                        <input type="text" value="8833-33220001">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Банк</div>
-                      <div class="profile__input input">
-                        <input type="text" value="ООО “Тинькофф банк”">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">БИК</div>
-                      <div class="profile__input input">
-                        <input type="text" value="2223100">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Р/С</div>
-                      <div class="profile__input input">
-                        <input type="text" value="828283900021">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">К/С</div>
-                      <div class="profile__input input">
-                        <input type="text" value="9332000113321">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Факт. адрес</div>
-                      <div class="profile__input input">
-                        <input type="text" value="Москва. Красносельская ул. 23/1">
-                      </div>
-                    </div>
-                    <div class="profile__item">
-                      <div class="profile__name text-regular-big">Юр. адрес</div>
-                      <div class="profile__input input">
-                        <input type="text" value="Москва. Красносельская ул. 23/1">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="profile__block"> 
-                  <h2 class="profile__title">Адреса доставки</h2>
-                  <div class="profile__address">
-                    <div class="profile__form-left">
-                      <div class="profile__item">
-                        <div class="profile__name text-regular-big">Адрес доставки</div>
-                        <div class="profile__input input">
-                          <input type="text" value="Москва. Красносельская ул. 23/1">
+          <form class="basket"> 
+            <div class="basket__left">
+              <h2>Оформление заказа</h2>
+              <div class="basket__form"> 
+                <div class="basket__item"> 
+                  <div class="basket__name">Договор</div>
+                  <div class="basket__content">
+                        <div class="select"> 
+                          <div class="select__main">
+                            <input type="text" disabled placeholder="Выберите договор">
+                          </div>
+                          <div class="select__drop"> 
+                            <div class="select__item"> 
+                              <div class="select__check"> 
+                                    <svg class="svgsprite _select-check">
+                                      <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                                    </svg><span>1</span>
+                              </div>
+                            </div>
+                            <div class="select__item"> 
+                              <div class="select__check"> 
+                                    <svg class="svgsprite _select-check">
+                                      <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                                    </svg><span>2</span>
+                              </div>
+                            </div>
+                            <div class="select__item"> 
+                              <div class="select__check"> 
+                                    <svg class="svgsprite _select-check">
+                                      <use xlink:href="assets/img/sprites/svgsprites.svg#select-check"></use>
+                                    </svg><span>3</span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                  </div>
+                </div>
+                <div class="basket__item"> 
+                  <div class="basket__name">Способ доставки</div>
+                  <div class="basket__content">
+                    <div class="radios"> 
+                      <label class="radio">
+                        <input type="radio" name="basket">
+                        <div class="radio__circle"></div>
+                        <div class="radio__text">Самовывоз (склад Белогород)</div>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="basket">
+                        <div class="radio__circle"></div>
+                        <div class="radio__text">Самовывоз (склад Воронеж)</div>
+                      </label>
+                      <label class="radio radio-checked">
+                        <input class="open-list" type="radio" name="basket">
+                        <div class="radio__circle"></div>
+                        <div class="radio__text">Выбрать из списка</div>
+                      </label>
+                      <div class="radios__inner"> 
+                        <label class="radio-inner">
+                          <input type="radio" name="basket__inner">
+                          <div class="radio__circle"></div>
+                          <div class="radio__text">Москва Разумова улица 3</div>
+                        </label>
+                        <label class="radio-inner">
+                          <input type="radio" name="basket__inner">
+                          <div class="radio__circle"></div>
+                          <div class="radio__text">Москва Нижний перулок 25/1</div>
+                        </label>
                       </div>
-                    </div><a class="status-point --red profile__status">Доставка не осуществляется</a>
-                  </div>
-                  <div class="add__adress">
-                        <button class="btn-add-transparent">+ Добавить адрес</button>
+                    </div>
                   </div>
                 </div>
-                <div class="profile__btn"> 
-                      <button class="btn --medium">Сохранить изменения</button>
+                <div class="basket__item"> 
+                  <div class="basket__name">Комментарий</div>
+                  <div class="basket__content">
+                    <textarea class="textarea" placeholder="Напишите комментарий к доставке"></textarea>
+                  </div>
                 </div>
-              </form>
+              </div>
             </div>
+            <div class="basket__right">
+              <div class="basket__panel"> 
+                <h2>Ваш заказ</h2>
+                <div class="--flex --jcsb">
+                  <div class="basket__panel-name">Итог</div>
+                  <div class="basket__panel-price">32 000 ₽ </div>
+                </div>
+                    <button class="btn --large">Оформить заказ</button>
+              </div>
+            </div>
+          </form>
+          <div class="table-scroll">
+            <table class="table table-place" style="min-width: 1050px">
+              <thead>
+                <tr>
+                  <td>Товар</td>
+                  <td>Док.</td>
+                  <td>Ед изм.</td>
+                  <td>Кратн.</td>
+                  <td>На складе</td>
+                  <td>Характеристики</td>
+                  <td>Кол-во</td>
+                </tr>
+              </thead>
+              <tbody> 
+                <tr> 
+                  <td>
+                    <div class="--flex --aicn">
+                      <div class="order__pic"> <img src="./assets/img/orders/1.jpg" alt=""></div>
+                      <div class="table__info">
+                        <div class="text-regular-big">Антибактериальные коврики</div>
+                        <div class="text-regular-big --grey-1">330100</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span></span></a>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big">500 шт</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big">100</div>
+                  </td>
+                  <td>
+                        <div class="tag --green">Много</div>
+                  </td>
+                  <td>
+                    <div class="--flex">
+                      <div class="input"> 
+                        <input type="text" value="Красный">
+                      </div>
+                      <div class="input"> 
+                        <input type="text" value="XL">
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="--flex --jcsb">
+                          <div class="count"> 
+                            <div class="count__minus count__btn">
+                                  <svg class="svgsprite _minus">
+                                    <use xlink:href="assets/img/sprites/svgsprites.svg#minus"></use>
+                                  </svg>
+                            </div>
+                            <div class="count__input">
+                              <div class="count__description"></div>
+                              <input type="text" value="1">
+                            </div>
+                            <div class="count__plus count__btn">
+                                  <svg class="svgsprite _plus">
+                                    <use xlink:href="assets/img/sprites/svgsprites.svg#plus"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                      <div class="basket__delete"> 
+                            <svg class="svgsprite _basket-delete">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#basket-delete"></use>
+                            </svg>Удалить
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td>
+                    <div class="--flex --aicn">
+                      <div class="order__pic"> <img src="./assets/img/orders/1.jpg" alt=""></div>
+                      <div class="table__info">
+                        <div class="text-regular-big">Антибактериальные коврики</div>
+                        <div class="text-regular-big --grey-1">330100</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span></span></a>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big">500 шт</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big">100</div>
+                  </td>
+                  <td>
+                        <div class="tag --green">Много</div>
+                  </td>
+                  <td>
+                    <div class="--flex">
+                      <div class="input"> 
+                        <input type="text" value="Красный">
+                      </div>
+                      <div class="input"> 
+                        <input type="text" value="XL">
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="--flex --jcsb">
+                          <div class="count"> 
+                            <div class="count__minus count__btn">
+                                  <svg class="svgsprite _minus">
+                                    <use xlink:href="assets/img/sprites/svgsprites.svg#minus"></use>
+                                  </svg>
+                            </div>
+                            <div class="count__input">
+                              <div class="count__description"></div>
+                              <input type="text" value="1">
+                            </div>
+                            <div class="count__plus count__btn">
+                                  <svg class="svgsprite _plus">
+                                    <use xlink:href="assets/img/sprites/svgsprites.svg#plus"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                      <div class="basket__delete"> 
+                            <svg class="svgsprite _basket-delete">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#basket-delete"></use>
+                            </svg>Удалить
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td>
+                    <div class="--flex --aicn">
+                      <div class="order__pic"> <img src="./assets/img/orders/1.jpg" alt=""></div>
+                      <div class="table__info">
+                        <div class="text-regular-big">Антибактериальные коврики</div>
+                        <div class="text-regular-big --grey-1">330100</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span></span></a>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big">500 шт</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big">100</div>
+                  </td>
+                  <td>
+                        <div class="tag --green">Много</div>
+                  </td>
+                  <td>
+                    <div class="--flex">
+                      <div class="input"> 
+                        <input type="text" value="Красный">
+                      </div>
+                      <div class="input"> 
+                        <input type="text" value="XL">
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="--flex --jcsb">
+                          <div class="count"> 
+                            <div class="count__minus count__btn">
+                                  <svg class="svgsprite _minus">
+                                    <use xlink:href="assets/img/sprites/svgsprites.svg#minus"></use>
+                                  </svg>
+                            </div>
+                            <div class="count__input">
+                              <div class="count__description"></div>
+                              <input type="text" value="1">
+                            </div>
+                            <div class="count__plus count__btn">
+                                  <svg class="svgsprite _plus">
+                                    <use xlink:href="assets/img/sprites/svgsprites.svg#plus"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                      <div class="basket__delete"> 
+                            <svg class="svgsprite _basket-delete">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#basket-delete"></use>
+                            </svg>Удалить
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td>
+                    <div class="--flex --aicn">
+                      <div class="order__pic"> <img src="./assets/img/orders/1.jpg" alt=""></div>
+                      <div class="table__info">
+                        <div class="text-regular-big">Антибактериальные коврики</div>
+                        <div class="text-regular-big --grey-1">330100</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span></span></a>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big">500 шт</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big">100</div>
+                  </td>
+                  <td>
+                        <div class="tag --green">Много</div>
+                  </td>
+                  <td>
+                    <div class="--flex">
+                      <div class="input"> 
+                        <input type="text" value="Красный">
+                      </div>
+                      <div class="input"> 
+                        <input type="text" value="XL">
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="--flex --jcsb">
+                          <div class="count"> 
+                            <div class="count__minus count__btn">
+                                  <svg class="svgsprite _minus">
+                                    <use xlink:href="assets/img/sprites/svgsprites.svg#minus"></use>
+                                  </svg>
+                            </div>
+                            <div class="count__input">
+                              <div class="count__description"></div>
+                              <input type="text" value="1">
+                            </div>
+                            <div class="count__plus count__btn">
+                                  <svg class="svgsprite _plus">
+                                    <use xlink:href="assets/img/sprites/svgsprites.svg#plus"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                      <div class="basket__delete"> 
+                            <svg class="svgsprite _basket-delete">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#basket-delete"></use>
+                            </svg>Удалить
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td>
+                    <div class="--flex --aicn">
+                      <div class="order__pic"> <img src="./assets/img/orders/1.jpg" alt=""></div>
+                      <div class="table__info">
+                        <div class="text-regular-big">Антибактериальные коврики</div>
+                        <div class="text-regular-big --grey-1">330100</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td><a class="btn-download" href="#" download> 
+                              <svg class="svgsprite _download">
+                                <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                              </svg><span></span></a>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big">500 шт</div>
+                  </td>
+                  <td> 
+                    <div class="text-regular-big">100</div>
+                  </td>
+                  <td>
+                        <div class="tag --green">Много</div>
+                  </td>
+                  <td>
+                    <div class="--flex">
+                      <div class="input"> 
+                        <input type="text" value="Красный">
+                      </div>
+                      <div class="input"> 
+                        <input type="text" value="XL">
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="--flex --jcsb">
+                          <div class="count"> 
+                            <div class="count__minus count__btn">
+                                  <svg class="svgsprite _minus">
+                                    <use xlink:href="assets/img/sprites/svgsprites.svg#minus"></use>
+                                  </svg>
+                            </div>
+                            <div class="count__input">
+                              <div class="count__description"></div>
+                              <input type="text" value="1">
+                            </div>
+                            <div class="count__plus count__btn">
+                                  <svg class="svgsprite _plus">
+                                    <use xlink:href="assets/img/sprites/svgsprites.svg#plus"></use>
+                                  </svg>
+                            </div>
+                          </div>
+                      <div class="basket__delete"> 
+                            <svg class="svgsprite _basket-delete">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#basket-delete"></use>
+                            </svg>Удалить
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
       </div>
