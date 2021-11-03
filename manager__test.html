@@ -366,12 +366,18 @@
                   </svg>
             </div>
             <nav class="nav"><a class="nav__link" href="index.html"> 
-                    <svg class="svgsprite _logist-menu-1">
-                      <use xlink:href="assets/img/sprites/svgsprites.svg#logist-menu-1"></use>
-                    </svg>Адреса</a><a class="nav__link" href="history.html"> 
-                    <svg class="svgsprite _logist-menu-2">
-                      <use xlink:href="assets/img/sprites/svgsprites.svg#logist-menu-2"></use>
-                    </svg>Регионы доставки</a></nav>
+                    <svg class="svgsprite _header-manager-1">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-1"></use>
+                    </svg>Клин-тест</a><a class="nav__link" href="history.html"> 
+                    <svg class="svgsprite _header-manager-2">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-2"></use>
+                    </svg>Контрагенты</a><a class="nav__link" href="index.html"> 
+                    <svg class="svgsprite _header-manager-3">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-3"></use>
+                    </svg>Документы</a><a class="nav__link" href="history.html"> 
+                    <svg class="svgsprite _header-manager-4">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#header-manager-4"></use>
+                    </svg>Сотрудники</a></nav>
           </div>
           <div class="menu__admin-user">
             <div class="manager__avatar tooltip manager__tooltip">
@@ -552,16 +558,19 @@
       </div>
       <div class="content content--admin">
         <section>
-              <div class="content__header --ico">
-                <div class="title"> 
-                  <div class="content-header-ico"> 
-                        <svg class="svgsprite _header-logist-adress">
-                          <use xlink:href="assets/img/sprites/svgsprites.svg#header-logist-adress"></use>
-                        </svg>
+          <div class="header__flex">
+                <div class="content__header --ico">
+                  <div class="title"> 
+                    <div class="content-header-ico"> 
+                          <svg class="svgsprite _header-test">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#header-test"></use>
+                          </svg>
+                    </div>
+                    <h1>Клин-тесты</h1>
                   </div>
-                  <h1>Подтверждение адресов</h1>
                 </div>
-              </div>
+                <button class="btn --medium">+ Новый клин-тест</button>
+          </div>
               <div class="search"> 
                 <input class="search__input" type="text" placeholder="Введите ИНН или название организации...">
                 <div class="search__ico"> 
@@ -570,18 +579,19 @@
                       </svg>
                 </div>
               </div>
-          <table class="table table-admin table-ico">
+          <table class="table table-admin table-ico table-test">
             <thead>
               <tr>
-                <td>Организация</td>
+                <td>Заказ</td>
                 <td>ИНН</td>
-                <td>Дата добавления</td>
-                <td>Адрес</td>
+                <td>ФИО</td>
+                <td>Дата создания</td>
+                <td>Документ</td>
                 <td>Статус</td>
               </tr>
             </thead>
             <tbody> 
-              <tr class="new">
+              <tr>
                 <td>
                   <div class="ico-text">
                     <div class="blue-ico">
@@ -596,26 +606,23 @@
                   <div class="text-regular-big --grey-3">31032035698</div>
                 </td>
                 <td>
+                  <div class="text-regular-big">Максимов Д.п.</div>
+                </td>
+                <td>
                   <div class="text-regular-big">05.05.2021</div>
                 </td>
                 <td>
-                  <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+                  <button class="form__edit">
+                        <svg class="svgsprite _blue-edit">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#blue-edit"></use>
+                        </svg>Редактировать
+                  </button>
                 </td>
                 <td>
-                  <div class="select select-content"> 
-                    <div class="select__main"> <span>Выбрать</span></div>
-                    <div class="select__drop"> 
-                      <div class="select__item-content">
-                        <div class="status-point --red">Доставка не осуществляется</div>
-                      </div>
-                      <div class="select__item-content">
-                        <div class="status-point --green">Доставка осуществляется</div>
-                      </div>
-                    </div>
-                  </div>
+                      <button class="btn --medium">Отправить</button>
                 </td>
               </tr>
-              <tr class="new">
+              <tr>
                 <td>
                   <div class="ico-text">
                     <div class="blue-ico">
@@ -630,26 +637,23 @@
                   <div class="text-regular-big --grey-3">31032035698</div>
                 </td>
                 <td>
+                  <div class="text-regular-big">Максимов Д.п.</div>
+                </td>
+                <td>
                   <div class="text-regular-big">05.05.2021</div>
                 </td>
                 <td>
-                  <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+                  <button class="form__edit">
+                        <svg class="svgsprite _blue-edit">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#blue-edit"></use>
+                        </svg>Редактировать
+                  </button>
                 </td>
                 <td>
-                  <div class="select select-content"> 
-                    <div class="select__main"> <span>Выбрать</span></div>
-                    <div class="select__drop"> 
-                      <div class="select__item-content">
-                        <div class="status-point --red">Доставка не осуществляется</div>
-                      </div>
-                      <div class="select__item-content">
-                        <div class="status-point --green">Доставка осуществляется</div>
-                      </div>
-                    </div>
-                  </div>
+                      <button class="btn --medium">Отправить</button>
                 </td>
               </tr>
-              <tr class="new">
+              <tr>
                 <td>
                   <div class="ico-text">
                     <div class="blue-ico">
@@ -664,22 +668,23 @@
                   <div class="text-regular-big --grey-3">31032035698</div>
                 </td>
                 <td>
+                  <div class="text-regular-big">Максимов Д.п.</div>
+                </td>
+                <td>
                   <div class="text-regular-big">05.05.2021</div>
                 </td>
                 <td>
-                  <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+                  <button class="form__edit">
+                        <svg class="svgsprite _blue-edit">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#blue-edit"></use>
+                        </svg>Редактировать
+                  </button>
                 </td>
                 <td>
-                  <div class="select select-content"> 
-                    <div class="select__main"> <span>Выбрать</span></div>
-                    <div class="select__drop"> 
-                      <div class="select__item-content">
-                        <div class="status-point --red">Доставка не осуществляется</div>
-                      </div>
-                      <div class="select__item-content">
-                        <div class="status-point --green">Доставка осуществляется</div>
-                      </div>
-                    </div>
+                  <div class="shipped">
+                        <svg class="svgsprite _grey-check">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#grey-check"></use>
+                        </svg>Отправлено
                   </div>
                 </td>
               </tr>
@@ -698,24 +703,21 @@
                   <div class="text-regular-big --grey-3">31032035698</div>
                 </td>
                 <td>
+                  <div class="text-regular-big">Максимов Д.п.</div>
+                </td>
+                <td>
                   <div class="text-regular-big">05.05.2021</div>
                 </td>
-                <td>
-                  <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+                <td><a class="btn-download" href="#" download> 
+                            <svg class="svgsprite _download">
+                              <use xlink:href="assets/img/sprites/svgsprites.svg#download"></use>
+                            </svg><span>PDF</span></a>
                 </td>
                 <td>
-                  <div class="select select-content"> 
-                    <div class="select__main"> 
-                      <div class="status-point --red">Доставка не осуществляется</div>
-                    </div>
-                    <div class="select__drop"> 
-                      <div class="select__item-content">
-                        <div class="status-point --red">Доставка не осуществляется</div>
-                      </div>
-                      <div class="select__item-content">
-                        <div class="status-point --green">Доставка осуществляется</div>
-                      </div>
-                    </div>
+                  <div class="shipped">
+                        <svg class="svgsprite _grey-check">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#grey-check"></use>
+                        </svg>Отправлено
                   </div>
                 </td>
               </tr>
@@ -734,24 +736,58 @@
                   <div class="text-regular-big --grey-3">31032035698</div>
                 </td>
                 <td>
+                  <div class="text-regular-big">Максимов Д.п.</div>
+                </td>
+                <td>
                   <div class="text-regular-big">05.05.2021</div>
                 </td>
                 <td>
-                  <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+                  <button class="form__edit">
+                        <svg class="svgsprite _blue-edit">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#blue-edit"></use>
+                        </svg>Редактировать
+                  </button>
                 </td>
                 <td>
-                  <div class="select select-content"> 
-                    <div class="select__main"> 
-                      <div class="status-point --green">Доставка осуществляется</div>
+                  <div class="shipped">
+                        <svg class="svgsprite _grey-check">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#grey-check"></use>
+                        </svg>Отправлено
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ico-text">
+                    <div class="blue-ico">
+                          <svg class="svgsprite _order">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                          </svg>
                     </div>
-                    <div class="select__drop"> 
-                      <div class="select__item-content">
-                        <div class="status-point --red">Доставка не осуществляется</div>
-                      </div>
-                      <div class="select__item-content">
-                        <div class="status-point --green">Доставка осуществляется</div>
-                      </div>
-                    </div>
+                    <div class="text-regular-big">ООО “Информационные технологии”</div>
+                  </div>
+                </td>
+                <td>
+                  <div class="text-regular-big --grey-3">31032035698</div>
+                </td>
+                <td>
+                  <div class="text-regular-big">Максимов Д.п.</div>
+                </td>
+                <td>
+                  <div class="text-regular-big">05.05.2021</div>
+                </td>
+                <td>
+                  <button class="form__edit">
+                        <svg class="svgsprite _blue-edit">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#blue-edit"></use>
+                        </svg>Редактировать
+                  </button>
+                </td>
+                <td>
+                  <div class="shipped">
+                        <svg class="svgsprite _grey-check">
+                          <use xlink:href="assets/img/sprites/svgsprites.svg#grey-check"></use>
+                        </svg>Отправлено
                   </div>
                 </td>
               </tr>

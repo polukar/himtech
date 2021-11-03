@@ -1663,6 +1663,11 @@ p a {
   height: 21px;
 }
 
+.svgsprite._blue-edit {
+  width: 19px;
+  height: 19px;
+}
+
 .svgsprite._catalog-btn {
   width: 16px;
   height: 8px;
@@ -1748,6 +1753,11 @@ p a {
   height: 18px;
 }
 
+.svgsprite._grey-check {
+  width: 11px;
+  height: 8px;
+}
+
 .svgsprite._header-finance {
   width: 12px;
   height: 21px;
@@ -1768,9 +1778,34 @@ p a {
   height: 16px;
 }
 
+.svgsprite._header-manager-1 {
+  width: 21px;
+  height: 22px;
+}
+
+.svgsprite._header-manager-2 {
+  width: 19px;
+  height: 19px;
+}
+
+.svgsprite._header-manager-3 {
+  width: 23px;
+  height: 23px;
+}
+
+.svgsprite._header-manager-4 {
+  width: 19px;
+  height: 19px;
+}
+
 .svgsprite._header-orders {
   width: 15px;
   height: 17px;
+}
+
+.svgsprite._header-test {
+  width: 20px;
+  height: 20px;
 }
 
 .svgsprite._header-user {
@@ -3551,6 +3586,50 @@ tbody tr.new {
   margin-bottom: 14px;
 }
 
+.header__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 0 11px;
+  border: 1px solid #DEE4EB;
+  border-radius: 4px;
+  display: inline-block;
+  height: 30px;
+  font-size: 14px;
+  color: #506FDE;
+  white-space: nowrap;
+}
+
+.form__edit svg {
+  margin-right: 6px;
+}
+
+.table-admin .btn {
+  height: 30px;
+}
+
+.table-admin .btn-download {
+  width: 162px;
+  max-width: 162px;
+}
+
+.shipped {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  color: #6E7885;
+}
+
+.shipped svg {
+  margin-right: 11px;
+}
+
 @media (min-width: 980px) {
   .popup__close {
     right: 656px;
@@ -4095,6 +4174,21 @@ tbody tr.new {
     justify-content: flex-start;
   }
 
+  .header__flex .btn {
+    display: none;
+  }
+
+  .table-test tbody td:nth-last-child(1) {
+    display: inline-block;
+    padding: 0;
+    margin-left: -40px;
+  }
+
+  .table-test tbody td:nth-last-child(2) {
+    display: inline-block;
+    padding: 0;
+  }
+
   .region {
     position: relative;
   }
@@ -4233,6 +4327,14 @@ tbody tr.new {
 
   .n-footer__pays {
     margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 370px) {
+  .table-test tbody td:nth-last-child(1) {
+    display: block;
+    margin-left: 0px;
+    margin-top: 10px;
   }
 }
 /*# sourceMappingURL=maps/common.css.map */
