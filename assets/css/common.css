@@ -1797,6 +1797,11 @@ p a {
   height: 23px;
 }
 
+.svgsprite._header-contragent {
+  width: 20px;
+  height: 15px;
+}
+
 .svgsprite._header-finance {
   width: 12px;
   height: 21px;
@@ -4616,8 +4621,14 @@ tbody tr.new {
     width: 100%;
   }
 
+  .header__flex {
+    display: block;
+  }
+
   .header__flex .btn {
-    display: none;
+    margin-left: 50px;
+    margin-top: 16px;
+    margin-bottom: 24px;
   }
 
   .table-test tbody td:nth-last-child(1) {
