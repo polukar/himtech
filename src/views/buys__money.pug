@@ -1,0 +1,107 @@
+extends _includes/layout-manager
+
+block config
+  - var pagetitle = 'Документы';
+  - var bodyClass = '';
+block content
+  section
+    +header-ico('header-finance','Поступление по счетам')
+    +search('Поиск по договору')
+    .table-scroll.table-scroll-admin
+      table.table.table-buy-money.table-admin.table-ico
+        thead
+          tr
+            td Счет
+            td Информация
+            td Организация
+            td ИНН
+            td Дата создания
+            td Сумма счета
+            td Пополнение
+            td Статус оплаты
+        tbody 
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td 
+              +btn-gray('Подробнее')
+            td
+              .text-regular-big ООО “РосКосмос”
+            td
+              .text-regular-big.--grey-1 31032035698
+            td
+              .text-regular-big 05.05.2021
+            td 
+              .text-regular-big 23 990 ₽
+            td 
+              .text-regular-big.--green + 12 320 ₽
+            td 
+              .-js-open-addbuy
+                +btn-medium('Внести оплату')
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td 
+              +btn-gray('Подробнее')
+            td
+              .text-regular-big ООО “РосКосмос”
+            td
+              .text-regular-big.--grey-1 31032035698
+            td
+              .text-regular-big 05.05.2021
+            td 
+              .text-regular-big 23 990 ₽
+            td 
+              .text-regular-big.--green + 12 320 ₽
+            td 
+              .-js-open-addbuy
+                +btn-medium('Внести оплату')
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td 
+              +btn-gray('Подробнее')
+            td
+              .text-regular-big ООО “РосКосмос”
+            td
+              .text-regular-big.--grey-1 31032035698
+            td
+              .text-regular-big 05.05.2021
+            td 
+              .text-regular-big 23 990 ₽
+            td 
+              .text-regular-big.--green + 12 320 ₽
+            td 
+              .-js-open-addbuy
+                +btn-medium('Внести оплату')
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td 
+              +btn-gray('Подробнее')
+            td
+              .text-regular-big ООО “РосКосмос”
+            td
+              .text-regular-big.--grey-1 31032035698
+            td
+              .text-regular-big 05.05.2021
+            td 
+              .text-regular-big 23 990 ₽
+            td 
+              .text-regular-big.--green + 12 320 ₽
+            td 
+              .-js-open-addbuy
+                +btn-medium('Внести оплату')
+          

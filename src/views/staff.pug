@@ -1,0 +1,112 @@
+extends _includes/layout-user
+
+block config
+  - var pagetitle = 'Реквизиты компании';
+  - var bodyClass = '';
+block content
+  section
+    +content-header-ico('header-user', 'Настройки аккаунта')
+    .profile
+      +profile-menu()
+      .profile__right
+        .profile__head
+          h2 Сотрудники
+          .-js-open-adduser
+            +btn-medium('+ Добавить пользователя')
+        .table-scroll
+          table.table.table-history(style="min-width: 795px")
+            thead
+              tr
+                td Пользователь
+                td Почта
+                td Дата регистрации
+            tbody 
+              tr
+                td
+                  .ico-text
+                    .mr-svg
+                      +svgsprite('user')
+                    a.link Юрий Адмиралов м.
+                td
+                  .text-regular-big admiral.ud@yandex.ru
+                td
+                  .--flex.--jcsb.--aicn 
+                    .text-regular-big.--grey-1 05.05.2021
+                    .table__tooltip.tooltip 
+                      +svgsprite('table-edit')
+                      .tooltip__panel
+                        .table__edit
+                          button.btn-edit
+                            +svgsprite('edit')
+                            | Редактировать
+                        .table__delete
+                          button.btn-delete
+                            +svgsprite('delete')
+                            | Удалить
+              tr
+                td
+                  .ico-text
+                    .mr-svg
+                      +svgsprite('user')
+                    a.link Юрий Адмиралов м.
+                td
+                  .text-regular-big admiral.ud@yandex.ru
+                td
+                  .--flex.--jcsb.--aicn 
+                    .text-regular-big.--grey-1 05.05.2021
+                    .table__tooltip.tooltip 
+                      +svgsprite('table-edit')
+                      .tooltip__panel
+                        .table__edit
+                          button.btn-edit
+                            +svgsprite('edit')
+                            | Редактировать
+                        .table__delete
+                          button.btn-delete
+                            +svgsprite('delete')
+                            | Удалить
+              tr
+                td
+                  .ico-text
+                    .mr-svg
+                      +svgsprite('user')
+                    a.link Юрий Адмиралов м.
+                td
+                  .text-regular-big admiral.ud@yandex.ru
+                td
+                  .--flex.--jcsb.--aicn 
+                    .text-regular-big.--grey-1 05.05.2021
+                    .table__tooltip.tooltip 
+                      +svgsprite('table-edit')
+                      .tooltip__panel
+                        .table__edit
+                          button.btn-edit
+                            +svgsprite('edit')
+                            | Редактировать
+                        .table__delete
+                          button.btn-delete
+                            +svgsprite('delete')
+                            | Удалить
+              tr
+                td
+                  .ico-text
+                    .mr-svg
+                      +svgsprite('user')
+                    a.link Юрий Адмиралов м.
+                td
+                  .text-regular-big admiral.ud@yandex.ru
+                td
+                  .--flex.--jcsb.--aicn 
+                    .text-regular-big.--grey-1 05.05.2021
+                    .table__tooltip.tooltip 
+                      +svgsprite('table-edit')
+                      .tooltip__panel
+                        .table__edit
+                          button.btn-edit
+                            +svgsprite('edit')
+                            | Редактировать
+                        .table__delete
+                          button.btn-delete
+                            +svgsprite('delete')
+                            | Удалить
+

@@ -1,0 +1,102 @@
+.head-select{
+  display: flex;
+  margin-right: -24px;
+}
+
+.head-select__item{
+  width: calc(25% - 24px);
+  margin-right: 24px;
+  margin-bottom: 12px;
+  p{
+    margin-bottom: 8px;
+  }
+}
+
+.clear__filter{
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  color: $bg-primary;
+  svg{
+    margin-left: 8px;
+  }
+}
+
+
+.air-datepicker-nav--title{
+  font-weight: 600;
+  color: #18273A;
+  i{
+    font-weight: 600;
+    color: #18273A;
+  }
+}
+
+.air-datepicker-body--day-name{
+  color: rgba(28, 48, 74, 0.5);
+}
+
+.air-datepicker-cell.-selected-{
+  background-color: $bg-primary;
+  &:hover{
+    background-color: $bg-primary;
+
+  }
+}
+
+.air-datepicker-cell.-current-{
+  color: $bg-primary;
+}
+
+.mobile-popup{
+  h2{
+    margin-bottom: 24px;
+  }
+  .btn{
+    margin-top: 39px;
+  }
+  .clear__filter{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 25px;
+  }
+}
+
+.mobile-popup.--history{
+  .mobile-popup__panel{
+    padding: 27px 24px;
+  }
+}
+
+.filter-mobile{
+  width: 157px;
+  height: 42px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 1px solid #C6CFD7;
+  border-radius: 4px;
+  svg{
+    margin-right: 21px;
+    margin-left: -21px;
+  }
+}
+
+
+@media(max-width: 980px){
+  .clear__filter{
+    display: none;
+  }
+  .head-select{
+    display: none;
+  }
+  .head-select__item{
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .filter-mobile{
+    display: flex;
+  }
+}

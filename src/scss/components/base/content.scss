@@ -1,0 +1,70 @@
+/*
+Основной контейнер
+*/
+
+.content {
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+
+.content-white{
+    background-color: #fff;
+}
+
+.content__wrap{
+    display: flex;
+}
+
+.content--user{
+    width: calc(100% - 280px);
+    margin-left: 280px;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.content--admin{
+    width: calc(100% - 220px);
+    margin-left: 220px;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+
+
+.section-grey{
+    padding: 32px 52px;
+    background-color: $bg-gray-1;
+}
+
+section{
+    padding: 32px 52px;
+}
+
+
+@media(max-width: 1400px){
+    .content--user{
+        width: calc(100% - 58px);
+        margin-left: 58px;
+    }
+    .content--admin{
+        width: calc(100% - 58px);
+        margin-left: 58px;
+    }
+}
+
+@media(max-width: 980px){
+    .content--user,
+    .content--admin{
+        width: 100%;
+        margin-left: 0;
+    }
+    section,
+    .section-grey{
+        padding: 32px 24px;
+    }
+    .content__wrap{
+        display: block;
+    }
+}

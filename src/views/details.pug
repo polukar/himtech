@@ -1,0 +1,64 @@
+extends _includes/layout-user
+
+block config
+  - var pagetitle = 'Реквизиты компании';
+  - var bodyClass = '';
+block content
+  section
+    +content-header-ico('header-user', 'Настройки аккаунта')
+    .profile.details
+      +profile-menu()
+      .profile__right
+        h2.profile__title Реквизиты компании
+        form.profile__form
+          .profile__block 
+            .profile__form-left
+              .profile__item
+                .profile__name.text-regular-big Название компании
+                .profile__input.input
+                  input(type='text' value="ООО “Куадралаб”")
+              .profile__item
+                .profile__name.text-regular-big ИНН
+                .profile__input.input
+                  input(type='text' value="289900211100")
+              .profile__item
+                .profile__name.text-regular-big КПП
+                .profile__input.input
+                  input(type='text' value="8833-33220001")
+              .profile__item
+                .profile__name.text-regular-big Банк
+                .profile__input.input
+                  input(type='text' value="ООО “Тинькофф банк”")
+              .profile__item
+                .profile__name.text-regular-big БИК
+                .profile__input.input
+                  input(type='text' value="2223100")
+              .profile__item
+                .profile__name.text-regular-big Р/С
+                .profile__input.input
+                  input(type='text' value="828283900021")
+              .profile__item
+                .profile__name.text-regular-big К/С
+                .profile__input.input
+                  input(type='text' value="9332000113321")
+              .profile__item
+                .profile__name.text-regular-big Факт. адрес
+                .profile__input.input
+                  input(type='text' value="Москва. Красносельская ул. 23/1")
+              .profile__item
+                .profile__name.text-regular-big Юр. адрес
+                .profile__input.input
+                  input(type='text' value="Москва. Красносельская ул. 23/1")
+          .profile__block 
+            h2.profile__title Адреса доставки
+            .profile__address
+              .profile__form-left
+                .profile__item
+                  .profile__name.text-regular-big Адрес доставки
+                  .profile__input.input
+                    input(type='text' value="Москва. Красносельская ул. 23/1")
+              .status-point.--red.profile__status Доставка не осуществляется
+            .add__adress
+              +btn-add-transparent('+ Добавить адрес')
+          .profile__btn 
+            +btn-medium('Сохранить изменения')

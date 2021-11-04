@@ -1,0 +1,103 @@
+extends _includes/layout-manager
+
+block config
+  - var pagetitle = 'Главная';
+  - var bodyClass = '';
+block content
+  section
+    .header__flex
+      +header-ico('header-contragent','Контрагенты')
+      +btn-medium('+ Добавить контрагента')
+    +search('Введите ИНН или название организации...')
+    table.table.table-admin.table-ico.table-test
+      thead
+        tr
+          td Организация
+          td ИНН
+          td Дата создания
+          td Редактировать
+      tbody 
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать

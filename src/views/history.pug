@@ -1,0 +1,149 @@
+extends _includes/layout-user
+
+block config
+  - var pagetitle = 'История заказов';
+  - var bodyClass = '';
+block content
+  section
+    +content-header-ico('header-history', 'История заказов')
+    +search('Введите ИНН или название организации...')
+    .head-select
+      .head-select__item
+        p.text-medium-small Дата заказа
+        +calendar('Выбрать')
+      .head-select__item
+        p.text-medium-small Статус заказа
+        +select('Выбрать', 'Химические средства', 'Перчатки', 'Средства обработки')
+      .head-select__item
+        p.text-medium-small Договор
+        +select('Выбрать', '1', '2', '3')
+      .head-select__item
+        p.text-medium-small Статус оплаты
+        +select('Выбрать', '1', '2', '3')
+    button.clear__filter
+      | Сбросить фильтры
+      +svgsprite('clear-filter')
+    .filter-mobile.-js-open-history
+      +svgsprite('filter')
+      | Фильтры
+    .table-scroll
+      table.table.table-history(style="min-width: 795px")
+        thead
+          tr
+            td Заказ
+            td Договор
+            td Документ
+            td Дата заказа
+            td Дата отгрузки
+            td Статус
+            td Сумма
+        tbody 
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('progress', 'Ожидает оплаты')
+            td 
+              .price 9 200 ₽
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('progress', 'Ожидает оплаты')
+            td 
+              .price 9 200 ₽
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('progress', 'Ожидает оплаты')
+            td 
+              .price 9 200 ₽
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('progress', 'Ожидает оплаты')
+            td 
+              .price 9 200 ₽
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('progress', 'Ожидает оплаты')
+            td 
+              .price 9 200 ₽
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('progress', 'Ожидает оплаты')
+            td 
+              .price 9 200 ₽
+          

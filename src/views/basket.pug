@@ -1,0 +1,204 @@
+extends _includes/layout-user
+
+block config
+  - var pagetitle = 'Корзина';
+  - var bodyClass = '';
+block content
+  section
+    +content-header('Корзина')
+    form.basket 
+      .basket__left
+        h2 Оформление заказа
+        .basket__form 
+          .basket__item 
+            .basket__name Договор
+            .basket__content
+              +select('Выберите договор', '1', '2', '3')
+          .basket__item 
+            .basket__name Способ доставки
+            .basket__content
+              .radios 
+                label.radio
+                  input(type="radio" name="basket")
+                  .radio__circle
+                  .radio__text Самовывоз (склад Белогород)
+                label.radio
+                  input(type="radio" name="basket")
+                  .radio__circle
+                  .radio__text Самовывоз (склад Воронеж)
+                label.radio.radio-checked
+                  input.open-list(type="radio" name="basket")
+                  .radio__circle
+                  .radio__text Выбрать из списка
+                .radios__inner 
+                  label.radio-inner
+                    input(type="radio" name="basket__inner")
+                    .radio__circle
+                    .radio__text Москва Разумова улица 3
+                  label.radio-inner
+                    input(type="radio"  name="basket__inner")
+                    .radio__circle
+                    .radio__text Москва Нижний перулок 25/1
+          .basket__item 
+            .basket__name Комментарий
+            .basket__content
+              textarea.textarea(placeholder="Напишите комментарий к доставке")
+      .basket__right
+        .basket__panel 
+          h2 Ваш заказ
+          .--flex.--jcsb
+            .basket__panel-name Итог
+            .basket__panel-price 32 000 ₽ 
+          +btn-large('Оформить заказ')
+    .table-scroll
+      table.table.table-place(style="min-width: 1050px")
+        thead
+          tr
+            td Товар
+            td Док.
+            td Ед изм.
+            td Кратн.
+            td На складе
+            td Характеристики
+            td Кол-во
+        tbody 
+          tr 
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .table__info
+                  .text-regular-big Антибактериальные коврики
+                  .text-regular-big.--grey-1 330100
+            td
+              +btn-download('')
+            td 
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td
+              +tag('--green', 'Много')
+            td
+              .--flex
+                .input 
+                  input(type="text" value="Красный")
+                .input 
+                  input(type="text" value="XL")
+            td
+              .--flex.--jcsb
+                +count
+                .basket__delete 
+                  +svgsprite('basket-delete')
+                  | Удалить
+          tr 
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .table__info
+                  .text-regular-big Антибактериальные коврики
+                  .text-regular-big.--grey-1 330100
+            td
+              +btn-download('')
+            td 
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td
+              +tag('--green', 'Много')
+            td
+              .--flex
+                .input 
+                  input(type="text" value="Красный")
+                .input 
+                  input(type="text" value="XL")
+            td
+              .--flex.--jcsb
+                +count
+                .basket__delete 
+                  +svgsprite('basket-delete')
+                  | Удалить
+          tr 
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .table__info
+                  .text-regular-big Антибактериальные коврики
+                  .text-regular-big.--grey-1 330100
+            td
+              +btn-download('')
+            td 
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td
+              +tag('--green', 'Много')
+            td
+              .--flex
+                .input 
+                  input(type="text" value="Красный")
+                .input 
+                  input(type="text" value="XL")
+            td
+              .--flex.--jcsb
+                +count
+                .basket__delete 
+                  +svgsprite('basket-delete')
+                  | Удалить
+          tr 
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .table__info
+                  .text-regular-big Антибактериальные коврики
+                  .text-regular-big.--grey-1 330100
+            td
+              +btn-download('')
+            td 
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td
+              +tag('--green', 'Много')
+            td
+              .--flex
+                .input 
+                  input(type="text" value="Красный")
+                .input 
+                  input(type="text" value="XL")
+            td
+              .--flex.--jcsb
+                +count
+                .basket__delete 
+                  +svgsprite('basket-delete')
+                  | Удалить
+          tr 
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .table__info
+                  .text-regular-big Антибактериальные коврики
+                  .text-regular-big.--grey-1 330100
+            td
+              +btn-download('')
+            td 
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td
+              +tag('--green', 'Много')
+            td
+              .--flex
+                .input 
+                  input(type="text" value="Красный")
+                .input 
+                  input(type="text" value="XL")
+            td
+              .--flex.--jcsb
+                +count
+                .basket__delete 
+                  +svgsprite('basket-delete')
+                  | Удалить

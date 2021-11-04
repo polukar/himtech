@@ -1,0 +1,215 @@
+extends _includes/layout-logist
+
+block config
+  - var pagetitle = 'Главная';
+  - var bodyClass = '';
+block content
+  <section>
+    <div class="content__header --ico">
+      <div class="title"> 
+        <div class="content-header-ico"> 
+              <svg class="svgsprite _header-logist-adress">
+                <use xlink:href="assets/img/sprites/svgsprites.svg#header-logist-adress"></use>
+              </svg>
+        </div>
+        <h1>Подтверждение адресов</h1>
+      </div>
+    </div>
+    <div class="search"> 
+      <input class="search__input" type="text" placeholder="Введите ИНН или название организации...">
+      <div class="search__ico"> 
+            <svg class="svgsprite _search">
+              <use xlink:href="assets/img/sprites/svgsprites.svg#search"></use>
+            </svg>
+      </div>
+    </div>
+    <table class="table table-admin table-ico">
+      <thead>
+        <tr>
+          <td>Организация</td>
+          <td>ИНН</td>
+          <td>Дата добавления</td>
+          <td>Адрес</td>
+          <td>Статус</td>
+        </tr>
+      </thead>
+      <tbody> 
+        <tr class="new">
+          <td>
+            <div class="ico-text">
+              <div class="blue-ico">
+                    <svg class="svgsprite _order">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                    </svg>
+              </div>
+              <div class="text-regular-big">ООО “Информационные технологии”</div>
+            </div>
+          </td>
+          <td>
+            <div class="text-regular-big --grey-3">31032035698</div>
+          </td>
+          <td>
+            <div class="text-regular-big">05.05.2021</div>
+          </td>
+          <td>
+            <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+          </td>
+          <td>
+            <div class="select select-content"> 
+              <div class="select__main"> <span>Выбрать</span></div>
+              <div class="select__drop"> 
+                <div class="select__item-content">
+                  <div class="status-point --red">Доставка не осуществляется</div>
+                </div>
+                <div class="select__item-content">
+                  <div class="status-point --green">Доставка осуществляется</div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="new">
+          <td>
+            <div class="ico-text">
+              <div class="blue-ico">
+                    <svg class="svgsprite _order">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                    </svg>
+              </div>
+              <div class="text-regular-big">ООО “Информационные технологии”</div>
+            </div>
+          </td>
+          <td>
+            <div class="text-regular-big --grey-3">31032035698</div>
+          </td>
+          <td>
+            <div class="text-regular-big">05.05.2021</div>
+          </td>
+          <td>
+            <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+          </td>
+          <td>
+            <div class="select select-content"> 
+              <div class="select__main"> <span>Выбрать</span></div>
+              <div class="select__drop"> 
+                <div class="select__item-content">
+                  <div class="status-point --red">Доставка не осуществляется</div>
+                </div>
+                <div class="select__item-content">
+                  <div class="status-point --green">Доставка осуществляется</div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr class="new">
+          <td>
+            <div class="ico-text">
+              <div class="blue-ico">
+                    <svg class="svgsprite _order">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                    </svg>
+              </div>
+              <div class="text-regular-big">ООО “Информационные технологии”</div>
+            </div>
+          </td>
+          <td>
+            <div class="text-regular-big --grey-3">31032035698</div>
+          </td>
+          <td>
+            <div class="text-regular-big">05.05.2021</div>
+          </td>
+          <td>
+            <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+          </td>
+          <td>
+            <div class="select select-content"> 
+              <div class="select__main"> <span>Выбрать</span></div>
+              <div class="select__drop"> 
+                <div class="select__item-content">
+                  <div class="status-point --red">Доставка не осуществляется</div>
+                </div>
+                <div class="select__item-content">
+                  <div class="status-point --green">Доставка осуществляется</div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="ico-text">
+              <div class="blue-ico">
+                    <svg class="svgsprite _order">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                    </svg>
+              </div>
+              <div class="text-regular-big">ООО “Информационные технологии”</div>
+            </div>
+          </td>
+          <td>
+            <div class="text-regular-big --grey-3">31032035698</div>
+          </td>
+          <td>
+            <div class="text-regular-big">05.05.2021</div>
+          </td>
+          <td>
+            <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+          </td>
+          <td>
+            <div class="select select-content"> 
+              <div class="select__main"> 
+                <div class="status-point --red">Доставка не осуществляется</div>
+              </div>
+              <div class="select__drop"> 
+                <div class="select__item-content">
+                  <div class="status-point --red">Доставка не осуществляется</div>
+                </div>
+                <div class="select__item-content">
+                  <div class="status-point --green">Доставка осуществляется</div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="ico-text">
+              <div class="blue-ico">
+                    <svg class="svgsprite _order">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                    </svg>
+              </div>
+              <div class="text-regular-big">ООО “Информационные технологии”</div>
+            </div>
+          </td>
+          <td>
+            <div class="text-regular-big --grey-3">31032035698</div>
+          </td>
+          <td>
+            <div class="text-regular-big">05.05.2021</div>
+          </td>
+          <td>
+            <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+          </td>
+          <td>
+            <div class="select select-content"> 
+              <div class="select__main"> 
+                <div class="status-point --green">Доставка осуществляется</div>
+              </div>
+              <div class="select__drop"> 
+                <div class="select__item-content">
+                  <div class="status-point --red">Доставка не осуществляется</div>
+                </div>
+                <div class="select__item-content">
+                  <div class="status-point --green">Доставка осуществляется</div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+    

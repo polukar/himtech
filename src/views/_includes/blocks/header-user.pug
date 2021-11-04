@@ -1,0 +1,98 @@
+header.header
+  .header__left
+    .header__burger.-js-menu
+      +svgsprite('catalog-btn') 
+    .header__logo
+      img(src="./assets/img/menu/logo.png", alt="")
+  .header__right
+    .header__catalog Каталог
+    a.header__basket(href="basket.html") 
+      +svgsprite('basket-mobile')
+    .header__notification.notification.active.-js-open-messages
+      +svgsprite('notifications')
+.menu.--desktop 
+  a.menu__logo(href="index.html") 
+    img(src="./assets/img/menu/logo.png", alt="")
+  .menu__content
+    .menu__top 
+      .menu__message.tooltip.tooltip--message.--left.notification.active
+        .tooltip__panel
+          .tooltip__head 
+            p.text-medium-small Уведомления
+          +message
+          +message
+          +message
+          +message
+        +svgsprite('notifications')
+      .user
+        .user__avatar
+          img(src="./assets/img/menu/user.png", alt="")
+        p.user__name.text-medium-small Максим Николаев
+        p.user__company.text-medium-small.--grey-1 Quadralab
+      +btn-add('Быстрый заказ')
+      +nav
+      a.nav__link.nav__link-exit(href="#") 
+        +svgsprite('exit')
+        | Выйти
+    .menu__maneger
+      p.text-medium-small.maneger__title Ваш менеджер
+      .manager__avatar
+        img(src="./assets/img/menu/manager.png", alt="")
+      p.manager__name.text-medium-small Петрова Василиса
+      a.manager__email.--grey-1.text-regular-big(href="mailto:v.petrova@ximtek.ru") v.petrova@ximtek.ru
+      a.manager__phone.--grey-1.text-regular-big(href="tel:88003333211") 8 800 333-32-11
+.menu.--tablet
+  .menu__top
+    a.menu__logo(href="index.html") 
+      img(src="./assets/img/menu/logo.png", alt="")
+    .user
+      .user__avatar
+        img(src="./assets/img/menu/user.png", alt="")
+    .menu__message.tooltip.tooltip--message.--left.notification.active
+      .tooltip__panel
+        .tooltip__head 
+          p.text-medium-small Уведомления
+        +message
+        +message
+        +message
+        +message
+      +svgsprite('notifications')
+    +btn-add('Быстрый заказ')
+    +nav
+    a.nav__link.nav__link-exit(href="#") 
+      +svgsprite('tablet-exit')
+  .menu__bottom
+    .menu__maneger.tooltip.tooltip--manager.--left-bottom 
+      .menu__maneger__btn
+        +svgsprite('meneger-info')
+      .tooltip__panel
+        p.text-medium-small.maneger__title Ваш менеджер
+        .manager__avatar
+          img(src="./assets/img/menu/manager.png", alt="")
+        p.manager__name.text-medium-small Петрова Василиса
+        a.manager__email.--grey-1.text-regular-big(href="mailto:v.petrova@ximtek.ru") v.petrova@ximtek.ru
+        a.manager__phone.--grey-1.text-regular-big(href="tel:88003333211") 8 800 333-32-11
+.menu.--mobile
+  .menu__bg.-js-menu-close
+  .menu__content
+    .menu__top 
+      .user
+        .user__avatar
+          img(src="./assets/img/menu/user.png", alt="")
+        .user__text
+          p.user__name.text-medium-small Максим Николаев
+          p.user__company.text-medium-small.--grey-1 Quadralab
+      +btn-add('Быстрый заказ')
+      +nav
+      a.nav__link.nav__link-exit(href="#") 
+        +svgsprite('exit')
+        | Выйти
+    .menu__maneger
+      p.text-medium-small.maneger__title Ваш менеджер
+      .menu__group
+        .manager__avatar
+          img(src="./assets/img/menu/manager.png", alt="")
+        .manager__info
+          p.manager__name.text-medium-small Петрова Василиса
+          a.manager__email.--grey-1.text-regular-big(href="mailto:v.petrova@ximtek.ru") v.petrova@ximtek.ru
+          a.manager__phone.--grey-1.text-regular-big(href="tel:88003333211") 8 800 333-32-11  

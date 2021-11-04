@@ -1,0 +1,93 @@
+.ui-block{
+  padding-left: 30px;
+  padding-right: 30px;
+  .input__name{
+    margin-bottom: 8px;
+  }
+  p{
+    margin-bottom: 10px;
+  }
+  h1{
+    margin-bottom: 30px;
+  }
+  .status-point{
+    margin-bottom: 20px;
+  }
+
+  .content__header.--ico h1{
+    margin-bottom: 0px;
+  }
+
+  .menu{
+    position: relative;
+  }
+
+  .menu.--tablet{
+    display: block;
+    height: 100vh;
+    background-color: #141923;
+    width: 100%;
+    width: 58px;
+  }
+
+  .header-admin{
+    display: flex;
+    justify-content: space-between;
+    background-color: #141923;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 43px;
+    .header__catalog{
+      display: none;
+    }
+    .header__right{
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  
+
+  .menu.--mobile{
+    height: 100vh;
+    display: block;
+    position: relative;
+  }
+
+  .maneger__title,
+  .manager__name{
+    color: #fff;
+  }
+
+  .popup.--adduser {
+    position: relative;
+    height: 100vh;
+    display: block;
+  }
+}
+.ui-title{
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-bottom: 1px solid #DFE2E4;
+  margin-bottom: 60px;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.ui__colors{
+  display: flex;
+  margin-right: -32px;
+  margin-bottom: 70px;
+}
+
+.ui__color{
+  width: calc((100% / 6) - 32px);
+  margin-right: 32px;
+}
+
+.ui__color__panel{
+  height: 116px;
+  border-radius: 10px;
+  width: 100%;
+}

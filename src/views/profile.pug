@@ -1,0 +1,54 @@
+extends _includes/layout-user
+
+block config
+  - var pagetitle = 'Настройки аккаунта';
+  - var bodyClass = '';
+block content
+  section
+    +content-header-ico('header-user', 'Настройки аккаунта')
+    .profile
+      +profile-menu()
+      .profile__right
+        h2.profile__title Профиль
+        form.profile__form
+          .profile__block 
+            .profile__form-left
+              .profile__item
+                .profile__name.text-regular-big Имя
+                .profile__input.input
+                  input(type='text' value="Максим")
+              .profile__item
+                .profile__name.text-regular-big Фамилия
+                .profile__input.input
+                  input(type='text' value="Николаем")
+              .profile__item
+                .profile__name.text-regular-big Телефон
+                .profile__input.input
+                  input(type='text' value="+7 (903) 223-21-34")
+              .profile__item
+                .profile__name.text-regular-big Название компании
+                .profile__input.input
+                  input(type='text' value="Quadralab")
+              .profile__item
+                .profile__name.text-regular-big Должность
+                .profile__input.input
+                  input(type='text' value="Руководитель закупок")
+              .profile__btn 
+                +btn-medium('Сохранить изменения')
+            label.add-avatar
+              input(type="file")
+              .add-avatar__pic
+              .link + Загрузить фото
+          .profile__block 
+            .profile__form-left
+              .profile__item
+                .profile__name.text-regular-big Email
+                .profile__input.input
+                  input(type='text' disabled value="m.nikolaev@quadralab.ru")
+            a.profile__link.link(href="#")  Изменить email
+          .profile__block 
+            .profile__form-left
+              .profile__item
+                .profile__name.text-regular-big Пароль
+                .profile__text.text-regular-big.--grey-1 Измените свой текущий пароль
+            a.profile__link.link(href="#")  Изменить пароль

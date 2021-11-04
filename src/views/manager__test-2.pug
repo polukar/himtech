@@ -1,0 +1,55 @@
+extends _includes/layout-manager
+
+block config
+  - var pagetitle = 'Главная';
+  - var bodyClass = '';
+block content
+  section.section-grey
+    +header-back('ООО “РосКосмос”')
+    .test 
+      .test__nav
+        a.test__nav-link(href="#")
+          .test__nav-number 1 
+          | Реквизиты компании 
+        a.test__nav-link.active(href="#") 
+          .test__nav-number 2
+          | Основной документ 
+        a.test__nav-link(href="#") 
+          .test__nav-number 3
+          | Заключение 
+      form.test__content
+        h2 Основной документ
+        .main__description
+          p.text-regular-big Заполните и проверьте реквизиты организации. Это важно для следующего этапа
+        .test-form__grey 
+          .test-form-head 
+            h3 Средство 1
+          .test-form__block 
+            p.text-regular-small Средство
+            +select('Выберите средство', '1', '2', '3')
+          .test-form__block 
+            p.text-regular-small Задача
+            textarea.textarea.textarea-small(placeholder="Введите описание задачи")
+          .test-form__block 
+            p.text-regular-small Комментарий
+            textarea.textarea.textarea-medium(placeholder="Введите ваш комментарий")
+          .test-form__block
+            p.text-regular-small Фото
+            label.admin-file-load
+              input(type="file")
+              .admin-file-load__left
+                +svgsprite('file-load')
+                | Перетащите фотографии
+              .admin-file-load__right 
+                +btn-medium('Загрузить')
+            .file-loaded 
+              .file-loaded__pic
+                img(src="./assets/img/admin/file.jpg", alt="")
+              .file-loaded__name Средство хим защит 2.jpeg
+              .file-loaded__delete
+                +svgsprite('delete-file')
+        button.add-instrument + Добавить средство
+          
+        .test__btns 
+          +btn-large('Сохранить и далее')
+          button.cancel Отменить

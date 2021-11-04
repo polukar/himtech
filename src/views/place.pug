@@ -1,0 +1,127 @@
+extends _includes/layout-user
+
+block config
+  - var pagetitle = 'Оформить заказ';
+  - var bodyClass = '';
+block content
+  section
+    +content-header('Оформить заказ')
+    +search('Поиск по артиклу, наименованию')
+    .head-select
+      .head-select__item
+        p.text-medium-small Сфера применения
+        +calendar('Выбрать')
+      .head-select__item
+        p.text-medium-small Раздел каталога
+        +select('Выбрать', 'Химические средства', 'Перчатки', 'Средства обработки')
+    .filter-mobile.-js-open-history
+      +svgsprite('filter')
+      | Фильтры
+    .table-scroll
+      table.table.table-place(style="min-width: 1050px")
+        thead
+          tr
+            td Товар
+            td Док.
+            td Ед изм.
+            td Кратн.
+            td На складе
+            td Характеристики
+            td Кол-во
+        tbody 
+          tr 
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .table__info
+                  .text-regular-big Антибактериальные коврики
+                  .text-regular-big.--grey-1 330100
+            td
+              +btn-download('')
+            td 
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td
+              +tag('--green', 'Много')
+            td
+              .--flex
+                +select('Цвет', '1', '2', '3')
+                +select('Размер', '1', '2', '3')
+            td
+              .--flex.--jcsb
+                +count
+                +btn-medium('В корзину')
+          tr 
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .table__info
+                  .text-regular-big Антибактериальные коврики
+                  .text-regular-big.--grey-1 330100
+            td
+              +btn-download('')
+            td 
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td
+              +tag('--green', 'Много')
+            td
+              .--flex
+                +select('Цвет', '1', '2', '3')
+                +select('Размер', '1', '2', '3')
+            td
+              .--flex.--jcsb
+                +count
+                +btn-medium('В корзину')
+          tr 
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .table__info
+                  .text-regular-big Антибактериальные коврики
+                  .text-regular-big.--grey-1 330100
+            td
+              +btn-download('')
+            td 
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td
+              +tag('--green', 'Много')
+            td
+              .--flex
+                +select('Цвет', '1', '2', '3')
+                +select('Размер', '1', '2', '3')
+            td
+              .--flex.--jcsb
+                +count
+                +btn-medium('В корзину')
+          tr 
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .table__info
+                  .text-regular-big Антибактериальные коврики
+                  .text-regular-big.--grey-1 330100
+            td
+              +btn-download('')
+            td 
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td
+              +tag('--green', 'Много')
+            td
+              .--flex
+                +select('Цвет', '1', '2', '3')
+                +select('Размер', '1', '2', '3')
+            td
+              .--flex.--jcsb
+                +count
+                +btn-medium('В корзину')

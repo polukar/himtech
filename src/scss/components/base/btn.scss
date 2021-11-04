@@ -1,0 +1,127 @@
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.--large{
+    width: 100%;
+    height: 56px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 96.3%;
+    color: #fff;
+    background-color: $bg-primary;
+    border-radius: 4px;
+  }
+  &.--medium{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 37px;
+    border-radius: 4px;
+    background-color: $bg-primary;
+    color: #fff;
+    font-size: 14px;
+  }
+  &.--gray{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 37px;
+    border-radius: 4px;
+    background-color: #F1F5F9;
+    color: #506FDE;
+    font-size: 14px;
+  }
+  &.--add{
+    width: 100%;
+    height: 34px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    background-color: $bg-primary;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    svg{
+      margin-right: 14px;
+      margin-left: -25px;
+    }
+  }
+}
+
+
+
+.button-catalog{
+  width: 167px;
+  margin-right: 22px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: $bg-dark-light;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  svg{
+    margin-right: 25px;
+    margin-left: -25px;
+  }
+}
+
+.button-basket{
+  width: 144px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  border-left: 1px solid $font-gray-2;
+  svg{
+    margin-right: 9px;
+  }
+}
+
+.button-basket__summ{
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #EAEFF4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+
+.btn-download{
+  width: 100%;
+  max-width: 115px;
+  height: 28px;
+  background-color: $bg-gray-1;
+  border-radius: 5px;
+  font-size: 13px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg{
+    margin-right: 9px;
+  }
+}
+
+
+.btn-add-transparent{
+  height: 37px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #506FDE;
+  border: 1px solid #506FDE;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}

@@ -1,0 +1,167 @@
+mixin svgsprite(name)
+  svg(class="svgsprite _" + name)&attributes(attributes)
+    use(xlink:href="assets/img/sprites/svgsprites.svg#" + name)
+
+mixin count(description)
+  .count 
+    .count__minus.count__btn
+      +svgsprite('minus')
+    .count__input
+      .count__description=description
+      input(type="text" value="1")
+    .count__plus.count__btn
+      +svgsprite('plus')
+
+mixin tag(className, text)
+  .tag(class=className)=text
+
+mixin input(placeholderText, typeItem)
+  .input 
+    input(type=typeItem placeholder=placeholderText)
+    if block
+      block
+
+mixin btn-large(text)
+  button.btn.--large=text
+
+mixin btn-add(text)
+  button.btn.--add
+    +svgsprite('add')
+    span=text
+
+mixin btn-small(text)
+  button.btn.--small=text
+
+mixin btn-gray(text)
+  button.btn.--gray=text
+
+mixin btn-medium(text)
+  button.btn.--medium=text
+
+mixin nav
+  nav.nav
+    a.nav__link(href="index.html") 
+      +svgsprite('home')
+      | Главная
+    a.nav__link(href="history.html") 
+      +svgsprite('clock')
+      | История заказов
+    a.nav__link(href="finance.html") 
+      +svgsprite('dollar')
+      | Финансы
+    a.nav__link(href="docs.html") 
+      +svgsprite('documents')
+      | Документы
+    a.nav__link(href="profile.html") 
+      +svgsprite('user-1')
+      | Профиль
+
+mixin message 
+  .message
+    .message__ico.blue-ico
+      +svgsprite('order')
+    .message__info
+      .message__name
+        p.text-regular-big.--ellipsis
+          | Новый документ
+          a(href="#") Акт заполненный.pdf 1234131231121412414
+        p.text-regular-big на подтверждение
+      p.text-regular-small.--grey-3 14.05.21  02:27
+
+mixin header-nav
+  a.button-catalog(href="arrange.html") 
+    +svgsprite('catalog-btn')
+    | Каталог
+  a.button-basket(href="arrange.html") 
+    +svgsprite('basket')
+    | Корзина
+    .button-basket__summ 0
+
+mixin content-header(text)
+  .content__header
+    .title 
+      h1=text 
+    .header__nav
+      +header-nav
+
+mixin content-header-ico(ico,text)
+  .content__header.--ico
+    .title 
+      .content-header-ico 
+        +svgsprite(ico)
+      h1=text 
+    .header__nav
+      +header-nav
+
+mixin header-back(text)
+  .content__header.--back
+    a.back(href="#") 
+      +svgsprite('back')
+    h1=text 
+
+mixin header-ico(ico,text)
+  .content__header.--ico
+    .title 
+      .content-header-ico 
+        +svgsprite(ico)
+      h1=text 
+
+mixin status(ico, text)
+  .status
+    +svgsprite(ico)
+    span.text-regular-big=text
+
+mixin search(text)
+  .search 
+    input.search__input(type="text" placeholder=text)
+    .search__ico 
+      +svgsprite('search')
+  
+mixin btn-download(text)
+  a.btn-download(href="#" download) 
+    +svgsprite('download')
+    span=text
+
+mixin btn-add-transparent(text)
+  button.btn-add-transparent=text
+
+mixin select(placeholderText, ...items)
+  .select 
+    .select__main
+      input(type="text" disabled placeholder=placeholderText)
+    .select__drop 
+      each item in items
+        .select__item 
+          .select__check 
+            +svgsprite('select-check')
+            span=item
+
+mixin calendar(placeholderText)
+  .select 
+    .select__main
+      input#calendar(type="text" placeholder=placeholderText)
+
+mixin calendar-mobile(placeholderText)
+  .select 
+    .select__main
+      input#calendar-mobile(type="text" placeholder=placeholderText)
+
+mixin bloggers 
+  .blogger
+    a.blogger__link.blogger__prev(href="") 
+      +svgsprite('prev')
+    a.blogger__link.active(href="") 1
+    a.blogger__link(href="") 2
+    a.blogger__link(href="") 3
+    a.blogger__link(href="") 4
+    a.blogger__link.blogger__next(href="") 
+      +svgsprite('next')
+
+mixin profile-menu
+  .profile-menu
+    a.profile-menu__link.active(href="profile.html") Профиль
+    a.profile-menu__link(href="details.html") Реквизиты компании
+    a.profile-menu__link(href="staff.html") Сотрудники
+
+mixin switch(className)
+  .switch(class=className)

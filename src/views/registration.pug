@@ -1,0 +1,34 @@
+extends _includes/layout-enter
+
+block config
+  - var pagetitle = 'Каталог';
+  - var bodyClass = '';
+block content
+  .enter 
+    .enter__panel 
+      .enter__logo
+        img(src="./assets/img/enter/logo.png", alt="")
+      form.enter__form
+        h1.h1 Регистрация
+        +input('ФИО', 'text')
+        +input('Email', 'text')
+        +input('Телефон', 'text')
+        +input('Регион', 'text')
+        +input('Компания', 'text')
+        +input('Вид деятельности', 'text')
+        +input('ИНН', 'text')
+        +input('КПП', 'text')
+        +input('Адрес доставки', 'text')
+        +input('Комментарий', 'text')
+        label.checkbox.enter__checkbox
+          input.checkbox__input(type="checkbox")
+          .checkbox__text.text-regular-small
+            | Нажимая на кнопку “отправить”, я принимаю условия 
+            a(href="#") политики 
+            | и 
+            a(href="#") пользовательского соглашения
+        +btn-large('Зарегистрироваться')
+        .enter__description 
+          p.text-medium-small
+            | У вас есть аккаунт? 
+            a(href="enter.html")  Войти 

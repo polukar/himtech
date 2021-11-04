@@ -1,0 +1,85 @@
+extends _includes/layout-user
+
+block config
+  - var pagetitle = 'Финансы';
+  - var bodyClass = '';
+block content
+  section
+    +content-header-ico('header-finance', 'Финансы')
+    +search('Поиск по договору')
+    .table-scroll
+      table.table.table-history(style="min-width: 850px")
+        thead
+          tr
+            td Счет
+            td Дата создания
+            td Дата отгрузки
+            td Документ
+            td Статус оплаты
+            td Сумма
+        tbody 
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big 05.05.2021
+            td
+              .text-regular-big 06.05.2021
+            td.right-padding
+              +btn-download('PDF')
+            td 
+              +status('done', 'Оплачено')
+            td 
+              .price 9 200 ₽
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big 05.05.2021
+            td
+              .text-regular-big 06.05.2021
+            td.right-padding
+              +btn-download('PDF')
+            td 
+              +status('error', 'Отказ')
+            td 
+              .price 9 200 ₽
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big 05.05.2021
+            td
+              .text-regular-big 06.05.2021
+            td.right-padding
+              +btn-download('PDF')
+            td 
+              +status('progress', 'Ожидает оплаты')
+            td 
+              .price 9 200 ₽
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big 05.05.2021
+            td
+              .text-regular-big 06.05.2021
+            td.right-padding
+              +btn-download('PDF')
+            td 
+              +status('progress', 'Ожидает оплаты')
+            td 
+              .price 9 200 ₽
+          

@@ -1,0 +1,21 @@
+extends _includes/layout-enter
+
+block config
+  - var pagetitle = 'Каталог';
+  - var bodyClass = '';
+block content
+  .enter 
+    .enter__panel 
+      .enter__logo
+        img(src="./assets/img/enter/logo.png", alt="")
+      form.enter__form
+        h1.h1 Вход
+        +input('Email', 'text')
+        +input('Пароль', 'password')
+          .password-visible.-js-password
+            +svgsprite('eye')
+        +btn-large('Войти')
+        .enter__description 
+          p.text-medium-small
+            | У вас нет аккаунта?
+            a(href="registration.html")  Зарегистрироваться 

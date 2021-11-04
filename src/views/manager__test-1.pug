@@ -1,0 +1,70 @@
+extends _includes/layout-manager
+
+block config
+  - var pagetitle = 'Главная';
+  - var bodyClass = '';
+block content
+  section.section-grey
+    +header-back('ООО “РосКосмос”')
+    .test 
+      .test__nav
+        a.test__nav-link.active(href="#")
+          .test__nav-number 1 
+          | Реквизиты компании 
+        a.test__nav-link(href="#") 
+          .test__nav-number 2
+          | Основной документ 
+        a.test__nav-link(href="#") 
+          .test__nav-number 3
+          | Заключение 
+      form.test__content
+        h2 Реквизиты
+        .main__description
+          p.text-regular-big Заполните и проверьте реквизиты организации. Это важно для следующего этапа
+        .test__form
+          +select('Выберите из существующих компаний', '1', '2', '3')
+          h3 Данные
+          .test__input
+            .input__name Название компании
+            .input 
+              input(type="text" value="ООО “Куадралаб”")
+          .test__input
+            .input__name ИНН
+            .input 
+              input(type="text" value="289900211100")
+          .test__input
+            .input__name КПП
+            .input 
+              input(type="text" value="8833-33220001")
+          .test__input
+            .input__name Банк
+            .input 
+              input(type="text" value="ООО “Тинькофф банк”")
+          .test__input
+            .input__name БИК
+            .input 
+              input(type="text" value="2223100")
+          .test__input
+            .input__name Р/С
+            .input 
+              input(type="text" value="828283900021")
+          .test__input
+            .input__name К/С
+            .input 
+              input(type="text" value="9332000113321")
+          .test__input
+            .input__name Факт. адрес
+            .input 
+              input(type="text" value="Москва. Красносельская ул. 23/1")
+          .test__input
+            .input__name Юр. адрес
+            .input 
+              input(type="text" value="Москва. Красносельская ул. 23/1")
+          .test__input
+            .input__name Адрес доставки
+            .input 
+              input(type="text" value="Москва. Красносельская ул. 23/1")
+          .test__input
+        .test__btns 
+          +btn-large('Сохранить и далее')
+          button.cancel Отменить

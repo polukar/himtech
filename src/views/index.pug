@@ -1,0 +1,160 @@
+extends _includes/layout-user
+
+block config
+  - var pagetitle = 'Главная';
+  - var bodyClass = '';
+block content
+  section.section-grey
+    +content-header('Добрый день, Максим')
+    .main__description
+      p.text-regular-big Это ваш личный кабинет. Посмотрите как пользоваться
+      a.play-link(href="#")
+        +svgsprite('subtract') 
+        | Инструкция 
+    .main__panels
+      a.main__panel(href="#") 
+        .main__panel-ico
+          +svgsprite('main-panels-ico_1')
+        .text-medium-big Быстрый заказ
+      a.main__panel(href="#") 
+        .main__panel-ico
+          +svgsprite('main-panels-ico_2')
+        .text-medium-big Финансы
+      a.main__panel(href="#") 
+        .main__panel-ico
+          +svgsprite('main-panels-ico_3')
+        .text-medium-big Заказы
+      a.main__panel(href="#") 
+        .main__panel-ico
+          +svgsprite('main-panels-ico_4')
+        .text-medium-big Реквизиты
+  section.main__tables
+    .main__history
+      .page__title 
+        h2 Мои заказы
+        a.link(href="history.html") История заказов
+      .table-scroll
+        table.table.table-user(style="min-width: 474px")
+          thead
+            tr
+              td Заказ
+              td Статус
+              td Сумма
+          tbody 
+            tr
+              td
+                .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  .ico-text__info
+                    p.text-medium-small d2234-VV0
+                    p.text-medium-small.--grey-1 02.02.2021, 12:32
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+               .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  .ico-text__info
+                    p.text-medium-small d2234-VV0
+                    p.text-medium-small.--grey-1 02.02.2021, 12:32
+              td 
+                +status('done', 'Оплачено')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  .ico-text__info
+                    p.text-medium-small d2234-VV0
+                    p.text-medium-small.--grey-1 02.02.2021, 12:32
+              td 
+                +status('error', 'Отказ')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  .ico-text__info
+                    p.text-medium-small d2234-VV0
+                    p.text-medium-small.--grey-1 02.02.2021, 12:32
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  .ico-text__info
+                    p.text-medium-small d2234-VV0
+                    p.text-medium-small.--grey-1 02.02.2021, 12:32
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  .ico-text__info
+                    p.text-medium-small d2234-VV0
+                    p.text-medium-small.--grey-1 02.02.2021, 12:32
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+    .main__docs
+      .page__title 
+        h2 Мои документы
+        a.link(href="docs.html") Смотреть все
+      .main__doc
+        .main__doc-left 
+          .ico-text
+            .blue-ico
+              +svgsprite('document')
+            .ico-text__info
+              p.text-medium-small № kV232-XX1
+              a.link.--ellipsis(href="#") Акт выполненных работ Акт выполненных работ
+        .main__doc-right 
+          a.btn.--medium Подтвердить
+      .main__doc
+        .main__doc-left 
+          .ico-text
+            .blue-ico
+              +svgsprite('document')
+            .ico-text__info
+              p.text-medium-small № kV232-XX1
+              a.link.--ellipsis(href="#") Акт выполненных работ Акт выполненных работ
+        .main__doc-right 
+          a.btn.--medium Подтвердить
+      .main__doc
+        .main__doc-left 
+          .ico-text
+            .blue-ico
+              +svgsprite('document')
+            .ico-text__info
+              p.text-medium-small № kV232-XX1
+              a.link.--ellipsis(href="#") Акт выполненных работ Акт выполненных работ
+        .main__doc-right 
+          a.btn.--medium Подтвердить
+      .main__doc
+        .main__doc-left 
+          .ico-text
+            .blue-ico
+              +svgsprite('document')
+            .ico-text__info
+              p.text-medium-small № kV232-XX1
+              a.link.--ellipsis(href="#") Акт выполненных работ Акт выполненных работ
+        .main__doc-right 
+          a.btn.--medium Подтвердить
+ 

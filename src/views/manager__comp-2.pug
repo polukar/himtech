@@ -1,0 +1,57 @@
+extends _includes/layout-manager
+
+block config
+  - var pagetitle = 'Главная';
+  - var bodyClass = '';
+block content
+  section
+    +header-ico('header-user','Контрагенты')
+    .profile.details
+      .profile-menu
+        a.profile-menu__link(href="profile.html") Профиль
+        a.profile-menu__link.active(href="details.html") Реквизиты компании
+      .profile__right
+        h2.profile__title Реквизиты компании
+        form.profile__form
+          .profile__block 
+            .profile__form-left
+              .profile__item
+                .profile__name.text-regular-big Название компании
+                .profile__input.input
+                  input(type='text' value="ООО “Куадралаб”")
+              .profile__item
+                .profile__name.text-regular-big ИНН
+                .profile__input.input
+                  input(type='text' value="289900211100")
+              .profile__item
+                .profile__name.text-regular-big КПП
+                .profile__input.input
+                  input(type='text' value="8833-33220001")
+              .profile__item
+                .profile__name.text-regular-big Банк
+                .profile__input.input
+                  input(type='text' value="ООО “Тинькофф банк”")
+              .profile__item
+                .profile__name.text-regular-big БИК
+                .profile__input.input
+                  input(type='text' value="2223100")
+              .profile__item
+                .profile__name.text-regular-big Р/С
+                .profile__input.input
+                  input(type='text' value="828283900021")
+              .profile__item
+                .profile__name.text-regular-big К/С
+                .profile__input.input
+                  input(type='text' value="9332000113321")
+              .profile__item
+                .profile__name.text-regular-big Факт. адрес
+                .profile__input.input
+                  input(type='text' value="Москва. Красносельская ул. 23/1")
+              .profile__item
+                .profile__name.text-regular-big Юр. адрес
+                .profile__input.input
+                  input(type='text' value="Москва. Красносельская ул. 23/1")
+            .add__adress.-js-open-docs
+              +btn-add-transparent('+ Добавить документ')
+          .profile__btn 
+            +btn-medium('Сохранить изменения')

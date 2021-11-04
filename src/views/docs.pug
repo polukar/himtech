@@ -1,0 +1,140 @@
+extends _includes/layout-user
+
+block config
+  - var pagetitle = 'Документы';
+  - var bodyClass = '';
+block content
+  section
+    +content-header-ico('header-orders', 'Документы')
+    +search('Поиск по договору')
+    .head-select
+      .head-select__item
+        p.text-medium-small Дата формирования
+        +calendar('Выбрать')
+      .head-select__item
+        p.text-medium-small Договор
+        +select('Выбрать', 'Химические средства', 'Перчатки', 'Средства обработки')
+      .head-select__item
+        p.text-medium-small Тип документа
+        +select('Выбрать', '1', '2', '3')
+    .table-scroll
+      table.table.table-history(style="min-width: 950px")
+        thead
+          tr
+            td Заказ
+            td Договор
+            td Документ
+            td Дата создания
+            td Дата отгрузки
+            td Статус
+            td Подтвердить
+        tbody 
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('progress', 'Ожидает подтверждения')
+            td 
+              +btn-medium('Подтвердить')
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('progress', 'Ожидает подтверждения')
+            td 
+              +btn-medium('Подтвердить')
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('done', 'Подтвержден')
+            td 
+              //- +btn-medium('Подтвердить')
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('error', 'Отказ')
+            td 
+              //- +btn-medium('Подтвердить')
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('progress', 'Ожидает подтверждения')
+            td 
+              +btn-medium('Подтвердить')
+          tr
+            td
+              .ico-text
+                  .blue-ico
+                    +svgsprite('order')
+                  a.link INV - 1001
+            td
+              .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              .text-regular-big.--grey-1 05.05.2021
+            td 
+              +status('progress', 'Ожидает подтверждения')
+            td 
+              +btn-medium('Подтвердить')
+    +bloggers()      

@@ -1,0 +1,48 @@
+/* Main Colors */
+
+$bg-primary: #506FDE;
+$bg-dark: #141923;
+$bg-dark-light: #222731;
+$bg-gray-1: #F1F5F9;
+$bg-gray-2: #ECF2F4;
+$bg-gray-3: #C6CFD7;
+
+$font-primary: #111723;
+$font-gray-1: #969EA8;
+$font-gray-2: #D1D3D5;
+$font-gray-3: #6E7885;
+
+$green: #1FB159;
+$green-light: #D7F3C1;
+$orange: #EC9B00;
+$orange-light: #FFF4D0;
+$red: #EF4722;
+$red-light: #FFE3DA;
+
+
+$color-base : $font-primary;
+$color-bg : $bg-gray-1;
+$color-text : $color-base;
+$color-overlay : $color-base;
+$opacity-overlay: .4;
+$link-color : #4E6CD7;
+
+
+
+
+/* Fonts */
+$font-family :  'Inter', sans-serif;
+$font-title: $font-family;
+$font-size : 16px;
+$font-weight : normal;
+$letter-spacing : normal;
+$line-height : 1.2;
+$placeholder: $font-gray-1;
+
+
+
+/*container*/
+$container-padding-left: 24px;
+$container-padding-right: 24px;
+$container-width: 1670px + $container-padding-left + $container-padding-right;
+

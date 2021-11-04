@@ -1,0 +1,137 @@
+extends _includes/layout-manager
+
+block config
+  - var pagetitle = 'Главная';
+  - var bodyClass = '';
+block content
+  section
+    .header__flex
+      +header-ico('header-test','Клин-тесты')
+      +btn-medium('+ Новый клин-тест')
+    +search('Введите ИНН или название организации...')
+    table.table.table-admin.table-ico.table-test
+      thead
+        tr
+          td Заказ
+          td ИНН
+          td ФИО
+          td Дата создания
+          td Документ
+          td Статус
+      tbody 
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big Максимов Д.п.
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать
+          td
+            +btn-medium('Отправить')
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big Максимов Д.п.
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать
+          td
+            +btn-medium('Отправить')
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big Максимов Д.п.
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать
+          td
+            .shipped
+              +svgsprite('grey-check')
+              | Отправлено
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big Максимов Д.п.
+          td
+            .text-regular-big 05.05.2021
+          td
+            +btn-download('PDF')
+              
+          td
+            .shipped
+              +svgsprite('grey-check')
+              | Отправлено
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big Максимов Д.п.
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать
+          td
+            .shipped
+              +svgsprite('grey-check')
+              | Отправлено
+        tr
+          td
+            .ico-text
+              .blue-ico
+                +svgsprite('order')
+              .text-regular-big ООО “Информационные технологии”
+          td
+            .text-regular-big.--grey-3 31032035698
+          td
+            .text-regular-big Максимов Д.п.
+          td
+            .text-regular-big 05.05.2021
+          td
+            button.form__edit
+              +svgsprite('blue-edit')
+              | Редактировать
+          td
+            .shipped
+              +svgsprite('grey-check')
+              | Отправлено
+        

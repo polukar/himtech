@@ -1,0 +1,23 @@
+extends _includes/layout-logist
+
+block config
+  - var pagetitle = 'Главная';
+  - var bodyClass = '';
+block content
+  section
+    +header-ico('header-flag','Управление регионами доставки')
+    .main__description
+      p.text-regular-big Это ваш личный кабинет. Посмотрите как пользоваться
+    h2.h2-admin Области
+    .region 
+      .region__left
+        +search('Введите название')
+        +btn-medium('+ Добавить область')
+      .region__right
+        .clear__region
+          .region__item 
+            h3.--grey-1 Не выбрано области
+          .clear__region-message 
+            +svgsprite('clear-flag')
+            h3.--grey-1 У вас не создано ни одной области доставки
+            p.text-regular-big.--grey-1 Создайте первую область доставки

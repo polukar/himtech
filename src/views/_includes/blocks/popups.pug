@@ -1,0 +1,179 @@
+.mobile-popup.--messages
+  .mobile-popup__panel
+    .mobile-popup__close.-js-close-mobilepopup
+      +svgsprite('mobile-popup-close')
+    .tooltip__head 
+      p.text-medium-small Уведомления
+    +message
+    +message
+    +message
+    +message
+.mobile-popup.--history
+  .mobile-popup__panel
+    .mobile-popup__close.-js-close-mobilepopup
+      +svgsprite('mobile-popup-close')
+    h2 Фильтры
+    .head-select__item
+      p.text-medium-small Дата заказа
+      +calendar-mobile('Выбрать')
+    .head-select__item
+      p.text-medium-small Статус заказа
+      +select('Выбрать', 'Химические средства', 'Перчатки', 'Средства обработки')
+    .head-select__item
+      p.text-medium-small Договор
+      +select('Выбрать', '1', '2', '3')
+    .head-select__item
+      p.text-medium-small Статус оплаты
+      +select('Выбрать', '1', '2', '3')
+    +btn-large('Применить')
+    button.clear__filter
+      | Сбросить фильтры
+      +svgsprite('clear-filter')
+
+.popup.--adduser 
+  .popup__bg
+  .popup__close.-js-close-popup
+    +svgsprite('mobile-popup-close')
+  .popup__right-panel
+    .popup__head 
+      h1 Добавить пользователя
+    form.popup__body 
+      label.add-avatar
+        input(type="file")
+        .add-avatar__pic
+        .link + Загрузить фото
+      .popup__item
+        .profile__name.text-regular-big Имя
+        .profile__input.input
+          input(type='text' placeholder="Введите имя")
+      .popup__item
+        .profile__name.text-regular-big Фамилия
+        .profile__input.input
+          input(type='text' placeholder="Введите фамилию")
+      .popup__item
+        .profile__name.text-regular-big Отчество
+        .profile__input.input
+          input(type='text' placeholder="Введите отчество")
+      .popup__50 
+        .popup__item
+          .profile__name.text-regular-big телефон
+          .profile__input.input
+            input(type='text' placeholder="Телефон")
+        .popup__item
+          .profile__name.text-regular-big Email
+          .profile__input.input
+            input(type='text' placeholder="example@mail.com")
+      .popup__btns.--flex.--jcfe.--aicn
+        button.popup__cancel Отменить
+        .popup__save
+          +btn-medium('Сохранить')
+.popup.--adduser-admin 
+  .popup__bg
+  .popup__close.-js-close-popup
+    +svgsprite('mobile-popup-close')
+  .popup__right-panel
+    .popup__head 
+      h1 Добавить пользователя
+    form.popup__body 
+      label.add-avatar
+        input(type="file")
+        .add-avatar__pic
+        .link + Загрузить фото
+      .popup__item
+        .profile__name.text-regular-big Имя
+        .profile__input.input
+          input(type='text' placeholder="Введите имя")
+      .popup__item
+        .profile__name.text-regular-big Фамилия
+        .profile__input.input
+          input(type='text' placeholder="Введите фамилию")
+      .popup__item
+        .profile__name.text-regular-big Отчество
+        .profile__input.input
+          input(type='text' placeholder="Введите отчество")
+      .popup__item
+        .profile__name.text-regular-big Телефон
+        .profile__input.input
+          input(type='text' placeholder="Телефон")
+      .popup__item
+        .profile__name.text-regular-big Email
+        .profile__input.input
+          input(type='text' placeholder="Email")
+      .popup__item
+        .profile__name.text-regular-big Тип аккаунта
+        .profile__input.input
+          +select('Выберите', '1', '2', '3')
+      .popup__item
+        .profile__name.text-regular-big Компания
+        .profile__input.input
+          +select('Выберите', '1', '2', '3')
+      .popup__btns.--flex.--jcfe.--aicn
+        button.popup__cancel Отменить
+        .popup__save
+          +btn-medium('Сохранить')
+.popup.--docs 
+  .popup__bg
+  .popup__close.-js-close-popup
+    +svgsprite('mobile-popup-close')
+  .popup__right-panel
+    .popup__head 
+      h1 Добавить документ
+    form.popup__body 
+      .popup__item
+        .profile__name.text-regular-big Название
+        .profile__input.input
+          input(type='text' placeholder="Введите название")
+      .popup__item
+        .profile__name.text-regular-big Тип документа
+        .profile__input.input
+          +select('Выберите', '1', '2', '3')
+      .popup__item
+        .profile__name.text-regular-big Документ
+        .profile__input.input
+          label.admin-file-load
+            input(type="file")
+            .admin-file-load__left
+              +svgsprite('file-load')
+              | Перетащите фотографии
+            .admin-file-load__right 
+              +btn-medium('Загрузить')
+      .popup__item
+        .profile__name.text-regular-big Доступность документ
+        .profile__input.input
+          +select('Выберите', '1', '2', '3')
+      .popup__item
+        label.checkbox
+          input(type="checkbox")
+          .checkbox__sqare
+          | Юрий Адмиралов м.
+        label.checkbox
+          input(type="checkbox")
+          .checkbox__sqare
+          | Максим Артуров д.
+        label.checkbox
+          input(type="checkbox")
+          .checkbox__sqare
+          | Дмитрий Торицын с.
+      .popup__item
+        .profile__name.text-regular-big Комментарий
+        textarea.textarea.textarea-small(placeholder="Введите название")
+      .popup__btns.--flex.--jcfe.--aicn
+        button.popup__cancel Отменить
+        .popup__save
+          +btn-medium('Сохранить')
+.popup.--addbuy 
+  .popup__bg
+  form.popup__panel
+    .popup__close.-js-close-popup
+      +svgsprite('mobile-popup-close')
+    h2 Внести оплату
+    .main__description
+      p.text-regular-big Введите сумму поступления на счет и сделайте перевод
+    .test__input
+      .input__name Счет
+      +select('Выберите счет для оплаты', '1', '2', '3')
+    .test__input
+      .input__name Сумма
+      .input 
+        input(type="text" placeholder="Введите сумму оплаты")
+    +btn-large('Отправить')

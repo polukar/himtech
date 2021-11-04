@@ -1,0 +1,64 @@
+extends _includes/layout-logist
+
+block config
+  - var pagetitle = 'Главная';
+  - var bodyClass = '';
+block content
+  section
+    +header-ico('header-flag','Управление регионами доставки')
+    .main__description
+      p.text-regular-big Это ваш личный кабинет. Посмотрите как пользоваться
+    h2.h2-admin Области
+    .region 
+      .region__left
+        +search('Введите название')
+        +btn-medium('+ Добавить область')
+        .profile-menu
+          a.profile-menu__link.active(href="#") Белгородская область
+          a.profile-menu__link(href="#") Воронежская область
+          a.profile-menu__link(href="#") Курская область
+          a.profile-menu__link(href="#") Дмитриевская область
+      .region__right
+        .region__item 
+          .back.back-region 
+            +svgsprite('back')
+          .region__head
+            h3 Белгородская область
+            +btn-medium('+ Добавить район')
+        .region__item 
+          .region__name.text-regular-big Дмитриевский район
+          .region__status 
+            +switch('noactive')
+            .switch__text Доставка не осуществляется
+        .region__item 
+          .region__name.text-regular-big Белоговский район
+          .region__status 
+            +switch('active')
+            .switch__text Доставка осуществляется
+        .region__item 
+          .region__name.text-regular-big Дмитриевский район
+          .region__status 
+            +switch('noactive')
+            .switch__text Доставка не осуществляется
+        .region__item 
+          .region__name.text-regular-big Белоговский район
+          .region__status 
+            +switch('active')
+            .switch__text Доставка осуществляется
+        .region__item 
+          .region__name.text-regular-big Дмитриевский район
+          .region__status 
+            +switch('noactive')
+            .switch__text Доставка не осуществляется
+        .region__item 
+          .region__name.text-regular-big Белоговский район
+          .region__status 
+            +switch('active')
+            .switch__text Доставка осуществляется
+        .region__item 
+          .region__name.text-regular-big Дмитриевский район
+          .region__status 
+            +switch('noactive')
+            .switch__text Доставка не осуществляется
+
+    

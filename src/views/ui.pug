@@ -1,0 +1,2332 @@
+extends _includes/layout-ui
+
+block config
+  - var pagetitle = 'ui';
+  - var bodyClass = '';
+block content
+  // text
+  .ui-block
+    .ui-title Fonts
+    h1 Heading (24)
+    h2 H2 Heading (20)
+    h3 H3 Heading (18)
+    p.text-medium-big Text medium (16)
+    p.text-medium-small Text medium (14)
+    p.text-regular-big Text Regular (14)
+    p.text-regular-small Text Regular (13)
+  .ui-block
+    .ui-title Colors 
+    h1 Background
+    .ui__colors
+      .ui__color
+        p.text-medium-small Primary
+        .ui__color__panel(style="background-color: #506FDE;")
+      .ui__color
+        p.text-medium-small Dark
+        .ui__color__panel(style="background-color: #222731;")
+      .ui__color
+        p.text-medium-small Dark light
+        .ui__color__panel(style="background-color: #222731;")
+      .ui__color
+        p.text-medium-small Gray 1
+        .ui__color__panel(style="background-color: #F1F5F9")
+      .ui__color
+        p.text-medium-small Gray 2
+        .ui__color__panel(style="background-color: #ECF2F4")
+      .ui__color
+        p.text-medium-small Gray 3
+        .ui__color__panel(style="background-color: #C6CFD7")
+    h1 Fonts
+    .ui__colors
+      .ui__color
+        p.text-medium-small Primary
+        .ui__color__panel(style="background-color: #111723")
+      .ui__color
+        p.text-medium-small Gray 1
+        .ui__color__panel(style="background-color: #969EA8")
+      .ui__color
+        p.text-medium-small Gray 2
+        .ui__color__panel(style="background-color: #D1D3D5;")
+    h1 Secondary colors
+    .ui__colors
+      .ui__color
+        p.text-medium-small Green
+        .ui__color__panel(style="background-color: #1FB159")
+      .ui__color
+        p.text-medium-small Orange
+        .ui__color__panel(style="background-color: #EC9B00")
+      .ui__color
+        p.text-medium-small Red
+        .ui__color__panel(style="background-color: #EF4722;")
+      .ui__color
+        p.text-medium-small Green light
+        .ui__color__panel(style="background-color: #D7F3C1;")
+      .ui__color
+        p.text-medium-small Orange light
+        .ui__color__panel(style="background-color: #FFF4D0;")
+      .ui__color
+        p.text-medium-small Red light
+        .ui__color__panel(style="background-color: #FFE3DA;")
+  .ui-block
+    .ui-title Elements
+    h1 Status
+    +status('done', 'Готово')
+    +status('progress', 'Ожидает оплаты')
+    +status('error', 'Отказ')
+    h1 
+    <div class="status-point --red">Доставка не осуществляется</div>
+    <div class="status-point --green">Доставка осуществляется</div>
+    <div class="status-point --btn --red">Доставка не осуществляется</div>
+    <div class="status-point --btn --green">Доставка осуществляется</div>
+  .ui-block
+    .ui-title Popup
+    .table__tooltip.tooltip 
+      .tooltip__panel(style="display: block; position: relative")
+        .table__edit
+          button.btn-edit
+            +svgsprite('edit')
+            | Редактировать
+        .table__delete
+          button.btn-delete
+            +svgsprite('delete')
+            | Удалить
+    br
+    .tooltip.tooltip--message.--left.notification(style="display: block; position: relative; width: 0;")
+        .tooltip__panel(style="display: block; position: relative")
+          .tooltip__head 
+            p.text-medium-small Уведомления
+          +message
+          +message
+          +message
+          +message
+    br
+    br
+    br
+    br
+    .menu__maneger.tooltip.tooltip--manager.--left-bottom(style="display: block; position: relative; width: 20px;")
+      .tooltip__panel(style="display: block; position: relative;")
+        p.text-medium-small.maneger__title Ваш менеджер
+        .manager__avatar
+          img(src="./assets/img/menu/manager.png", alt="")
+        p.manager__name.text-medium-small Петрова Василиса
+        a.manager__email.--grey-1.text-regular-big(href="mailto:v.petrova@ximtek.ru") v.petrova@ximtek.ru
+        a.manager__phone.--grey-1.text-regular-big(href="tel:88003333211") 8 800 333-32-11
+    br
+    .manager__avatar.tooltip.manager__tooltip
+      .tooltip__panel(style="display: block; position: relative; left: 0; top: 0")
+        a.admin-profile(href="#") 
+          +svgsprite('admin-user')
+          | Мой профиль
+        button.admin-exit 
+          +svgsprite('admin-exit')
+          | Выйти
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    .popup.--adduser 
+      .popup__bg
+      .popup__close.-js-close-popup
+        +svgsprite('mobile-popup-close')
+      .popup__right-panel
+        .popup__head 
+          h1 Добавить пользователя
+        form.popup__body 
+          label.add-avatar
+            input(type="file")
+            .add-avatar__pic
+            .link + Загрузить фото
+          .popup__item
+            .profile__name.text-regular-big Имя
+            .profile__input.input
+              input(type='text' placeholder="Введите имя")
+          .popup__item
+            .profile__name.text-regular-big Фамилия
+            .profile__input.input
+              input(type='text' placeholder="Введите фамилию")
+          .popup__item
+            .profile__name.text-regular-big Отчество
+            .profile__input.input
+              input(type='text' placeholder="Введите отчество")
+          .popup__50 
+            .popup__item
+              .profile__name.text-regular-big телефон
+              .profile__input.input
+                input(type='text' placeholder="Телефон")
+            .popup__item
+              .profile__name.text-regular-big Email
+              .profile__input.input
+                input(type='text' placeholder="example@mail.com")
+          .popup__btns.--flex.--jcfe.--aicn
+            button.popup__cancel Отменить
+            .popup__save
+              +btn-medium('Сохранить')
+    br
+    br
+    br
+    br
+    br
+    h1 Header
+    +content-header-ico('header-test', 'История заказов')
+    br
+    br
+    br
+    br
+    br
+    h1 Label
+    .ico-text
+      .blue-ico
+        +svgsprite('order')
+      .ico-text__info
+        p.text-medium-small d2234-VV0
+        p.text-medium-small.--grey-1 02.02.2021, 12:32
+    +bloggers()
+    br
+    br
+    br
+    br
+    br
+    h1 Menu
+    .menu 
+      a.menu__logo(href="index.html") 
+        img(src="./assets/img/menu/logo.png", alt="")
+      .menu__content
+        .menu__top 
+          .menu__message.tooltip.tooltip--message.--left.notification.active
+            .tooltip__panel
+              .tooltip__head 
+                p.text-medium-small Уведомления
+              +message
+              +message
+              +message
+              +message
+            +svgsprite('notifications')
+          .user
+            .user__avatar
+              img(src="./assets/img/menu/user.png", alt="")
+            p.user__name.text-medium-small Максим Николаев
+            p.user__company.text-medium-small.--grey-1 Quadralab
+          +btn-add('Быстрый заказ')
+          +nav
+          a.nav__link.nav__link-exit(href="#") 
+            +svgsprite('exit')
+            | Выйти
+        .menu__maneger
+          p.text-medium-small.maneger__title Ваш менеджер
+          .manager__avatar
+            img(src="./assets/img/menu/manager.png", alt="")
+          p.manager__name.text-medium-small Петрова Василиса
+          a.manager__email.--grey-1.text-regular-big(href="mailto:v.petrova@ximtek.ru") v.petrova@ximtek.ru
+          a.manager__phone.--grey-1.text-regular-big(href="tel:88003333211") 8 800 333-32-11
+    br
+    br
+    br
+    .menu.menu--admin
+      .menu__content
+        .menu__top 
+          .admin__logo 
+            img(src="./assets/img/admin/logo.png", alt="")
+          .menu__message.tooltip.tooltip--message.--left.notification.active
+            .tooltip__panel
+              .tooltip__head 
+                p.text-medium-small Уведомления
+              +message
+              +message
+              +message
+              +message
+            +svgsprite('notifications')
+          nav.nav
+            a.nav__link(href="index.html") 
+              +svgsprite('header-manager-1')
+              | Клин-тест
+            a.nav__link(href="history.html") 
+              +svgsprite('header-manager-2')
+              | Контрагенты
+            a.nav__link(href="index.html") 
+              +svgsprite('header-manager-3')
+              | Документы
+            a.nav__link(href="history.html") 
+              +svgsprite('header-manager-4')
+              | Сотрудники
+        .menu__admin-user
+          .manager__avatar.tooltip.manager__tooltip
+            .manager__arrow 
+              img(src="./assets/img/admin/manager-arrow.svg", alt="")
+            img(src="./assets/img/menu/manager.png", alt="")
+            .tooltip__panel
+              a.admin-profile(href="#") 
+                +svgsprite('admin-user')
+                | Мой профиль
+              button.admin-exit 
+                +svgsprite('admin-exit')
+                | Выйти
+          p.text-medium-small.maneger__title Максим Николаев
+          .--grey-1.text-regular-big(href="mailto:v.petrova@ximtek.ru") Логист
+    br
+    br
+    br
+    .menu.--tablet
+      .menu__top
+        a.menu__logo(href="index.html") 
+          img(src="./assets/img/menu/logo.png", alt="")
+        .user
+          .user__avatar
+            img(src="./assets/img/menu/user.png", alt="")
+        .menu__message.tooltip.tooltip--message.--left.notification.active
+          .tooltip__panel
+            .tooltip__head 
+              p.text-medium-small Уведомления
+            +message
+            +message
+            +message
+            +message
+          +svgsprite('notifications')
+        +btn-add('Быстрый заказ')
+        +nav
+        a.nav__link.nav__link-exit(href="#") 
+          +svgsprite('tablet-exit')
+      .menu__bottom
+        .menu__maneger.tooltip.tooltip--manager.--left-bottom 
+          .menu__maneger__btn
+            +svgsprite('meneger-info')
+          .tooltip__panel
+            p.text-medium-small.maneger__title Ваш менеджер
+            .manager__avatar
+              img(src="./assets/img/menu/manager.png", alt="")
+            p.manager__name.text-medium-small Петрова Василиса
+            a.manager__email.--grey-1.text-regular-big(href="mailto:v.petrova@ximtek.ru") v.petrova@ximtek.ru
+            a.manager__phone.--grey-1.text-regular-big(href="tel:88003333211") 8 800 333-32-11
+    br
+    br
+    br
+    .menu.--mobile
+      .menu__bg.-js-menu-close
+      .menu__content
+        .menu__top 
+          .user
+            .user__avatar
+              img(src="./assets/img/menu/user.png", alt="")
+            .user__text
+              p.user__name.text-medium-small Максим Николаев
+              p.user__company.text-medium-small.--grey-1 Quadralab
+          +btn-add('Быстрый заказ')
+          +nav
+          a.nav__link.nav__link-exit(href="#") 
+            +svgsprite('exit')
+            | Выйти
+        .menu__maneger
+          p.text-medium-small.maneger__title Ваш менеджер
+          .menu__group
+            .manager__avatar
+              img(src="./assets/img/menu/manager.png", alt="")
+            .manager__info
+              p.manager__name.text-medium-small Петрова Василиса
+              a.manager__email.--grey-1.text-regular-big(href="mailto:v.petrova@ximtek.ru") v.petrova@ximtek.ru
+              a.manager__phone.--grey-1.text-regular-big(href="tel:88003333211") 8 800 333-32-11 
+    br
+    br
+    br
+    header.header.header-admin
+      .header__left 
+        .header__logo
+          img(src="./assets/img/menu/logo.png", alt="")
+      .header__right
+        .header__catalog Каталог
+        .header__notification.notification.active.-js-open-messages
+          +svgsprite('notifications')
+        .header__burger.-js-menu
+          +svgsprite('catalog-btn')
+    br
+    br
+    br
+    .ui-block
+      .ui-title Таблицы личный кабинет
+      h1 История заказов
+      .table-scroll
+        table.table.table-history(style="min-width: 795px")
+          thead
+            tr
+              td Заказ
+              td Договор
+              td Документ
+              td Дата заказа
+              td Дата отгрузки
+              td Статус
+              td Сумма
+          tbody 
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+    br
+    br
+    br
+    br
+    section.main__tables
+      .main__history
+        .page__title 
+          h2 Мои заказы
+          a.link(href="history.html") История заказов
+        .table-scroll
+          table.table.table-user(style="min-width: 474px")
+            thead
+              tr
+                td Заказ
+                td Статус
+                td Сумма
+            tbody 
+              tr
+                td
+                  .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    .ico-text__info
+                      p.text-medium-small d2234-VV0
+                      p.text-medium-small.--grey-1 02.02.2021, 12:32
+                td 
+                  +status('progress', 'Ожидает оплаты')
+                td 
+                  .price 9 200 ₽
+              tr
+                td
+                  .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    .ico-text__info
+                      p.text-medium-small d2234-VV0
+                      p.text-medium-small.--grey-1 02.02.2021, 12:32
+                td 
+                  +status('done', 'Оплачено')
+                td 
+                  .price 9 200 ₽
+              tr
+                td
+                  .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    .ico-text__info
+                      p.text-medium-small d2234-VV0
+                      p.text-medium-small.--grey-1 02.02.2021, 12:32
+                td 
+                  +status('error', 'Отказ')
+                td 
+                  .price 9 200 ₽
+              tr
+                td
+                  .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    .ico-text__info
+                      p.text-medium-small d2234-VV0
+                      p.text-medium-small.--grey-1 02.02.2021, 12:32
+                td 
+                  +status('progress', 'Ожидает оплаты')
+                td 
+                  .price 9 200 ₽
+              tr
+                td
+                  .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    .ico-text__info
+                      p.text-medium-small d2234-VV0
+                      p.text-medium-small.--grey-1 02.02.2021, 12:32
+                td 
+                  +status('progress', 'Ожидает оплаты')
+                td 
+                  .price 9 200 ₽
+              tr
+                td
+                  .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    .ico-text__info
+                      p.text-medium-small d2234-VV0
+                      p.text-medium-small.--grey-1 02.02.2021, 12:32
+                td 
+                  +status('progress', 'Ожидает оплаты')
+                td 
+                  .price 9 200 ₽
+      .main__docs
+        .page__title 
+          h2 Мои документы
+          a.link(href="docs.html") Смотреть все
+        .main__doc
+          .main__doc-left 
+            .ico-text
+              .blue-ico
+                +svgsprite('document')
+              .ico-text__info
+                p.text-medium-small № kV232-XX1
+                a.link.--ellipsis(href="#") Акт выполненных работ Акт выполненных работ
+          .main__doc-right 
+            a.btn.--medium Подтвердить
+        .main__doc
+          .main__doc-left 
+            .ico-text
+              .blue-ico
+                +svgsprite('document')
+              .ico-text__info
+                p.text-medium-small № kV232-XX1
+                a.link.--ellipsis(href="#") Акт выполненных работ Акт выполненных работ
+          .main__doc-right 
+            a.btn.--medium Подтвердить
+        .main__doc
+          .main__doc-left 
+            .ico-text
+              .blue-ico
+                +svgsprite('document')
+              .ico-text__info
+                p.text-medium-small № kV232-XX1
+                a.link.--ellipsis(href="#") Акт выполненных работ Акт выполненных работ
+          .main__doc-right 
+            a.btn.--medium Подтвердить
+        .main__doc
+          .main__doc-left 
+            .ico-text
+              .blue-ico
+                +svgsprite('document')
+              .ico-text__info
+                p.text-medium-small № kV232-XX1
+                a.link.--ellipsis(href="#") Акт выполненных работ Акт выполненных работ
+          .main__doc-right 
+            a.btn.--medium Подтвердить
+    br
+    br
+    br
+    br
+    h1 Отчет по товарам
+    .table-scroll
+      table.table.table-history(style="min-width: 795px")
+        thead
+          tr
+            td Артикул
+            td Товар
+            td Документ
+            td Ед изм.
+            td Кратность
+            td Заказы
+            td Кол-во
+            td Сумма
+        tbody 
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+      br
+      br
+      br
+      br
+      h1 Финансы
+      .table-scroll
+        table.table.table-history(style="min-width: 850px")
+          thead
+            tr
+              td Счет
+              td Дата создания
+              td Дата отгрузки
+              td Документ
+              td Статус оплаты
+              td Сумма
+          tbody 
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big 05.05.2021
+              td
+                .text-regular-big 06.05.2021
+              td.right-padding
+                +btn-download('PDF')
+              td 
+                +status('done', 'Оплачено')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big 05.05.2021
+              td
+                .text-regular-big 06.05.2021
+              td.right-padding
+                +btn-download('PDF')
+              td 
+                +status('error', 'Отказ')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big 05.05.2021
+              td
+                .text-regular-big 06.05.2021
+              td.right-padding
+                +btn-download('PDF')
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big 05.05.2021
+              td
+                .text-regular-big 06.05.2021
+              td.right-padding
+                +btn-download('PDF')
+              td 
+                +status('progress', 'Ожидает оплаты')
+              td 
+                .price 9 200 ₽
+      br
+      br
+      br
+      br
+      h1 Документы
+      .table-scroll
+        table.table.table-history(style="min-width: 950px")
+          thead
+            tr
+              td Заказ
+              td Договор
+              td Документ
+              td Дата создания
+              td Дата отгрузки
+              td Статус
+              td Подтвердить
+          tbody 
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('progress', 'Ожидает подтверждения')
+              td 
+                +btn-medium('Подтвердить')
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('progress', 'Ожидает подтверждения')
+              td 
+                +btn-medium('Подтвердить')
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('done', 'Подтвержден')
+              td 
+                //- +btn-medium('Подтвердить')
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('error', 'Отказ')
+              td 
+                //- +btn-medium('Подтвердить')
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('progress', 'Ожидает подтверждения')
+              td 
+                +btn-medium('Подтвердить')
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td
+                .text-regular-big kV232-XX1
+              td
+                +btn-download('PDF')
+              td
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                .text-regular-big.--grey-1 05.05.2021
+              td 
+                +status('progress', 'Ожидает подтверждения')
+              td 
+                +btn-medium('Подтвердить')
+      br
+      br
+      br
+      br
+      h1 Оформление заказа
+      .table-scroll
+        table.table.table-place(style="min-width: 1050px")
+          thead
+            tr
+              td Товар
+              td Док.
+              td Ед изм.
+              td Кратн.
+              td На складе
+              td Характеристики
+              td Кол-во
+          tbody 
+            tr 
+              td
+                .--flex.--aicn
+                  .order__pic 
+                    img(src="./assets/img/orders/1.jpg", alt="")
+                  .table__info
+                    .text-regular-big Антибактериальные коврики
+                    .text-regular-big.--grey-1 330100
+              td
+                +btn-download('')
+              td 
+                .text-regular-big 500 шт
+              td 
+                .text-regular-big 100
+              td
+                +tag('--green', 'Много')
+              td
+                .--flex
+                  +select('Цвет', '1', '2', '3')
+                  +select('Размер', '1', '2', '3')
+              td
+                .--flex.--jcsb
+                  +count
+                  +btn-medium('В корзину')
+            tr 
+              td
+                .--flex.--aicn
+                  .order__pic 
+                    img(src="./assets/img/orders/1.jpg", alt="")
+                  .table__info
+                    .text-regular-big Антибактериальные коврики
+                    .text-regular-big.--grey-1 330100
+              td
+                +btn-download('')
+              td 
+                .text-regular-big 500 шт
+              td 
+                .text-regular-big 100
+              td
+                +tag('--green', 'Много')
+              td
+                .--flex
+                  +select('Цвет', '1', '2', '3')
+                  +select('Размер', '1', '2', '3')
+              td
+                .--flex.--jcsb
+                  +count
+                  +btn-medium('В корзину')
+            tr 
+              td
+                .--flex.--aicn
+                  .order__pic 
+                    img(src="./assets/img/orders/1.jpg", alt="")
+                  .table__info
+                    .text-regular-big Антибактериальные коврики
+                    .text-regular-big.--grey-1 330100
+              td
+                +btn-download('')
+              td 
+                .text-regular-big 500 шт
+              td 
+                .text-regular-big 100
+              td
+                +tag('--green', 'Много')
+              td
+                .--flex
+                  +select('Цвет', '1', '2', '3')
+                  +select('Размер', '1', '2', '3')
+              td
+                .--flex.--jcsb
+                  +count
+                  +btn-medium('В корзину')
+            tr 
+              td
+                .--flex.--aicn
+                  .order__pic 
+                    img(src="./assets/img/orders/1.jpg", alt="")
+                  .table__info
+                    .text-regular-big Антибактериальные коврики
+                    .text-regular-big.--grey-1 330100
+              td
+                +btn-download('')
+              td 
+                .text-regular-big 500 шт
+              td 
+                .text-regular-big 100
+              td
+                +tag('--green', 'Много')
+              td
+                .--flex
+                  +select('Цвет', '1', '2', '3')
+                  +select('Размер', '1', '2', '3')
+              td
+                .--flex.--jcsb
+                  +count
+                  +btn-medium('В корзину')
+    br
+    br
+    br
+    br
+    .ui__block
+      .ui-title Таблицы админ
+      h1 Подтверждение адресов
+      <table class="table table-admin table-ico">
+        <thead>
+          <tr>
+            <td>Организация</td>
+            <td>ИНН</td>
+            <td>Дата добавления</td>
+            <td>Адрес</td>
+            <td>Статус</td>
+          </tr>
+        </thead>
+        <tbody> 
+          <tr class="new">
+            <td>
+              <div class="ico-text">
+                <div class="blue-ico">
+                      <svg class="svgsprite _order">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                      </svg>
+                </div>
+                <div class="text-regular-big">ООО “Информационные технологии”</div>
+              </div>
+            </td>
+            <td>
+              <div class="text-regular-big --grey-3">31032035698</div>
+            </td>
+            <td>
+              <div class="text-regular-big">05.05.2021</div>
+            </td>
+            <td>
+              <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    <div class="status-point --red">Доставка не осуществляется</div>
+                  </div>
+                  <div class="select__item-content">
+                    <div class="status-point --green">Доставка осуществляется</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="new">
+            <td>
+              <div class="ico-text">
+                <div class="blue-ico">
+                      <svg class="svgsprite _order">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                      </svg>
+                </div>
+                <div class="text-regular-big">ООО “Информационные технологии”</div>
+              </div>
+            </td>
+            <td>
+              <div class="text-regular-big --grey-3">31032035698</div>
+            </td>
+            <td>
+              <div class="text-regular-big">05.05.2021</div>
+            </td>
+            <td>
+              <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    <div class="status-point --red">Доставка не осуществляется</div>
+                  </div>
+                  <div class="select__item-content">
+                    <div class="status-point --green">Доставка осуществляется</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="new">
+            <td>
+              <div class="ico-text">
+                <div class="blue-ico">
+                      <svg class="svgsprite _order">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                      </svg>
+                </div>
+                <div class="text-regular-big">ООО “Информационные технологии”</div>
+              </div>
+            </td>
+            <td>
+              <div class="text-regular-big --grey-3">31032035698</div>
+            </td>
+            <td>
+              <div class="text-regular-big">05.05.2021</div>
+            </td>
+            <td>
+              <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    <div class="status-point --red">Доставка не осуществляется</div>
+                  </div>
+                  <div class="select__item-content">
+                    <div class="status-point --green">Доставка осуществляется</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ico-text">
+                <div class="blue-ico">
+                      <svg class="svgsprite _order">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                      </svg>
+                </div>
+                <div class="text-regular-big">ООО “Информационные технологии”</div>
+              </div>
+            </td>
+            <td>
+              <div class="text-regular-big --grey-3">31032035698</div>
+            </td>
+            <td>
+              <div class="text-regular-big">05.05.2021</div>
+            </td>
+            <td>
+              <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> 
+                  <div class="status-point --red">Доставка не осуществляется</div>
+                </div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    <div class="status-point --red">Доставка не осуществляется</div>
+                  </div>
+                  <div class="select__item-content">
+                    <div class="status-point --green">Доставка осуществляется</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ico-text">
+                <div class="blue-ico">
+                      <svg class="svgsprite _order">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                      </svg>
+                </div>
+                <div class="text-regular-big">ООО “Информационные технологии”</div>
+              </div>
+            </td>
+            <td>
+              <div class="text-regular-big --grey-3">31032035698</div>
+            </td>
+            <td>
+              <div class="text-regular-big">05.05.2021</div>
+            </td>
+            <td>
+              <div class="text-regular-big">Москва. Геоологический проспект 14</div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> 
+                  <div class="status-point --green">Доставка осуществляется</div>
+                </div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    <div class="status-point --red">Доставка не осуществляется</div>
+                  </div>
+                  <div class="select__item-content">
+                    <div class="status-point --green">Доставка осуществляется</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      br
+      br
+      br
+      br
+      h1 Районы
+      .region__right
+        .region__item 
+          .back.back-region 
+            +svgsprite('back')
+          .region__head
+            h3 Белгородская область
+            +btn-medium('+ Добавить район')
+        .region__item 
+          .region__name.text-regular-big Дмитриевский район
+          .region__status 
+            +switch('noactive')
+            .switch__text Доставка не осуществляется
+        .region__item 
+          .region__name.text-regular-big Белоговский район
+          .region__status 
+            +switch('active')
+            .switch__text Доставка осуществляется
+        .region__item 
+          .region__name.text-regular-big Дмитриевский район
+          .region__status 
+            +switch('noactive')
+            .switch__text Доставка не осуществляется
+        .region__item 
+          .region__name.text-regular-big Белоговский район
+          .region__status 
+            +switch('active')
+            .switch__text Доставка осуществляется
+        .region__item 
+          .region__name.text-regular-big Дмитриевский район
+          .region__status 
+            +switch('noactive')
+            .switch__text Доставка не осуществляется
+        .region__item 
+          .region__name.text-regular-big Белоговский район
+          .region__status 
+            +switch('active')
+            .switch__text Доставка осуществляется
+        .region__item 
+          .region__name.text-regular-big Дмитриевский район
+          .region__status 
+            +switch('noactive')
+            .switch__text Доставка не осуществляется
+      br
+      br
+      br
+      br
+      h1 Клин-тесты
+      table.table.table-admin.table-ico.table-test
+        thead
+          tr
+            td Заказ
+            td ИНН
+            td ФИО
+            td Дата создания
+            td Документ
+            td Статус
+        tbody 
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big Максимов Д.п.
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+            td
+              +btn-medium('Отправить')
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big Максимов Д.п.
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+            td
+              +btn-medium('Отправить')
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big Максимов Д.п.
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+            td
+              .shipped
+                +svgsprite('grey-check')
+                | Отправлено
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big Максимов Д.п.
+            td
+              .text-regular-big 05.05.2021
+            td
+              +btn-download('PDF')
+                
+            td
+              .shipped
+                +svgsprite('grey-check')
+                | Отправлено
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big Максимов Д.п.
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+            td
+              .shipped
+                +svgsprite('grey-check')
+                | Отправлено
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big Максимов Д.п.
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+            td
+              .shipped
+                +svgsprite('grey-check')
+                | Отправлено
+      br
+      br
+      br
+      br
+      h1 Обработка заявок
+      <table class="table table-admin table-ico">
+        <thead>
+          <tr>
+            <td>Организация</td>
+            <td>ИНН</td>
+            <td>Дата создания</td>
+            <td>Ответственный</td>
+            <td>Статус</td>
+          </tr>
+        </thead>
+        <tbody> 
+          <tr >
+            <td>
+              <div class="ico-text">
+                <div class="blue-ico">
+                      <svg class="svgsprite _order">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                      </svg>
+                </div>
+                <div class="text-regular-big">ООО “Информационные технологии”</div>
+              </div>
+            </td>
+            <td>
+              <div class="text-regular-big --grey-3">31032035698</div>
+            </td>
+            <td>
+              <div class="text-regular-big">05.05.2021</div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать ответственного</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    <div class="status-point --red">Доставка не осуществляется</div>
+                  </div>
+                  <div class="select__item-content">
+                    <div class="status-point --green">Доставка осуществляется</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr >
+            <td>
+              <div class="ico-text">
+                <div class="blue-ico">
+                      <svg class="svgsprite _order">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                      </svg>
+                </div>
+                <div class="text-regular-big">ООО “Информационные технологии”</div>
+              </div>
+            </td>
+            <td>
+              <div class="text-regular-big --grey-3">31032035698</div>
+            </td>
+            <td>
+              <div class="text-regular-big">05.05.2021</div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать ответственного</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    <div class="status-point --red">Доставка не осуществляется</div>
+                  </div>
+                  <div class="select__item-content">
+                    <div class="status-point --green">Доставка осуществляется</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr >
+            <td>
+              <div class="ico-text">
+                <div class="blue-ico">
+                      <svg class="svgsprite _order">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                      </svg>
+                </div>
+                <div class="text-regular-big">ООО “Информационные технологии”</div>
+              </div>
+            </td>
+            <td>
+              <div class="text-regular-big --grey-3">31032035698</div>
+            </td>
+            <td>
+              <div class="text-regular-big">05.05.2021</div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать ответственного</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    <div class="status-point --red">Доставка не осуществляется</div>
+                  </div>
+                  <div class="select__item-content">
+                    <div class="status-point --green">Доставка осуществляется</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ico-text">
+                <div class="blue-ico">
+                      <svg class="svgsprite _order">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                      </svg>
+                </div>
+                <div class="text-regular-big">ООО “Информационные технологии”</div>
+              </div>
+            </td>
+            <td>
+              <div class="text-regular-big --grey-3">31032035698</div>
+            </td>
+            <td>
+              <div class="text-regular-big">05.05.2021</div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать ответственного</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> 
+                  <div class="status-point --red">Доставка не осуществляется</div>
+                </div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    <div class="status-point --red">Доставка не осуществляется</div>
+                  </div>
+                  <div class="select__item-content">
+                    <div class="status-point --green">Доставка осуществляется</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="ico-text">
+                <div class="blue-ico">
+                      <svg class="svgsprite _order">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order"></use>
+                      </svg>
+                </div>
+                <div class="text-regular-big">ООО “Информационные технологии”</div>
+              </div>
+            </td>
+            <td>
+              <div class="text-regular-big --grey-3">31032035698</div>
+            </td>
+            <td>
+              <div class="text-regular-big">05.05.2021</div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> <span>Выбрать ответственного</span></div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                  <div class="select__item-content">
+                    .buy-orders-user 
+                      <svg class="svgsprite _order-user">
+                        <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                      </svg>
+                      | Адмиралов Ю.Д.
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="select select-content"> 
+                <div class="select__main"> 
+                  <div class="status-point --green">Доставка осуществляется</div>
+                </div>
+                <div class="select__drop"> 
+                  <div class="select__item-content">
+                    <div class="status-point --red">Доставка не осуществляется</div>
+                  </div>
+                  <div class="select__item-content">
+                    <div class="status-point --green">Доставка осуществляется</div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      br
+      br
+      br
+      br
+      h1 Поступление по счетам
+      .table-scroll.table-scroll-admin
+        table.table.table-buy-money.table-admin.table-ico
+          thead
+            tr
+              td Счет
+              td Информация
+              td Организация
+              td ИНН
+              td Дата создания
+              td Сумма счета
+              td Пополнение
+              td Статус оплаты
+          tbody 
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td 
+                +btn-gray('Подробнее')
+              td
+                .text-regular-big ООО “РосКосмос”
+              td
+                .text-regular-big.--grey-1 31032035698
+              td
+                .text-regular-big 05.05.2021
+              td 
+                .text-regular-big 23 990 ₽
+              td 
+                .text-regular-big.--green + 12 320 ₽
+              td 
+                .-js-open-addbuy
+                  +btn-medium('Внести оплату')
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td 
+                +btn-gray('Подробнее')
+              td
+                .text-regular-big ООО “РосКосмос”
+              td
+                .text-regular-big.--grey-1 31032035698
+              td
+                .text-regular-big 05.05.2021
+              td 
+                .text-regular-big 23 990 ₽
+              td 
+                .text-regular-big.--green + 12 320 ₽
+              td 
+                .-js-open-addbuy
+                  +btn-medium('Внести оплату')
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td 
+                +btn-gray('Подробнее')
+              td
+                .text-regular-big ООО “РосКосмос”
+              td
+                .text-regular-big.--grey-1 31032035698
+              td
+                .text-regular-big 05.05.2021
+              td 
+                .text-regular-big 23 990 ₽
+              td 
+                .text-regular-big.--green + 12 320 ₽
+              td 
+                .-js-open-addbuy
+                  +btn-medium('Внести оплату')
+            tr
+              td
+                .ico-text
+                    .blue-ico
+                      +svgsprite('order')
+                    a.link INV - 1001
+              td 
+                +btn-gray('Подробнее')
+              td
+                .text-regular-big ООО “РосКосмос”
+              td
+                .text-regular-big.--grey-1 31032035698
+              td
+                .text-regular-big 05.05.2021
+              td 
+                .text-regular-big 23 990 ₽
+              td 
+                .text-regular-big.--green + 12 320 ₽
+              td 
+                .-js-open-addbuy
+                  +btn-medium('Внести оплату')
+      br
+      br
+      br
+      br
+      h1 Контрагенты
+      table.table.table-admin.table-ico.table-test
+        thead
+          tr
+            td Организация
+            td ИНН
+            td Дата создания
+            td Редактировать
+        tbody 
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+          tr
+            td
+              .ico-text
+                .blue-ico
+                  +svgsprite('order')
+                .text-regular-big ООО “Информационные технологии”
+            td
+              .text-regular-big.--grey-3 31032035698
+            td
+              .text-regular-big 05.05.2021
+            td
+              button.form__edit
+                +svgsprite('blue-edit')
+                | Редактировать
+      br
+      br
+      br
+      br
+      h1 Сотрудники
+      .table-scroll
+        table.table.table-history.table-manager-3
+          thead
+            tr
+              td ФИО
+              td Телефон
+              td Почта
+              td Компания
+              td Дата создания
+              td Роль
+          tbody 
+            tr
+              td
+                .ico-text
+                  .mr-svg
+                    +svgsprite('user')
+                  .text-regular-big  Юрий Адмиралов м.
+              td
+                .text-regular-big +7 (902) 222-11-24
+              td 
+                .text-regular-big admiral.ud@yandex.ru
+              td 
+                .text-regular-big ООО “РосКосмос”
+              td 
+                .text-regular-big 05.05.2021
+              td
+                .--flex.--jcsb.--aicn 
+                  +tag('--green', 'Много')
+                  .table__tooltip.tooltip 
+                    +svgsprite('table-edit')
+                    .tooltip__panel
+                      .table__edit
+                        button.btn-edit
+                          +svgsprite('edit')
+                          | Редактировать
+                      .table__delete
+                        button.btn-delete
+                          +svgsprite('delete')
+                          | Удалить
+            tr
+              td
+                .ico-text
+                  .mr-svg
+                    +svgsprite('user')
+                  .text-regular-big  Юрий Адмиралов м.
+              td
+                .text-regular-big +7 (902) 222-11-24
+              td 
+                .text-regular-big admiral.ud@yandex.ru
+              td 
+                .text-regular-big ООО “РосКосмос”
+              td 
+                .text-regular-big 05.05.2021
+              td
+                .--flex.--jcsb.--aicn 
+                  +tag('--green', 'Много')
+                  .table__tooltip.tooltip 
+                    +svgsprite('table-edit')
+                    .tooltip__panel
+                      .table__edit
+                        button.btn-edit
+                          +svgsprite('edit')
+                          | Редактировать
+                      .table__delete
+                        button.btn-delete
+                          +svgsprite('delete')
+                          | Удалить
+            tr
+              td
+                .ico-text
+                  .mr-svg
+                    +svgsprite('user')
+                  .text-regular-big  Юрий Адмиралов м.
+              td
+                .text-regular-big +7 (902) 222-11-24
+              td 
+                .text-regular-big admiral.ud@yandex.ru
+              td 
+                .text-regular-big ООО “РосКосмос”
+              td 
+                .text-regular-big 05.05.2021
+              td
+                .--flex.--jcsb.--aicn 
+                  +tag('--green', 'Много')
+                  .table__tooltip.tooltip 
+                    +svgsprite('table-edit')
+                    .tooltip__panel
+                      .table__edit
+                        button.btn-edit
+                          +svgsprite('edit')
+                          | Редактировать
+                      .table__delete
+                        button.btn-delete
+                          +svgsprite('delete')
+                          | Удалить
+            tr
+              td
+                .ico-text
+                  .mr-svg
+                    +svgsprite('user')
+                  .text-regular-big  Юрий Адмиралов м.
+              td
+                .text-regular-big +7 (902) 222-11-24
+              td 
+                .text-regular-big admiral.ud@yandex.ru
+              td 
+                .text-regular-big ООО “РосКосмос”
+              td 
+                .text-regular-big 05.05.2021
+              td
+                .--flex.--jcsb.--aicn 
+                  +tag('--green', 'Много')
+                  .table__tooltip.tooltip 
+                    +svgsprite('table-edit')
+                    .tooltip__panel
+                      .table__edit
+                        button.btn-edit
+                          +svgsprite('edit')
+                          | Редактировать
+                      .table__delete
+                        button.btn-delete
+                          +svgsprite('delete')
+                          | Удалить
+            tr
+              td
+                .ico-text
+                  .mr-svg
+                    +svgsprite('user')
+                  .text-regular-big  Юрий Адмиралов м.
+              td
+                .text-regular-big +7 (902) 222-11-24
+              td 
+                .text-regular-big admiral.ud@yandex.ru
+              td 
+                .text-regular-big ООО “РосКосмос”
+              td 
+                .text-regular-big 05.05.2021
+              td
+                .--flex.--jcsb.--aicn 
+                  +tag('--green', 'Много')
+                  .table__tooltip.tooltip 
+                    +svgsprite('table-edit')
+                    .tooltip__panel
+                      .table__edit
+                        button.btn-edit
+                          +svgsprite('edit')
+                          | Редактировать
+                      .table__delete
+                        button.btn-delete
+                          +svgsprite('delete')
+                          | Удалить
+            tr
+              td
+                .ico-text
+                  .mr-svg
+                    +svgsprite('user')
+                  .text-regular-big  Юрий Адмиралов м.
+              td
+                .text-regular-big +7 (902) 222-11-24
+              td 
+                .text-regular-big admiral.ud@yandex.ru
+              td 
+                .text-regular-big ООО “РосКосмос”
+              td 
+                .text-regular-big 05.05.2021
+              td
+                .--flex.--jcsb.--aicn 
+                  +tag('--green', 'Много')
+                  .table__tooltip.tooltip 
+                    +svgsprite('table-edit')
+                    .tooltip__panel
+                      .table__edit
+                        button.btn-edit
+                          +svgsprite('edit')
+                          | Редактировать
+                      .table__delete
+                        button.btn-delete
+                          +svgsprite('delete')
+                          | Удалить
+    .ui__block 
+      .ui-title Buttons
+      h1 Large buttons
+      .btn-large(style="max-width: 350px")
+        +btn-large('Оформить заказ')
+      br
+      br
+      br
+      br
+      h1 Medium buttons
+      +btn-medium('Оформить заказ')
+      br
+      +btn-gray('Подробнее')
+      br
+      +btn-add-transparent('+ Добавить адрес')
+      br
+      br
+      br
+      button.form__edit
+        +svgsprite('blue-edit')
+        | Редактировать
+      br
+      br
+      br
+      br
+      h1 small buttons 
+      +btn-download('PDF')
+      br
+      .small-btn(style="max-width: 52px")
+        +btn-download()
+    .ui__block 
+      .ui-title Inputs
+      h1 Search
+      +search('Введите ИНН или название организации...')
+      br
+      br
+      h1 Inputs
+      .input__large
+        +input('Email', 'text')
+      br
+      .input__small 
+        +input('Email', 'text')
+      br
+      br
+      h1 Dropdown
+      .div(style="max-width: 400px")
+        +select('Введите имя', '1', '2', '3')
+        br
+        .input__name Дата заказа
+        +select('Введите имя', '1', '2', '3')
+        br
+        <div class="select select-content"> 
+          <div class="select__main"> <span>Выбрать ответственного</span></div>
+          <div class="select__drop"> 
+            <div class="select__item-content">
+              .buy-orders-user 
+                <svg class="svgsprite _order-user">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                </svg>
+                | Адмиралов Ю.Д.
+            </div>
+            <div class="select__item-content">
+              .buy-orders-user 
+                <svg class="svgsprite _order-user">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                </svg>
+                | Адмиралов Ю.Д.
+            </div>
+            <div class="select__item-content">
+              .buy-orders-user 
+                <svg class="svgsprite _order-user">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                </svg>
+                | Адмиралов Ю.Д.
+            </div>
+            <div class="select__item-content">
+              .buy-orders-user 
+                <svg class="svgsprite _order-user">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                </svg>
+                | Адмиралов Ю.Д.
+            </div>
+            <div class="select__item-content">
+              .buy-orders-user 
+                <svg class="svgsprite _order-user">
+                  <use xlink:href="assets/img/sprites/svgsprites.svg#order-user"></use>
+                </svg>
+                | Адмиралов Ю.Д.
+            </div>
+          </div>
+        </div>
+        br
+        .div(style="max-width: 108px")
+          +count
+        br
+        textarea.textarea(placeholder="Введите описание задачи")
+        br
+        br
+        label.admin-file-load
+          input(type="file")
+          .admin-file-load__left
+            +svgsprite('file-load')
+            | Перетащите фотографии
+          .admin-file-load__right 
+            +btn-medium('Загрузить')
+        .file-loaded 
+          .file-loaded__pic
+            img(src="./assets/img/admin/file.jpg", alt="")
+          .file-loaded__name Средство хим защит 2.jpeg
+          .file-loaded__delete
+            +svgsprite('delete-file')
+        br
+        h1 calendar
+        +calendar()
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br

@@ -1,0 +1,157 @@
+extends _includes/layout-user
+
+block config
+  - var pagetitle = 'История заказов';
+  - var bodyClass = '';
+block content
+  section
+    +content-header-ico('header-orders', 'Отчет по товарам')
+    +search('Поиск по договору')
+    .head-select
+      .head-select__item
+        p.text-medium-small Период
+        +calendar('Выбрать')
+      .head-select__item
+        p.text-medium-small Тип отчета
+        +select('Выбрать', 'Химические средства', 'Перчатки', 'Средства обработки')
+      .head-select__item
+        p.text-medium-small Раздел каталога
+        +select('Выбрать', '1', '2', '3')
+    .filter-mobile.-js-open-history
+      +svgsprite('filter')
+      | Фильтры
+    .table-scroll
+      table.table.table-history(style="min-width: 795px")
+        thead
+          tr
+            td Артикул
+            td Товар
+            td Документ
+            td Ед изм.
+            td Кратность
+            td Заказы
+            td Кол-во
+            td Сумма
+        tbody 
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+          tr
+            td
+              .text-regular-big 330100
+            td
+              .--flex.--aicn
+                .order__pic 
+                  img(src="./assets/img/orders/1.jpg", alt="")
+                .text-regular-big kV232-XX1
+            td
+              +btn-download('PDF')
+            td
+              .text-regular-big 500 шт
+            td 
+              .text-regular-big 100
+            td 
+              .text-regular-big 2
+            td 
+              .text-regular-big 25
+            td 
+              .text-regular-big 14 000 ₽
+      +bloggers
+          
