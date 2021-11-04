@@ -1237,6 +1237,10 @@ p a {
   line-height: 18px;
 }
 
+.input input:focus {
+  border-color: #506FDE;
+}
+
 .input input:disabled {
   color: #818689;
   background-color: #F1F5F9;
@@ -1619,6 +1623,24 @@ p a {
   align-items: center;
   background-color: #F1F5F9;
   cursor: pointer;
+}
+
+.status-point.--btn {
+  height: 38px;
+  width: 100%;
+  max-width: 271px;
+  padding-left: 11px;
+  border-radius: 4px;
+}
+
+.status-point.--btn.--red {
+  color: #161617;
+  background: #FFEDEB;
+}
+
+.status-point.--btn.--green {
+  color: #161617;
+  background: #ECFAEE;
 }
 
 .svgsprite {
@@ -2150,6 +2172,10 @@ p a {
 .content {
   overflow: hidden;
   width: 100%;
+}
+
+.content-white {
+  background-color: #fff;
 }
 
 .content__wrap {
@@ -2857,6 +2883,18 @@ section {
 
 .main__doc-left {
   width: calc(100% - 150px);
+}
+
+.input__large {
+  max-width: 350px;
+}
+
+.input__small {
+  max-width: 280px;
+}
+
+.input__small input {
+  height: 42px;
 }
 
 .enter {
@@ -4052,6 +4090,105 @@ input:checked + .checkbox__sqare:after {
   z-index: 1000;
   position: fixed;
   display: none;
+}
+
+.ui-block {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.ui-block .input__name {
+  margin-bottom: 8px;
+}
+
+.ui-block p {
+  margin-bottom: 10px;
+}
+
+.ui-block h1 {
+  margin-bottom: 30px;
+}
+
+.ui-block .status-point {
+  margin-bottom: 20px;
+}
+
+.ui-block .content__header.--ico h1 {
+  margin-bottom: 0px;
+}
+
+.ui-block .menu {
+  position: relative;
+}
+
+.ui-block .menu.--tablet {
+  display: block;
+  height: 100vh;
+  background-color: #141923;
+  width: 100%;
+  width: 58px;
+}
+
+.ui-block .header-admin {
+  display: flex;
+  justify-content: space-between;
+  background-color: #141923;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 43px;
+}
+
+.ui-block .header-admin .header__catalog {
+  display: none;
+}
+
+.ui-block .header-admin .header__right {
+  display: flex;
+  align-items: center;
+}
+
+.ui-block .menu.--mobile {
+  height: 100vh;
+  display: block;
+  position: relative;
+}
+
+.ui-block .maneger__title,
+.ui-block .manager__name {
+  color: #fff;
+}
+
+.ui-block .popup.--adduser {
+  position: relative;
+  height: 100vh;
+  display: block;
+}
+
+.ui-title {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-bottom: 1px solid #DFE2E4;
+  margin-bottom: 60px;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.ui__colors {
+  display: flex;
+  margin-right: -32px;
+  margin-bottom: 70px;
+}
+
+.ui__color {
+  width: calc((100% / 6) - 32px);
+  margin-right: 32px;
+}
+
+.ui__color__panel {
+  height: 116px;
+  border-radius: 10px;
+  width: 100%;
 }
 
 @media (min-width: 980px) {
